@@ -4,9 +4,25 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap/scss/bootstrap";
+
 @import "font-awesome";
+
+@import "bootstrap/scss/bootstrap";
 
 // Your CSS partials
 @import "components/index";
+@import "pages/home";
 @import "pages/index";
+@import "pages/survey";
+
+* {
+  font-family: 'Comfortaa', cursive;
+  letter-spacing: 1.1px;
+}
+body {
+  background: linear-gradient(0deg,#BE8EB6,#5F68AA);
+}
+
+h1{
+ font-size : 50px;
+}
