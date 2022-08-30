@@ -1,0 +1,41 @@
+.btn_blue{
+  color: black;
+  padding: 8px 24px;
+  border-radius: 8px;
+  background: #96E2D7;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+.btn_blue:hover{
+  background: #80c2b8;
+  color: black;
+}
+
+// + Icon
+// .btn_add{}
+// .btn_add:hover{}
+
+// Trash Icon
+// .btn_delete{}
+// .btn_delete:hover{}
+
+.btn_yes{
+  width: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: green;
+}
+
+.btn_yes:hover{
+  opacity: 1;
+}
+
+.btn_no{
+  width: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: red;
+}
+.btn_no:hover{
+  opacity: 1;
+}
