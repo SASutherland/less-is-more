@@ -14,14 +14,14 @@ puts "Cleared!"
 
 puts "Creating users, ideas..."
 
-ideaname1 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+carpool = Idea.new(
+  title: "Carpool to work",
+  content: "Share a ride with my colleagues instead of us each driving individual cars.",
+  location: "Toronto, Canada",
+  votes: 0,
+  category: "transport",
+  subcategory: "car",
+  impact: "25%",
   user: User.create!(
     first_name: "Brian",
     last_name: "Mac",
@@ -29,18 +29,18 @@ ideaname1 = Idea.new(
     password: "password",
   )
 )
-file = URI.open("")
-ideaname1.photo.attach(io: file, filename: "ideaname1.jpg", content_type: "image/jpg")
-ideaname1.save!
+# file = URI.open("")
+# ideaname1.photo.attach(io: file, filename: "ideaname1.jpg", content_type: "image/jpg")
+carpool.save!
 
-ideaname2 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+work_from_home = Idea.new(
+  title: "Home office",
+  content: "Work remotely one day per week.",
+  location: "Rotterdam, Netherlands",
+  votes: 0,
+  category: "transport",
+  subcategory: "car",
+  impact: "20%",
   user: User.create!(
     first_name: "Janet",
     last_name: "Marsh",
@@ -48,18 +48,18 @@ ideaname2 = Idea.new(
     password: "password"
   )
 )
-file = URI.open("")
-ideaname2.photo.attach(io: file, filename: "ideaname2.jpg", content_type: "image/jpg")
-ideaname2.save!
+# file = URI.open("")
+# ideaname2.photo.attach(io: file, filename: "ideaname2.jpg", content_type: "image/jpg")
+work_from_home.save!
 
-ideaname3 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+poultry_and_pork = Idea.new(
+  title: "Eat more poultry/pork",
+  content: "Limit beef consumption and choose other meats instead.",
+  location: "Budapest, Hungary",
+  votes: 0,
+  category: "food",
+  subcategory: "beef",
+  impact: "10%",
   user: User.create!(
     first_name: "Dan",
     last_name: "Goodman",
@@ -67,18 +67,18 @@ ideaname3 = Idea.new(
     password: "password"
   )
 )
-file = URI.open("")
-ideaname3.photo.attach(io: file, filename: "ideaname3.jpg", content_type: "image/jpg")
-ideaname3.save!
+# file = URI.open("")
+# ideaname3.photo.attach(io: file, filename: "ideaname3.jpg", content_type: "image/jpg")
+poultry_and_pork.save!
 
-ideaname4 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+skip_meat = Idea.new(
+  title: "Move toward veganism",
+  content: "Skip meat and choose a more plant-based diet.",
+  location: "Amsterdam, Netherlands",
+  votes: 0,
+  category: "food",
+  subcategory: "beef",
+  impact: "30%",
   user: User.create!(
     first_name: "Michael",
     last_name: "Loev",
@@ -86,18 +86,18 @@ ideaname4 = Idea.new(
     password: "password"
   )
 )
-file = URI.open("")
-ideaname4.photo.attach(io: file, filename: "ideaname4.jpg", content_type: "image/jpg")
-ideaname4.save!
+# file = URI.open("")
+# ideaname4.photo.attach(io: file, filename: "ideaname4.jpg", content_type: "image/jpg")
+skip_meat.save!
 
-ideaname5 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+more_fish = Idea.new(
+  title: "Eat more fish, less beef",
+  content: "Reduce red meat in diet and replace with fish.",
+  location: "Lisbon, Portugal",
+  votes: 0,
+  category: "food",
+  subcategory: "beef",
+  impact: "20%",
   user: User.create!(
     first_name: "Donna",
     last_name: "Hunter",
@@ -105,18 +105,18 @@ ideaname5 = Idea.new(
     password: "password"
   )
 )
-file = URI.open("")
-ideaname5.photo.attach(io: file, filename: "ideaname5.jpg", content_type: "image/jpg")
-ideaname5.save!
+# file = URI.open("")
+# ideaname5.photo.attach(io: file, filename: "ideaname5.jpg", content_type: "image/jpg")
+more_fish.save!
 
-ideaname6 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+electric_car = Idea.new(
+  title: "Electric car",
+  content: "Trade in my gasoline-based car for an electric car.",
+  location: "Paris, France",
+  votes: 0,
+  category: "transport",
+  subcategory: "car",
+  impact: "50%",
   user: User.create!(
     first_name: "Sally",
     last_name: "Mantis",
@@ -124,18 +124,18 @@ ideaname6 = Idea.new(
     password: "password"
   )
 )
-file = URI.open("")
-ideaname6.photo.attach(io: file, filename: "ideaname6.jpg", content_type: "image/jpg")
-ideaname6.save!
+# file = URI.open("")
+# ideaname6.photo.attach(io: file, filename: "ideaname6.jpg", content_type: "image/jpg")
+electric_car.save!
 
-ideaname7 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+lower_home_heating = Idea.new(
+  title: "Decrease home heating",
+  content: "Reduce the temperature inside my home by 1 degree Celsius during winter.",
+  location: "Edinburgh, United Kingdom",
+  votes: 0,
+  category: "home",
+  subcategory: "heating",
+  impact: "10%",
   user: User.create!(
     first_name: "Todd",
     last_name: "Gakke",
@@ -143,18 +143,18 @@ ideaname7 = Idea.new(
     password: "password"
   )
 )
-file = URI.open("")
-ideaname7.photo.attach(io: file, filename: "ideaname7.jpg", content_type: "image/jpg")
-ideaname7.save!
+# file = URI.open("")
+# ideaname7.photo.attach(io: file, filename: "ideaname7.jpg", content_type: "image/jpg")
+lower_home_heating.save!
 
-ideaname8 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
+holiday_train = Idea.new(
+  title: "Take a holiday by train",
+  content: "Travel by train instead of an airplane during my next holiday.",
+  location: "Berlin, Germany",
+  votes: 0,
+  category: "leisure",
+  subcategory: "travel",
+  impact: "10%",
   user: User.create!(
     first_name: "Lois",
     last_name: "Steele",
@@ -162,27 +162,27 @@ ideaname8 = Idea.new(
     password: "password"
   )
 )
-file = URI.open("")
-ideaname8.photo.attach(io: file, filename: "ideaname8.jpg", content_type: "image/jpg")
-ideaname8.save!
+# file = URI.open("")
+# ideaname8.photo.attach(io: file, filename: "ideaname8.jpg", content_type: "image/jpg")
+holiday_train.save!
 
-ideaname9 = Idea.new(
-  title: ,
-  content: ,
-  location: ,
-  votes: ,
-  category: ,
-  subcategory: ,
-  impact: ,
-  user: User.create!(
-    first_name: "Jake",
-    last_name: "Payne",
-    email: "jake@realmail.com",
-    password: "password"
-  )
-)
-file = URI.open("")
-ideaname9.photo.attach(io: file, filename: "ideaname9.jpg", content_type: "image/jpg")
-ideaname9.save!
+# ideaname9 = Idea.new(
+#   title: ,
+#   content: ,
+#   location: ,
+#   votes: ,
+#   category: ,
+#   subcategory: ,
+#   impact: ,
+#   user: User.create!(
+#     first_name: "Jake",
+#     last_name: "Payne",
+#     email: "jake@realmail.com",
+#     password: "password"
+#   )
+# )
+# file = URI.open("")
+# ideaname9.photo.attach(io: file, filename: "ideaname9.jpg", content_type: "image/jpg")
+# ideaname9.save!
 
 puts "Done!"
