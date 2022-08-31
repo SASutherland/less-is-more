@@ -1,0 +1,146 @@
+<div class="results-container d-flex justify-content-center">
+  <div class="row results-card ">
+    <div class="">
+      <div class="title">
+        <h1 > Your CO2 Impact </h1>
+      </div>
+      <div class="middle d-flex ">
+        <div class="d-flex">
+              <h3 class=" kpi text-align-center">My Footprint</h3>
+              <h3 class=" kpi text-align-center">Target</h3>
+        </div>
+        <div class="d-flex">
+          <p class=" justify-content-center">6.2</p>
+          <p class=" justify-content-center">2</p>
+        </div>
+        <div class="">
+          <h2>Split per category</h2>
+        </div>
+        <div class="">
+          <canvas id="myChart" style="display: block; box-sizing: border-box; height: 154px; width: 154.5px;" width="350" height="350"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+              const labels = [
+                'Transport',
+                'Food',
+                'House',
+                'Leisure',
+              ];
+
+              const data = {
+                labels: labels,
+                datasets: [{
+                  label: 'My First dataset',
+                  backgroundColor: ['#FF839D', '#5CAB7D', '#349DE4', '#FFD77C'] ,
+                  // borderColor: 'rgb(255, 99, 132)',
+                  data: [45, 30, 15, 10],
+                }]
+              };
+
+              const config = {
+                type: 'doughnut',
+                data: data,
+                options: {}
+              };
+            </script>
+            <script>
+              const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+              );
+            </script>
+        </div>
+
+        <div class="">
+          <h2>Comparison</h2>
+        </div>
+        <div class="">
+          <%# <canvas id="marksChart" width="600" height="400"></canvas> %>
+          <canvas id="myRadar" width="350" height="350" style="display: block; box-sizing: border-box; height: 254px; width: 254.5px;"></canvas>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+          <script>
+            const radarLabels = [
+                'Car',
+                'Plane',
+                'Train',
+                'Bus/Tram',
+                'Bike',
+                'Two_weelers',
+                'Dairy',
+                'Drinks',
+                'Fish',
+                'Meat',
+                'Other',
+                'Vegetables',
+                'Construction',
+                'Electricity',
+                'Gaz_Fuel',
+                'Waste',
+                'Banque',
+                'Clothes',
+                'Entertainment',
+                'Home',
+                'Tech',
+                'Other'
+            ];
+
+              const radarData = {
+                labels: radarLabels,
+              datasets: [{
+                label: 'My First Dataset',
+                data: [20, 15, 12, 18, 56, 55, 40, 2, 4, 6, 1, 0, 0, 1, 0, 1, 2, 3, 2],
+                fill: true,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+              }
+              ]
+              }
+              const radarDatas = {
+                labels: radarLabels,
+                datasets: [{
+                label: 'My Second Dataset',
+                data: [20, 15, 12, 18, 56, 55, 40, 2, 4, 6, 1, 0, 0, 1, 0, 1, 2, 3, 2],
+                fill: true,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgb(255, 99, 132)',
+                pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+              }]
+              }
+
+            const radarConfig = {
+              type: 'radar',
+              data: radarData,
+              options: {
+                elements: {
+                  line: {
+                    borderWidth: 3
+                  }
+                }
+              },
+            };
+
+          </script>
+            <script>
+              const myRadar = new Chart(
+                document.getElementById('myRadar'),
+                radarConfig
+              );
+              console.log(myRadar)
+            </script>
+        </div>
+        </div>
+        </div>
+      <div class="resultbtn">
+        <button class="button">Get Ideas</button>
+      </div>
+    </div>
+  </div>
+</div>
