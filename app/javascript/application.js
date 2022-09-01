@@ -3,11 +3,15 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
+import {swiper} from "./plugin/swiper"
 
+// var slider = document.getElementById("myRange");
+// var output = document.getElementById("demo");
 
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+// slider.addEventListener("input", (event) => {output.innerText = event.target.value;})
+// output.innerText = slider.value; // Display the default slider value
+// console.log(slider.value)
 
-slider.addEventListener("input", (event) => {output.innerText = event.target.value;})
-output.innerText = slider.value; // Display the default slider value
-console.log(slider.value)
+swiper();
+document.addEventListener('turbo:load', () => {
+})

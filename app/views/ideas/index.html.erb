@@ -1,9 +1,11 @@
-<h2>Getting ideas</h2>
+
+<div class="row card">
+<h2 class="pt-2">Getting ideas</h2>
 
 <br>
 
 <div class="d-none" id="marker-get"><%= @markers %></div>
-<div id="map" data-markers="<%= @markers.to_json %>" style="width: 100%; height: 390px;"></div>
+<div id="map" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" data-markers="<%= @markers.to_json %>" style="width: 100%; height: 390px;"></div>
 
 <style>
   .marker {
@@ -14,20 +16,20 @@
 </style>
 
 <script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoicGllcnJlY2FpbGxpYXUiLCJhIjoiY2w3aGd6d281MGVhbjNvc2FvZ3dnbXAxdCJ9.8TtZBHevDZoSbiFLOnXmqQ';
   const markerGet = document.getElementById("marker-get").innerText
   const mapGet = document.getElementById("map")
+  mapboxgl.accessToken = mapGet.dataset.mapApiKeyValue;
   const markers = JSON.parse(mapGet.dataset.markers);
   const features = [];
   markers.forEach((marker) => {
     features.push({
       'type': 'Feature',
       'properties': {
-        'name': 'Idea',
+        'name': marker.name,
         'height': 8849
       },
       'geometry': {
-        'type': 'Point',
+        'type': marker.location,
         'coordinates': [marker.lng, marker.lat]
       }
     })
@@ -60,7 +62,7 @@
     // Add a popup displayed on click for each marker
     const popup = new mapboxgl.Popup({ offset: 25 });
     popup.setHTML(
-    `<h2>${marker.properties.name}</h2>${marker.properties.height}m<br/>`
+    `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br/>`
     );
 
     // Add markers to the map.
@@ -75,7 +77,54 @@
     .addTo(map);
   }
 </script>
+</div>
+
 
 <br>
 
+<div class="row card">
+
 <h2>Recommended Ideas</h2>
+
+<br>
+
+<div class="tinder">
+  <div class="tinder--status">
+    <i class="fa fa-remove"></i>
+    <i class="fa fa-heart"></i>
+  </div>
+  <div class="tinder--cards">
+    <div class="tinder--card">
+      <img src="https://placeimg.com/600/300/people">
+      <h3>Demo card 1</h3>
+      <p>This is a demo for Tinder like swipe cards</p>
+    </div>
+    <div class="tinder--card">
+      <img src="https://placeimg.com/600/300/animals">
+      <h3>Demo card 2</h3>
+      <p>This is a demo for Tinder like swipe cards</p>
+    </div>
+    <div class="tinder--card">
+      <img src="https://placeimg.com/600/300/nature">
+      <h3>Demo card 3</h3>
+      <p>This is a demo for Tinder like swipe cards</p>
+    </div>
+    <div class="tinder--card">
+      <img src="https://placeimg.com/600/300/tech">
+      <h3>Demo card 4</h3>
+      <p>This is a demo for Tinder like swipe cards</p>
+    </div>
+    <div class="tinder--card">
+      <img src="https://placeimg.com/600/300/arch">
+      <h3>Demo card 5</h3>
+      <p>This is a demo for Tinder like swipe cards</p>
+    </div>
+  </div>
+
+  <div class="tinder--buttons">
+    <button id="nope"><i class="fa fa-remove"></i></button>
+    <button id="love"><i class="fa fa-heart"></i></button>
+  </div>
+</div>
+
+</div>
