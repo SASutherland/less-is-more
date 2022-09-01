@@ -12,7 +12,6 @@ import {swiper} from "./plugin/swiper"
 // output.innerText = slider.value; // Display the default slider value
 // console.log(slider.value)
 
-
 swiper();
 document.addEventListener('turbo:load', () => {
 })
@@ -33,5 +32,5 @@ document.addEventListener('turbo:load', () => {
     console.log(slider.value)
   }
 })
-console.log('hello from app normal after slider')
 
+console.log('hello from app normal after slider')

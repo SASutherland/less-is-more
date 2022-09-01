@@ -4,15 +4,9 @@
   margin: 0;
 }
 
-// body {
-//   background: #CCFBFE;
-//   // overflow: hidden;
-//   font-family: sans-serif;
-// }
-
 .tinder {
   width: 100vw;
-  height: 100vh;
+  height: 390px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -57,11 +51,11 @@
 
 .tinder--cards {
   flex-grow: 1;
-  padding-top: 40px;
+  // padding-top: 40px;
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  // align-items: flex-end;
   z-index: 1;
 }
 
@@ -69,7 +63,7 @@
   display: inline-block;
   width: 90vw;
   max-width: 400px;
-  height: 70vh;
+  // height: 70vh;
   background: #FFFFFF;
   padding-bottom: 40px;
   border-radius: 8px;
