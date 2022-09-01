@@ -14,7 +14,6 @@
 @import "pages/home";
 @import "pages/index";
 @import "pages/survey";
-@import "components/footer";
 @import "components/navbar";
 @import "components/cards";
 @import "components/btn";
@@ -32,4 +31,7 @@ body {
 
 h1{
   font-size : 50px;
+}
+.typedcont{
+  color: #4FD1C5;
 }
