@@ -11,9 +11,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+
 import MapController from "./map_controller"
 application.register("map", MapController)
 
-import TypedJsController from "./typed_js_controller"
-application.register("typed-js", TypedJsController)
 

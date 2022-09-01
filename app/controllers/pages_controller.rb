@@ -7,6 +7,9 @@ class PagesController < ApplicationController
   def survey
   end
 
+  def about
+  end
+
   def results
     @country = params[:country]
     @work = params[:work]
