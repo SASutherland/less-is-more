@@ -1,3 +1,8 @@
+
+
+<% if @refresh%>
+  <div id="refresh" style="display: none;" data-refresh="<%= @refresh %>"></div>
+<% end %>
 <div class="container general1 d-flex" id="page1">
   <form action="/results">
     <div class="row card d-flex ">
@@ -24,7 +29,7 @@
         </div>
       </div>
       <div class="green1 button">
-        <a href="#page2"  >Next</a>
+        <a href="#page2">Next</a>
       </div>
     </div>
   </div>
@@ -105,44 +110,14 @@
         </div>
 
       <div class="green3 button">
-        <a href="#page4"  >Next</a>
+        <a href="#page4" >Next</a>
       </div>
     </div>
   </div>
   </div>
 
 
-
-  <div class="container general4 d-flex" id="page4">
-    <div class="row card d-flex ">
-      <div class="title">
-        <h1 > Profile your Lifestyle </h1>
-      </div>
-
-      <div class=" middle d-flex">
-        <div class="icons4 d-flex justify-content-between">
-          <i class="fa-solid fa-user current"></i>
-          <i class="fa-solid fa-car-side current"></i>
-          <i class="fa-solid fa-utensils current"></i>
-          <i class="fa-solid fa-house-chimney current"></i>
-          <i class="fa-solid fa-champagne-glasses"></i>
-        </div>
-        <div class="container bloc4">
-          <h2 class="question4"> Your ideal room temperature?</h2>
-        </div>
-        <div class="slidecontainer">
-          <input type="range" min="16" max="25" value="20" class="slider" id="myRange" name="myRange">
-            <p> <span id="demo" > </span> Degres</p>
-        </div>
-
-        <div class="green4 button">
-            <a href="#page5" >Next</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container general5 d-flex" id="page5">
+<div class="container general5 d-flex" id="page4">
     <div class="row card d-flex ">
       <div class="title2">
         <h1 > Profile your Lifestyle </h1>
@@ -170,11 +145,40 @@
         </div>
 
 
+        <div class="green4 button">
+            <a href="#page5" >Next</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <div class="container general4 d-flex" id="page5">
+    <div class="row card d-flex ">
+      <div class="title">
+        <h1 > Profile your Lifestyle </h1>
+      </div>
+
+      <div class=" middle d-flex">
+        <div class="icons4 d-flex justify-content-between">
+          <i class="fa-solid fa-user current"></i>
+          <i class="fa-solid fa-car-side current"></i>
+          <i class="fa-solid fa-utensils current"></i>
+          <i class="fa-solid fa-house-chimney current"></i>
+          <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+        <div class="container bloc4">
+          <h2 class="question4"> Your ideal room temperature?</h2>
+        </div>
+        <div class="slidecontainer">
+          <input type="range" min="16" max="25" value="20" class="slider" id="myRange" name="myrange">
+            <p> <span id="demo" > </span> Degres</p>
+        </div>
+
+
       <div class="green5">
-        <button class="button" , results_path >Submit</button>
+        <button class="btn btn-primary", results_path >Submit</button>
       </div>
       </div>
     </div>
   </form>
 </div>
-    <h1><%= @country  %></h1>
