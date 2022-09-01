@@ -36,7 +36,7 @@ carpool.save!
 work_from_home = Idea.new(
   title: "Home office",
   content: "Work remotely one day per week.",
-  location: "Rotterdam, Netherlands",
+  location: "St. John's, Newfoundland and Labrador",
   votes: 0,
   category: "transport",
   subcategory: "car",
@@ -55,7 +55,7 @@ work_from_home.save!
 poultry_and_pork = Idea.new(
   title: "Eat more poultry/pork",
   content: "Limit beef consumption and choose other meats instead.",
-  location: "Budapest, Hungary",
+  location: "Nairobi, Kenya",
   votes: 0,
   category: "food",
   subcategory: "beef",
@@ -74,7 +74,7 @@ poultry_and_pork.save!
 skip_meat = Idea.new(
   title: "Move toward veganism",
   content: "Skip meat and choose a more plant-based diet.",
-  location: "Amsterdam, Netherlands",
+  location: "Buenos Aires, Argentina",
   votes: 0,
   category: "food",
   subcategory: "beef",
@@ -93,7 +93,7 @@ skip_meat.save!
 more_fish = Idea.new(
   title: "Eat more fish, less beef",
   content: "Reduce red meat in diet and replace with fish.",
-  location: "Lisbon, Portugal",
+  location: "Jakarta, Indonesia",
   votes: 0,
   category: "food",
   subcategory: "beef",
@@ -110,9 +110,9 @@ more_fish = Idea.new(
 more_fish.save!
 
 electric_car = Idea.new(
-  title: "Electric car",
+  title: "Buy an electric car",
   content: "Trade in my gasoline-based car for an electric car.",
-  location: "Paris, France",
+  location: "Moscow, Russia",
   votes: 0,
   category: "transport",
   subcategory: "car",
@@ -150,7 +150,7 @@ lower_home_heating.save!
 holiday_train = Idea.new(
   title: "Take a holiday by train",
   content: "Travel by train instead of an airplane during my next holiday.",
-  location: "Berlin, Germany",
+  location: "Shanghai, China",
   votes: 0,
   category: "leisure",
   subcategory: "travel",

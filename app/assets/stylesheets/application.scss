@@ -13,24 +13,31 @@
 @import "components/index";
 @import "pages/home";
 @import "pages/index";
+
+@import "components/footer";
+
 @import "pages/survey";
+
 @import "components/navbar";
 @import "components/cards";
 @import "components/btn";
 @import "pages/favindex";
 @import "pages/about";
+@import "ideas/index";
 
 * {
   font-family: 'Comfortaa', cursive;
   letter-spacing: 1.1px;
 }
+
 body {
   background: linear-gradient(0deg,#BE8EB6,#5F68AA);
 }
 
-h1{
+h1 {
   font-size : 50px;
 }
-.typedcont{
+
+.typedcont {
   color: #4FD1C5;
 }
