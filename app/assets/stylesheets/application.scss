@@ -18,6 +18,8 @@
 @import "components/navbar";
 @import "components/cards";
 @import "components/btn";
+@import "pages/favindex";
+@import "pages/about";
 
 * {
   font-family: 'Comfortaa', cursive;
@@ -28,5 +30,5 @@ body {
 }
 
 h1{
- font-size : 50px;
+  font-size : 50px;
 }

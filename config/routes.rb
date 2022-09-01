@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get '/survey', to: "pages#survey"
   get '/results', to: "pages#results"
+  get '/about', to: "pages#about"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :ideas, except: :destroy do
     collection do

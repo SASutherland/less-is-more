@@ -1,0 +1,24 @@
+.target_chart{
+  background-color: white;
+  width: 80%;
+  height: 30vh;
+  border-radius: 8px;
+  margin-left: 2.3rem;
+  margin-top: 1rem;
+}
+.saved_ideas{
+  background-color: white;
+  width: 80%;
+  height: 35vh;
+  border-radius: 8px;
+  margin-left: 2.3rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.actioncont{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
