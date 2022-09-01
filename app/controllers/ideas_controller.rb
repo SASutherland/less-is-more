@@ -5,11 +5,14 @@ class IdeasController < ApplicationController
     @ideas = Idea.all
     @markers = @ideas.geocoded.map do |idea|
       {
+        name: idea.title,
+        location: idea.location,
         lat: idea.latitude,
         lng: idea.longitude,
-        location: idea.location
+        infoWindow: render_to_string(partial: "info_window", locals: { idea: idea })
       }
     end
+
   end
 
 end
