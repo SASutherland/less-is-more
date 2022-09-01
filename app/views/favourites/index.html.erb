@@ -2,7 +2,9 @@
   <div class="backcard">
     <h1>My target</h1>
     <h4>My co2 target</h4>
-    <div class="targetchart"></div>
+    <div class="targetchart">
+      <canvas id="myChart"></canvas>
+    </div>
     <div class="actionbtncont">
       <h4>My actions</h4>
       <%= image_tag "plus-circle-fill.png"%>
@@ -51,3 +53,33 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const labels = [
+    'Max',
+    'Results',
+    'New Results',
+    'Goal',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: '',
+      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+      borderColor: 'rgb(255, 99, 132)',
+      data: [10 ,6, 4, 2]
+    }]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  };
+    const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
