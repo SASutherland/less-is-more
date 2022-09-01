@@ -1,14 +1,21 @@
+
+<div class="transport" data-value="<%= @transport %>"></div>
+<div class="food" data-value="<%= @food %>"></div>
+<div class="house" data-value="<%= @house %>"></div>
+<div class="leisure" data-value="<%= @leisure %>"></div>
+
 <div class="results-container">
-  <h1 class="text-center"> Your CO2 Impact </h1>
   <div class="results-card ">
+  <h1> Your CO2 Impact </h1>
+
     <div>
       <div class="middle d-flex ">
         <div class="d-flex justify-content-around">
-              <h3>My Footprint</h3>
-              <h3>Target</h3>
+              <h3 class="title-kpi">Your Co2</h3>
+              <h3 class="title-kpi">Target</h3>
         </div>
         <div class="d-flex justify-content-around">
-          <p>6.2</p>
+          <p><%= @co2 %></p>
           <p>2</p>
         </div>
         <div>
@@ -25,21 +32,27 @@
                 'Leisure',
               ];
 
+              const transport = document.querySelector(".transport")
+              const food = document.querySelector(".food")
+              const house = document.querySelector(".house")
+              const leisure = document.querySelector(".leisure")
+
               const data = {
                 labels: labels,
                 datasets: [{
                   label: 'My First dataset',
                   backgroundColor: ['#FF839D', '#5CAB7D', '#349DE4', '#FFD77C'] ,
-                  // borderColor: 'rgb(255, 99, 132)',
-                  data: [45, 30, 15, 10],
+
+                  data: [transport.dataset.value, food.dataset.value, house.dataset.value, leisure.dataset.value]
                 }]
               };
-
               const config = {
                 type: 'doughnut',
                 data: data,
                 options: {}
               };
+
+
             </script>
             <script>
               const myChart = new Chart(
@@ -62,52 +75,40 @@
                 'Car',
                 'Plane',
                 'Train',
-                'Bus/Tram',
                 'Bike',
-                'Dairy',
-                'Drinks',
                 'Fish',
                 'Meat',
                 'Vegetables',
-                'Construction',
-                'Electricity',
-                'Gaz_Fuel',
-                'Waste',
-                'Clothes',
-                'Entertainment',
-                'Home',
-                'Tech',
+                'Heating',
             ];
 
               const radarData = {
                 labels: radarLabels,
-              datasets: [{
-                label: 'My First Dataset',
-                data: [20, 15, 12, 18, 56, 55, 40, 2, 4, 6, 1, 0, 0, 1, 0, 1, 2, 3, 2],
+                datasets: [{
+                label: 'Your Country',
+                data: [1441, 318, 272, 91, 101, 786, 202 ,990],
                 fill: true,
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: 'rgb(255, 99, 132)',
                 pointBackgroundColor: 'rgb(255, 99, 132)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgb(255, 99, 132)'
+              },
+              {
+                label: 'My Footprint',
+                data: [700, 700, 500, 91, 200, 200, 400 ,800],
+                fill: true,
+                backgroundColor: '#7A56AB',
+                borderColor: '#7A56AB',
+                pointBackgroundColor: '#7A56AB',
                 pointBorderColor: '#fff',
                 pointHoverBackgroundColor: '#fff',
                 pointHoverBorderColor: 'rgb(255, 99, 132)'
               }
               ]
               }
-              const radarDatas = {
-                labels: radarLabels,
-                datasets: [{
-                label: 'My Second Dataset',
-                data: [20, 15, 12, 18, 56, 55, 40, 2, 4, 6, 1, 0, 0, 1, 0, 1, 2, 3, 2],
-                fill: true,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgb(255, 99, 132)',
-                pointBackgroundColor: 'rgb(255, 99, 132)',
-                pointBorderColor: '#fff',
-                pointHoverBackgroundColor: '#fff',
-                pointHoverBorderColor: 'rgb(255, 99, 132)'
-              }]
-              }
+
 
             const radarConfig = {
               type: 'radar',

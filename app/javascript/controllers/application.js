@@ -7,4 +7,6 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
-// console.log("aefdafad")
+
+console.log('hello from app/controller')
+
