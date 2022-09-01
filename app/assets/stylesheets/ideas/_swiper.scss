@@ -36,7 +36,7 @@
   transition: all 0.2s ease-in-out;
   position: absolute;
   width: 100px;
-  margin-left: -50px;
+  margin-left: -97px;
 }
 
 .tinder_love .fa-heart {
@@ -61,7 +61,7 @@
 
 .tinder--card {
   display: inline-block;
-  width: 90vw;
+  width: 18rem;
   max-width: 400px;
   // height: 70vh;
   background: #FFFFFF;
@@ -74,6 +74,7 @@
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: grab;
+  margin-right: 5.5rem;
 }
 
 .moving.tinder--card {
