@@ -22,11 +22,13 @@
   border-radius:  20px;
   padding: 0px 25px 0px 25px;
   flex-direction: row;
-  margin-top: 35px;
+  margin-top: 120px;
 
 }
 
-
+.card2 {
+  margin-top: 67px;
+}
 
 .title h1{
   text-align: left;
@@ -159,6 +161,10 @@ a{
   height: 800px;
 }
 
+.card3 {
+  margin-top: -91px;
+}
+
 .icons3{
   margin-top: -70px;
   margin-bottom: -22px;
@@ -202,29 +208,36 @@ a{
   height: 800px;
 }
 
-.icons4{
-  margin-top: -22px;
+.card4 {
+  margin-top: -146px;
+}
+.icons4 {
+  margin-top: -86px;
   margin-bottom: -58px;
 }
 
+.card5 {
+  margin-top: -200px;
+}
+
 .green4{
-  margin-left: 18px;
-  margin-top: 20px;
-  margin-bottom: -132px;
+  margin-left: 21px;
+  margin-top: 77px;
+  margin-bottom: -145px;
   height: 58px;
   width: 80%;
   margin-right: 16px;
 }
 
-.bloc4{
-  margin-top: 102px;
-  margin-bottom: 85px;
+.bloc4 {
+  margin-top: 91px;
+  margin-bottom: 86px;
 }
 
 .question4{
   flex-direction: row;
   margin-top: 2px;
-  margin-bottom: -24px;
+  margin-bottom: -44px;
   font-weight: lighter;
   font-size: 3vh;
   margin-left: 0rem;
@@ -241,9 +254,10 @@ a{
   height: 800px;
 }
 
-.bloc5{
-  margin-top: 137px;
-  margin-bottom: 7px;
+
+.bloc5 {
+    margin-top: 128px;
+    margin-bottom: 7px;
 }
 
 
@@ -284,6 +298,7 @@ a{
   border-radius: 50%;
   background:#7A56AB;
   cursor: pointer;
+  margin-bottom: 30px;
 }
 
 .icons5{
@@ -296,10 +311,10 @@ a{
 }
 
 
-.green5{
+.green5 {
   margin-left: 5px;
-  margin-top: 60px;
-  margin-bottom: -152px;
+  margin-top: 27px;
+  margin-bottom: -144px;
   height: 55px;
   width: 116%;
   margin-right: -27px;
