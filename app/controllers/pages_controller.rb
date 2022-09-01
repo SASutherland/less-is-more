@@ -9,4 +9,13 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  def results
+    @country = params[:country]
+    @work = params[:work]
+    @flight = params[:flight]
+    @food = params[:food]
+    @myRange = params[:myRange]
+    @leisure = params[:leisure]
+  end
 end
