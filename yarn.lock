@@ -686,10 +686,7 @@
   "resolved" "https://registry.npmjs.org/shebang-regex/-/shebang-regex-3.0.0.tgz"
   "version" "3.0.0"
 
-"source-map-support@~0.5.20":
-  "integrity" "sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w=="
-  "resolved" "https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz"
-  "version" "0.5.21"
+
   dependencies:
     "buffer-from" "^1.0.0"
     "source-map" "^0.6.0"
@@ -737,15 +734,11 @@
     "commander" "^2.20.0"
     "source-map-support" "~0.5.20"
 
-"typed.js@^2.0.12":
-  "integrity" "sha512-lyACZh1cu+vpfYY3DG/bvsGLXXbdoDDpWxmqta10IQUdMXisMXOEyl+jos+YT9uBbzK4QaKYBjT3R0kTJO0Slw=="
-  "resolved" "https://registry.npmjs.org/typed.js/-/typed.js-2.0.12.tgz"
-  "version" "2.0.12"
-
 "update-browserslist-db@^1.0.5":
   "integrity" "sha512-dteFFpCyvuDdr9S/ff1ISkKt/9YZxKjI9WlRR99c180GaztJtRa/fn18FdxGVKVsnPY7/a/FDN68mcvUmP4U7Q=="
   "resolved" "https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.0.5.tgz"
   "version" "1.0.5"
+
   dependencies:
     "escalade" "^3.1.1"
     "picocolors" "^1.0.0"
