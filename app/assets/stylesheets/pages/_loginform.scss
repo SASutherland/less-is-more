@@ -17,6 +17,7 @@ h4{
   margin-left: 1rem;
   margin-right: 1rem;
   width: 90%;
+  margin-top: -5px !important;
 }
 .logtext{
   display: flex;
@@ -29,6 +30,7 @@ h4{
   margin: 1rem;
   padding: 1rem;
   width: 80%;
+  margin-left: 2.5rem;
 }
 .btn{
   color: black;
@@ -45,7 +47,9 @@ h4{
 }
 .btncontainer{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .btncontainer a{
   text-decoration: none;
