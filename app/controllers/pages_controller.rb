@@ -10,7 +10,6 @@ class PagesController < ApplicationController
   end
 
   def results
-
     @country = params[:country]
     @work = params[:work]
     @flight = params[:flight]
