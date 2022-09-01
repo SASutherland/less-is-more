@@ -18,4 +18,4 @@ class PagesController < ApplicationController
     @leisure = params[:leisure]
   end
 
-end
+

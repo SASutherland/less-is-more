@@ -9,6 +9,7 @@ import "bootstrap"
 
 
 
+
 // var options = {
 //   strings:  ['impact calculator', 'performance tracker','idea generator','community builder'],
 //   typeSpeed: 60,
@@ -29,4 +30,5 @@ var output = document.getElementById("demo");
 slider.addEventListener("input", (event) => {output.innerText = event.target.value;})
 output.innerText = slider.value; // Display the default slider value
 console.log(slider.value)
+
 
