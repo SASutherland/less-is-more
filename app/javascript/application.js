@@ -22,6 +22,7 @@ document.addEventListener('turbo:load', () => {
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
   var refresh = document.getElementById("refresh");
+
   if(refresh) {
     console.log("hello")
   }
