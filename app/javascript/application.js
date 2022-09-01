@@ -3,6 +3,7 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 import Typed from 'typed.js'
+// import  data from "controllers/doughnut_chart.js";
 
 var options = {
   strings:  ['impact calculator', 'performance tracker','idea generator','community builder'],
@@ -24,3 +25,7 @@ slider.oninput = function() {
 }
 
 $("#sortable").sortable();
+
+// document.addEventListener('turbolinks:load', () => {
+//   data();
+// });

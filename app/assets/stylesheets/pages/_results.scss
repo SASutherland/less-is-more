@@ -1,0 +1,24 @@
+.results-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 71px;
+  margin-top: 19px;
+}
+
+.results-card{
+  background-color: white;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 10px 20px 15px #6f6f6f;
+  border-radius: 20px;
+  padding: 25px;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 50px;
+  font-weight: 300;
+}
