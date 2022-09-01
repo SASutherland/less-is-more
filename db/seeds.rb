@@ -10,6 +10,7 @@ puts "Clearing database..."
 Favourite.destroy_all
 Idea.destroy_all
 User.destroy_all
+Chatroom.destroy_all
 puts "Cleared!"
 
 puts "Creating users, ideas..."
@@ -165,6 +166,13 @@ holiday_train = Idea.new(
 # file = URI.open("")
 # ideaname8.photo.attach(io: file, filename: "ideaname8.jpg", content_type: "image/jpg")
 holiday_train.save!
+
+Idea.all.each do |idea|
+  Chatroom.create(
+    name: idea.title,
+    idea: idea
+  )
+end
 
 # ideaname9 = Idea.new(
 #   title: ,

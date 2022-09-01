@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     end
     resources :favourites, only: :create
   end
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
   # Defines the root path route ("/")
   # root "articles#index"
   resources :favourites, only: [:index, :destroy]
