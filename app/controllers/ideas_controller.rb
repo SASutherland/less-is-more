@@ -6,10 +6,10 @@ class IdeasController < ApplicationController
     @markers = @ideas.geocoded.map do |idea|
       {
         lat: idea.latitude,
-        lng: idea.longitude,
-        location: idea.location
+        lng: idea.longitude
       }
     end
+
   end
 
 end
