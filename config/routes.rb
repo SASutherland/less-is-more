@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'rails/c'
   devise_for :users
   root to: "pages#home"
   get '/survey', to: "pages#survey"
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
     end
     resources :favourites, only: :create
   end
-  resources :chatrooms, only: :show do
+  resources :chatrooms, only: [:index, :show] do
     resources :messages, only: :create
   end
   # Defines the root path route ("/")

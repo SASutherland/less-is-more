@@ -1,0 +1,17 @@
+<div class="results-container">
+  <div class="results-card">
+    <div>
+      <h1>My Tribe</h1>
+    </div>
+    <div>
+      <%= render "searchbar", chatrooms: @chatrooms %></div>
+    </div>
+      <div class="card-body">
+      <% @ideas.each do |idea| %>
+      <%= idea.title %>
+      <% end %>
+
+        <a href="#" class="search-btn">Button</a>
+      </div>
+  </div>
+</div>
