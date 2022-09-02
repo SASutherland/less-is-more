@@ -3,8 +3,9 @@
 <% if @refresh%>
   <div id="refresh" style="display: none;" data-refresh="<%= @refresh %>"></div>
 <% end %>
-<div class="container general1 d-flex" id="page1">
-  <form action="/results">
+
+<div class="container general1 d-flex margin-top: 300px;" id="page1">
+  <form action="/results" class="">
     <div class="row card d-flex ">
       <div class="title">
         <h1 > Profile your Lifestyle </h1>
@@ -32,7 +33,7 @@
         <a href="#page2">Next</a>
       </div>
     </div>
-  </div>
+
 
 
 
@@ -174,9 +175,9 @@
             <p> <span id="demo" > </span> Degres</p>
         </div>
 
-
+        <input type="hidden" id="" name="random" value="true">
       <div class="green5">
-        <button class="button", results_path >Submit</button>
+        <input class="button" type="submit">
       </div>
       </div>
     </div>

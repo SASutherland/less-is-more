@@ -6,17 +6,9 @@ import "bootstrap"
 import {swiper} from "./plugin/swiper"
 
 console.log('hello from app normal before slider')
-
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-
-slider.addEventListener("input", (event) => {output.innerText = event.target.value;})
-output.innerText = slider.value;
-console.log(slider.value)
-
-swiper();
-document.addEventListener('turbo:load', () => {
-})
+// swiper();
+// document.addEventListener('turbo:load', () => {
+// })
 
 
 document.addEventListener('turbo:load', () => {
@@ -33,6 +25,8 @@ document.addEventListener('turbo:load', () => {
     output.innerText = slider.value;
     console.log(slider.value)
   }
+
+
 })
 
 console.log('hello from app normal after slider')

@@ -17,13 +17,13 @@ class PagesController < ApplicationController
   end
 
   def results
+
     @country = params[:country]
     @work = params[:work]
     @flight = params[:flight]
     @food = params[:food]
     @my_range = params[:myrange]
     @leisure = params[:leisure]
-
     # @table = CSV.parse(File.read("db/data/co2_country.csv"), headers: true)
 
     filepath = "./db/data/co2_country.csv"
@@ -46,5 +46,5 @@ class PagesController < ApplicationController
     @food.to_f.round(2)
     @house.to_f.round(2)
     @leisure.to_f.round(2)
-end
+  end
 end
