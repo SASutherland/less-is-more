@@ -1,7 +1,7 @@
 import * as Hammer from "hammerjs";
 
 const swiper = () => {
-  console.log("How are you doing")
+  console.log("Hello from swiper.js")
 
   var tinderContainer = document.querySelector('.tinder');
   var allCards = document.querySelectorAll('.tinder--card');
