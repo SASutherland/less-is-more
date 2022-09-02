@@ -6,6 +6,7 @@ class IdeasController < ApplicationController
     @markers = @ideas.geocoded.map do |idea|
       {
         name: idea.title,
+        content: idea.content,
         location: idea.location,
         lat: idea.latitude,
         lng: idea.longitude,
