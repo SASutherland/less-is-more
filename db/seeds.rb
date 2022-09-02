@@ -17,12 +17,13 @@ puts "Creating users, ideas..."
 
 carpool = Idea.new(
   title: "Carpool to work",
-  content: "Share a ride with my colleagues instead of us each driving individual cars.",
+  content: "Share a ride with my colleagues instead of driving four cars.",
   location: "Toronto, Canada",
   votes: 0,
   category: "transport",
   subcategory: "car",
   impact: "25%",
+  photo: "https://images.unsplash.com/photo-1597685204565-110abf469a1e?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Brian",
     last_name: "Mac",
@@ -30,8 +31,8 @@ carpool = Idea.new(
     password: "password",
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1597685204565-110abf469a1e?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-carpool.photo.attach(io: file, filename: "carpool.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1597685204565-110abf469a1e?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+# carpool.photo.attach(io: file, filename: "carpool.jpg", content_type: "image/jpg")
 carpool.save!
 
 work_from_home = Idea.new(
@@ -42,6 +43,7 @@ work_from_home = Idea.new(
   category: "transport",
   subcategory: "car",
   impact: "20%",
+  photo: "https://images.unsplash.com/photo-1591382696684-38c427c7547a?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Janet",
     last_name: "Marsh",
@@ -49,8 +51,8 @@ work_from_home = Idea.new(
     password: "password"
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1591382696684-38c427c7547a?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-work_from_home.photo.attach(io: file, filename: "work_from_home.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1591382696684-38c427c7547a?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+# work_from_home.photo.attach(io: file, filename: "work_from_home.jpg", content_type: "image/jpg")
 work_from_home.save!
 
 poultry_and_pork = Idea.new(
@@ -61,6 +63,7 @@ poultry_and_pork = Idea.new(
   category: "food",
   subcategory: "beef",
   impact: "10%",
+  photo: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80",
   user: User.create!(
     first_name: "Dan",
     last_name: "Goodman",
@@ -68,8 +71,8 @@ poultry_and_pork = Idea.new(
     password: "password"
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80")
-poultry_and_pork.photo.attach(io: file, filename: "poultry_and_pork.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80")
+# poultry_and_pork.photo.attach(io: file, filename: "poultry_and_pork.jpg", content_type: "image/jpg")
 poultry_and_pork.save!
 
 skip_meat = Idea.new(
@@ -80,6 +83,7 @@ skip_meat = Idea.new(
   category: "food",
   subcategory: "beef",
   impact: "30%",
+  photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Michael",
     last_name: "Loev",
@@ -87,8 +91,8 @@ skip_meat = Idea.new(
     password: "password"
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-skip_meat.photo.attach(io: file, filename: "skip_meat.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+# skip_meat.photo.attach(io: file, filename: "skip_meat.jpg", content_type: "image/jpg")
 skip_meat.save!
 
 more_fish = Idea.new(
@@ -99,6 +103,7 @@ more_fish = Idea.new(
   category: "food",
   subcategory: "beef",
   impact: "20%",
+  photo: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Donna",
     last_name: "Hunter",
@@ -106,8 +111,8 @@ more_fish = Idea.new(
     password: "password"
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-more_fish.photo.attach(io: file, filename: "more_fish.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+# more_fish.photo.attach(io: file, filename: "more_fish.jpg", content_type: "image/jpg")
 more_fish.save!
 
 electric_car = Idea.new(
@@ -118,6 +123,7 @@ electric_car = Idea.new(
   category: "transport",
   subcategory: "car",
   impact: "50%",
+  photo: "https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80",
   user: User.create!(
     first_name: "Sally",
     last_name: "Mantis",
@@ -125,18 +131,19 @@ electric_car = Idea.new(
     password: "password"
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80")
-electric_car.photo.attach(io: file, filename: "electric_car.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80")
+# electric_car.photo.attach(io: file, filename: "electric_car.jpg", content_type: "image/jpg")
 electric_car.save!
 
 lower_home_heating = Idea.new(
   title: "Decrease home heating",
-  content: "Reduce the temperature inside my home by 1 degree Celsius during winter.",
+  content: "Reduce the temperature in my home by 1 degree Celsius during winter.",
   location: "Edinburgh, United Kingdom",
   votes: 0,
   category: "home",
   subcategory: "heating",
   impact: "10%",
+  photo: "https://images.unsplash.com/photo-1619140099965-06d74aaf51fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Todd",
     last_name: "Gakke",
@@ -144,8 +151,8 @@ lower_home_heating = Idea.new(
     password: "password"
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1619140099965-06d74aaf51fa?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-lower_home_heating.photo.attach(io: file, filename: "lower_home_heating.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1619140099965-06d74aaf51fa?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+# lower_home_heating.photo.attach(io: file, filename: "lower_home_heating.jpg", content_type: "image/jpg")
 lower_home_heating.save!
 
 holiday_train = Idea.new(
@@ -156,6 +163,7 @@ holiday_train = Idea.new(
   category: "leisure",
   subcategory: "travel",
   impact: "10%",
+  photo: "https://images.unsplash.com/photo-1562078809-7ef447ae26c6?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Lois",
     last_name: "Steele",
@@ -163,8 +171,8 @@ holiday_train = Idea.new(
     password: "password"
   )
 )
-file = URI.open("https://images.unsplash.com/photo-1562078809-7ef447ae26c6?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
-holiday_train.photo.attach(io: file, filename: "holiday_train.jpg", content_type: "image/jpg")
+# file = URI.open("https://images.unsplash.com/photo-1562078809-7ef447ae26c6?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+# holiday_train.photo.attach(io: file, filename: "holiday_train.jpg", content_type: "image/jpg")
 holiday_train.save!
 
 Idea.all.each do |idea|
