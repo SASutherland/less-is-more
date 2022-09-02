@@ -1,3 +1,24 @@
+
+
+
+<% if @refresh%>
+  <div id="refresh" style="display: none;" data-refresh="<%= @refresh %>"></div>
+<% end %>
+
+<div class="container general1 d-flex margin-top: 300px;" id="page1">
+  <form action="/results" class="">
+    <div class="row card d-flex ">
+      <div class="title">
+        <h1 > Profile your Lifestyle </h1>
+      </div>
+      <div class="middle">
+        <div class="icons justify-content-between">
+          <i class="fa-solid fa-user current"></i>
+          <i class="fa-solid fa-car-side"></i>
+          <i class="fa-solid fa-utensils"></i>
+          <i class="fa-solid fa-house-chimney"></i>
+          <i class="fa-solid fa-champagne-glasses"></i>
+
 <div class="bodycont">
   <% if @refresh%>
     <div id="refresh" style="display: none;" data-refresh="<%= @refresh %>"></div>
@@ -7,6 +28,7 @@
       <div class="row card d-flex ">
         <div class="title">
           <h1 > Profile your Lifestyle </h1>
+
         </div>
         <div class="middle">
           <div class="icons justify-content-between">
@@ -157,6 +179,12 @@
           <h1 > Profile your Lifestyle </h1>
         </div>
 
+
+        <input type="hidden" id="" name="random" value="true">
+      <div class="green5">
+        <input class="button" type="submit">
+      </div>
+
         <div class=" middle d-flex">
           <div class="icons4 d-flex justify-content-between">
             <i class="fa-solid fa-user current"></i>
@@ -178,6 +206,7 @@
           <button class="button", results_path >Submit</button>
         </div>
         </div>
+
       </div>
     </form>
   </div>
