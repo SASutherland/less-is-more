@@ -3,15 +3,23 @@
     <div>
       <h1>My Tribe</h1>
     </div>
-    <div>
-      <%= render "searchbar", chatrooms: @chatrooms %></div>
-    </div>
-      <div class="card-body">
-      <% @ideas.each do |idea| %>
-      <%= idea.title %>
-      <% end %>
-
-        <a href="#" class="search-btn">Button</a>
+    <div class="middle d-flex ">
+      <div>
+        <%= render "searchbar", chatrooms: @chatrooms %></div>
       </div>
+        <div class="row card-product">
+              <h2><% @ideas.each do |idea| %></h2>
+              <div class="col">
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" width="80px" height="50px" />
+              <div class="col card-product-infos">
+              <p><%= idea.title %></p>
+              <p><%= idea.content %></p>
+              </div>
+              <% end %>
+
+            <%# <a href="#" class="search-btn">Button</a> %>
+          </div>
+        </div>
+    </div>
   </div>
 </div>
