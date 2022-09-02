@@ -98,12 +98,10 @@
 
         <% @ideas.each do |idea| %>
           <div class="tinder--card">
-            <div class="idea-card-img">
           <%# <img src="https://source.unsplash.com/random/600x300?nature"> %>
-              <%= idea.photo %>
-            </div>
-          <h3><%= idea.title %></h3>
-          <p><%= idea.content %></p>
+            <img src=<%= idea.photo %>>
+            <h3><%= idea.title %></h3>
+            <p><%= idea.content %></p>
           </div>
         <% end %>
 
