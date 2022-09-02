@@ -10,7 +10,7 @@
       <div class="hidden dropdown" data-dropdown-menu-target="dropdown">
           <% if user_signed_in? %>
                 <%= link_to "Footprint", results_path, class: "dropdown-item" %>
-                <%= link_to "Ideas", destroy_user_session_path, class: "dropdown-item" %>
+                <%= link_to "Ideas", ideas_path, class: "dropdown-item" %>
                 <%= link_to "Target", favourites_path, class: "dropdown-item" %>
                 <%= link_to "Community", destroy_user_session_path, class: "dropdown-item" %>
                 <%= link_to "About", about_path, class: "dropdown-item" %>

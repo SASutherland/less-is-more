@@ -1,5 +1,6 @@
 
 
+
 <% if @refresh%>
   <div id="refresh" style="display: none;" data-refresh="<%= @refresh %>"></div>
 <% end %>
@@ -17,169 +18,196 @@
           <i class="fa-solid fa-utensils"></i>
           <i class="fa-solid fa-house-chimney"></i>
           <i class="fa-solid fa-champagne-glasses"></i>
+
+<div class="bodycont">
+  <% if @refresh%>
+    <div id="refresh" style="display: none;" data-refresh="<%= @refresh %>"></div>
+  <% end %>
+  <div class="container general1 d-flex" id="page1">
+    <form action="/results">
+      <div class="row card d-flex ">
+        <div class="title">
+          <h1 > Profile your Lifestyle </h1>
+
         </div>
-        <h2 class="question"> Where do you live?</h2>
-        <div>
+        <div class="middle">
+          <div class="icons justify-content-between">
+            <i class="fa-solid fa-user current"></i>
+            <i class="fa-solid fa-car-side"></i>
+            <i class="fa-solid fa-utensils"></i>
+            <i class="fa-solid fa-house-chimney"></i>
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <h2 class="question"> Where do you live?</h2>
+          <div>
+            <div class="form-group">
+              <select class="form-control" id="country" name="country">
+                <% ApplicationRecord::COUNTRIES.each do |country|%>
+                <option value="<%= country %>"> <%=country %> </option>
+                <% end %>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="green1 button">
+          <a href="#page2">Next</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container-fluid general2 d-flex" id="page2">
+      <div class="row card card2 d-flex ">
+        <div class="title">
+          <h1 > Profile your Lifestyle </h1>
+        </div>
+
+        <div class=" middle d-flex">
+          <div class="icons2 d-flex justify-content-between">
+            <i class="fa-solid fa-user current"></i>
+            <i class="fa-solid fa-car-side current"></i>
+            <i class="fa-solid fa-utensils"></i>
+            <i class="fa-solid fa-house-chimney"></i>
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <div class="container bloc">
+            <h2 class="question2"> How do you go to work?</h2>
+            <div class="form-group">
+              <select class="form-control" id="work" name="work">
+                <option value="car"> Car </option>
+                <option value="electrical_car"> Electrical Car </option>
+                <option value="public_transport"> Public Transport </option>
+                <option value="bike"> Bike </option>
+                <option value="foot"> Foot </option>
+              </select>
+            </div>
+          </div>
+          <div class="container bloc">
+            <h2 class="question2"> How many flights you do per year?</h2>
+            <div class="form-group">
+              <select class="form-control" id="flight" name="flight">
+                <option value="1"> 1 </option>
+                <option value="2"> 2</option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 and more </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="green2 button">
+          <a href="#page3"  >Next</a>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container general3 d-flex" id="page3">
+      <div class="row card card3 d-flex ">
+        <div class="title">
+          <h1 > Profile your Lifestyle </h1>
+        </div>
+
+        <div class=" middle d-flex">
+          <div class="icons3 d-flex justify-content-between">
+            <i class="fa-solid fa-user current"></i>
+            <i class="fa-solid fa-car-side current"></i>
+            <i class="fa-solid fa-utensils current"></i>
+            <i class="fa-solid fa-house-chimney"></i>
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <div class="container bloc3">
+          <h2 class="question3">What is your favorite food?</h2>
+        </div>
+
           <div class="form-group">
-            <select class="form-control" id="country" name="country">
-              <% ApplicationRecord::COUNTRIES.each do |country|%>
-              <option value="<%= country %>"> <%=country %> </option>
-              <% end %>
+            <select class="form-control" id="food" name="food">
+              <option value="beef">Beef </option>
+              <option  value="pork_poultry">Pork & Poultry</option>
+              <option value="fish">Fish</option>
+              <option value="vegetables">Vegetables</option>
             </select>
+          </div>
+
+        <div class="green3 button">
+          <a href="#page4" >Next</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  <div class="container general5 d-flex" id="page4">
+      <div class="row card card4 d-flex ">
+        <div class="title2">
+          <h1 > Profile your Lifestyle </h1>
+        </div>
+
+        <div class=" middle d-flex">
+          <div class="icons5 d-flex justify-content-between">
+            <i class="fa-solid fa-user current"></i>
+            <i class="fa-solid fa-car-side current"></i>
+            <i class="fa-solid fa-utensils current"></i>
+            <i class="fa-solid fa-house-chimney current"></i>
+            <i class="fa-solid fa-champagne-glasses current"></i>
+          </div>
+          <div class="container bloc5">
+          <h2 class="question5"> How do you mostly spend your free-time?</h2>
+          </div>
+
+          <div class="form-group">
+            <select class="form-control" id="leisure" name="leisure">
+              <option value="hanging out">Hanging out </option>
+              <option  value="traveling">Traveling</option>
+              <option value="chilling">Chilling at home</option>
+              <option value="shopping">Shopping</option>
+            </select>
+          </div>
+
+
+          <div class="green4 button">
+              <a href="#page5" >Next</a>
           </div>
         </div>
       </div>
-      <div class="green1 button">
-        <a href="#page2">Next</a>
-      </div>
     </div>
 
-
-
-
-  <div class="container-fluid general2 d-flex" id="page2">
-    <div class="row card card2 d-flex ">
-      <div class="title">
-        <h1 > Profile your Lifestyle </h1>
-      </div>
-
-      <div class=" middle d-flex">
-        <div class="icons2 d-flex justify-content-between">
-          <i class="fa-solid fa-user current"></i>
-          <i class="fa-solid fa-car-side current"></i>
-          <i class="fa-solid fa-utensils"></i>
-          <i class="fa-solid fa-house-chimney"></i>
-          <i class="fa-solid fa-champagne-glasses"></i>
-        </div>
-        <div class="container bloc">
-          <h2 class="question2"> How do you go to work?</h2>
-          <div class="form-group">
-            <select class="form-control" id="work" name="work">
-              <option value="car"> Car </option>
-              <option value="electrical_car"> Electrical Car </option>
-              <option value="public_transport"> Public Transport </option>
-              <option value="bike"> Bike </option>
-              <option value="foot"> Foot </option>
-            </select>
-          </div>
-        </div>
-        <div class="container bloc">
-          <h2 class="question2"> How many flights you do per year?</h2>
-          <div class="form-group">
-            <select class="form-control" id="flight" name="flight">
-              <option value="1"> 1 </option>
-              <option value="2"> 2</option>
-              <option value="3"> 3 </option>
-              <option value="4"> 4 and more </option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="green2 button">
-        <a href="#page3"  >Next</a>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="container general3 d-flex" id="page3">
-    <div class="row card card3 d-flex ">
-      <div class="title">
-        <h1 > Profile your Lifestyle </h1>
-      </div>
-
-      <div class=" middle d-flex">
-        <div class="icons3 d-flex justify-content-between">
-          <i class="fa-solid fa-user current"></i>
-          <i class="fa-solid fa-car-side current"></i>
-          <i class="fa-solid fa-utensils current"></i>
-          <i class="fa-solid fa-house-chimney"></i>
-          <i class="fa-solid fa-champagne-glasses"></i>
-        </div>
-        <div class="container bloc3">
-        <h2 class="question3">What is your favorite food?</h2>
-      </div>
-
-        <div class="form-group">
-          <select class="form-control" id="food" name="food">
-            <option value="beef">Beef </option>
-            <option  value="pork_poultry">Pork & Poultry</option>
-            <option value="fish">Fish</option>
-            <option value="vegetables">Vegetables</option>
-          </select>
+  <div class="container general4 d-flex" id="page5">
+      <div class="row card card5 d-flex ">
+        <div class="title">
+          <h1 > Profile your Lifestyle </h1>
         </div>
 
-      <div class="green3 button">
-        <a href="#page4" >Next</a>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-<div class="container general5 d-flex" id="page4">
-    <div class="row card card4 d-flex ">
-      <div class="title2">
-        <h1 > Profile your Lifestyle </h1>
-      </div>
-
-      <div class=" middle d-flex">
-        <div class="icons5 d-flex justify-content-between">
-          <i class="fa-solid fa-user current"></i>
-          <i class="fa-solid fa-car-side current"></i>
-          <i class="fa-solid fa-utensils current"></i>
-          <i class="fa-solid fa-house-chimney current"></i>
-          <i class="fa-solid fa-champagne-glasses current"></i>
-        </div>
-        <div class="container bloc5">
-        <h2 class="question5"> How do you mostly spend your free-time?</h2>
-        </div>
-
-        <div class="form-group">
-          <select class="form-control" id="leisure" name="leisure">
-            <option value="hanging out">Hanging out </option>
-            <option  value="traveling">Traveling</option>
-            <option value="chilling">Chilling at home</option>
-            <option value="shopping">Shopping</option>
-          </select>
-        </div>
-
-
-        <div class="green4 button">
-            <a href="#page5" >Next</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
- <div class="container general4 d-flex" id="page5">
-    <div class="row card card5 d-flex ">
-      <div class="title">
-        <h1 > Profile your Lifestyle </h1>
-      </div>
-
-      <div class=" middle d-flex">
-        <div class="icons4 d-flex justify-content-between">
-          <i class="fa-solid fa-user current"></i>
-          <i class="fa-solid fa-car-side current"></i>
-          <i class="fa-solid fa-utensils current"></i>
-          <i class="fa-solid fa-house-chimney current"></i>
-          <i class="fa-solid fa-champagne-glasses"></i>
-        </div>
-        <div class="container bloc4">
-          <h2 class="question4"> Your ideal room temperature?</h2>
-        </div>
-        <div class="slidecontainer">
-          <input type="range" min="16" max="25" value="20" class="slider" id="myRange" name="myrange">
-            <p> <span id="demo" > </span> Degres</p>
-        </div>
 
         <input type="hidden" id="" name="random" value="true">
       <div class="green5">
         <input class="button" type="submit">
       </div>
+
+        <div class=" middle d-flex">
+          <div class="icons4 d-flex justify-content-between">
+            <i class="fa-solid fa-user current"></i>
+            <i class="fa-solid fa-car-side current"></i>
+            <i class="fa-solid fa-utensils current"></i>
+            <i class="fa-solid fa-house-chimney current"></i>
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <div class="container bloc4">
+            <h2 class="question4"> Your ideal room temperature?</h2>
+          </div>
+          <div class="slidecontainer">
+            <input type="range" min="16" max="25" value="20" class="slider" id="myRange" name="myrange">
+              <p> <span id="demo" > </span> Degres</p>
+          </div>
+
+
+        <div class="green5">
+          <button class="button", results_path >Submit</button>
+        </div>
+        </div>
+
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
 </div>

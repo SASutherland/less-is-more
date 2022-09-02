@@ -12,7 +12,8 @@
 }
 .navbar h1{
   font-family: 'Rubik Microbe', cursive;
-}
+  margin-top: -3rem;}
+
 .avatarimg{
   width: 40px;
   height: 40px;
@@ -29,10 +30,11 @@
   right: 0px;
   top: 50px;
   height: 15rem;
-
+  z-index: 100;
 }
 .dropdown-item{
   margin-bottom: 14px;
+  z-index: 100;
 }
 .dropimg{
   position: relative;
