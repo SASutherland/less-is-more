@@ -33,6 +33,7 @@
           },
           'geometry': {
             'type': marker.location,
+            'content': marker.content,
             'coordinates': [marker.lng, marker.lat]
           }
         })
@@ -65,7 +66,7 @@
         // Add a popup displayed on click for each marker
         const popup = new mapboxgl.Popup({ offset: 25 });
         popup.setHTML(
-        `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br/>`
+        `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br/>`
         );
 
         // Add markers to the map.
