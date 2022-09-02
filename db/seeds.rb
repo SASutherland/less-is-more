@@ -10,7 +10,7 @@ puts "Clearing database..."
 Favourite.destroy_all
 Idea.destroy_all
 User.destroy_all
-Chatroom.destroy_all
+# Chatroom.destroy_all
 puts "Cleared!"
 
 puts "Creating users, ideas..."
@@ -38,7 +38,7 @@ carpool.save!
 work_from_home = Idea.new(
   title: "Home office",
   content: "Work remotely one day per week.",
-  location: "St. John's, Newfoundland and Labrador",
+  location: "St. John's, Newfoundland",
   votes: 0,
   category: "transport",
   subcategory: "car",
@@ -55,25 +55,6 @@ work_from_home = Idea.new(
 # work_from_home.photo.attach(io: file, filename: "work_from_home.jpg", content_type: "image/jpg")
 work_from_home.save!
 
-poultry_and_pork = Idea.new(
-  title: "Eat more poultry/pork",
-  content: "Limit beef consumption and choose other meats instead.",
-  location: "Nairobi, Kenya",
-  votes: 0,
-  category: "food",
-  subcategory: "beef",
-  impact: "10%",
-  photo: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80",
-  user: User.create!(
-    first_name: "Dan",
-    last_name: "Goodman",
-    email: "dan@realmail.com",
-    password: "password"
-  )
-)
-# file = URI.open("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80")
-# poultry_and_pork.photo.attach(io: file, filename: "poultry_and_pork.jpg", content_type: "image/jpg")
-poultry_and_pork.save!
 
 skip_meat = Idea.new(
   title: "Move toward veganism",
@@ -175,12 +156,32 @@ holiday_train = Idea.new(
 # holiday_train.photo.attach(io: file, filename: "holiday_train.jpg", content_type: "image/jpg")
 holiday_train.save!
 
-Idea.all.each do |idea|
-  Chatroom.create(
-    name: idea.title,
-    idea: idea
+poultry_and_pork = Idea.new(
+  title: "Eat more poultry/pork",
+  content: "Limit beef consumption and choose other meats instead.",
+  location: "Nairobi, Kenya",
+  votes: 0,
+  category: "food",
+  subcategory: "beef",
+  impact: "10%",
+  photo: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80",
+  user: User.create!(
+    first_name: "Dan",
+    last_name: "Goodman",
+    email: "dan@realmail.com",
+    password: "password"
   )
-end
+)
+# file = URI.open("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80")
+# poultry_and_pork.photo.attach(io: file, filename: "poultry_and_pork.jpg", content_type: "image/jpg")
+poultry_and_pork.save!
+
+# Idea.all.each do |idea|
+#   Chatroom.create(
+#     name: idea.title,
+#     idea: idea
+#   )
+# end
 
 # ideaname9 = Idea.new(
 #   title: ,

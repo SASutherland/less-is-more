@@ -33,6 +33,7 @@
           },
           'geometry': {
             'type': marker.location,
+            'content': marker.content,
             'coordinates': [marker.lng, marker.lat]
           }
         })
@@ -65,7 +66,7 @@
         // Add a popup displayed on click for each marker
         const popup = new mapboxgl.Popup({ offset: 25 });
         popup.setHTML(
-        `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br/>`
+        `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br/>`
         );
 
         // Add markers to the map.
@@ -83,9 +84,14 @@
 
     <br>
 
-    <h2 class="pt-3">Ideas for You</h2>
+    <h2 class="pt-3" style="margin-bottom: -10px;">Ideas for You</h2>
 
     <br>
+
+    <div class="swipe-instructions">
+      <p>Swipe <strong>right</strong> to accept an idea.</p>
+      <p>Swipe <strong>left</strong> to decline an idea.</p>
+    </div>
 
     <div class="tinder">
 

@@ -1,6 +1,13 @@
 // Import page-specific CSS files here.
 @import "swiper";
 
+.ideas-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .ideas-card {
   background-color: white;
   width: 90%;
@@ -15,11 +22,15 @@
   margin-bottom: 30px;
 }
 
-.ideas-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.swipe-instructions {
+  padding-bottom: 10px;
+}
+
+.swipe-instructions p {
+  text-align: left;
+  font-size: 10px;
+  line-height: 60%;
+  padding-left: 16px;
 }
 
 .tinder--card img {

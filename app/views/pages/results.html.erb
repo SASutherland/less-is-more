@@ -75,7 +75,6 @@
                   'Car',
                   'Plane',
                   'Train',
-                  'Bike',
                   'Fish',
                   'Meat',
                   'Vegetables',
@@ -86,7 +85,7 @@
                   labels: radarLabels,
                   datasets: [{
                   label: 'Your Country',
-                  data: [1441, 318, 272, 91, 101, 786, 202 ,990],
+                  data: [1441, 318, 272,101, 786, 202 ,990],
                   fill: true,
                   backgroundColor: 'rgba(255, 99, 132, 0.2)',
                   borderColor: 'rgb(255, 99, 132)',
@@ -97,7 +96,7 @@
                 },
                 {
                   label: 'My Footprint',
-                  data: [700, 700, 500, 91, 200, 200, 400 ,800],
+                  data: [700, 700, 500, 200, 200, 400 ,800],
                   fill: true,
                   backgroundColor: '#7A56AB',
                   borderColor: '#7A56AB',
@@ -134,7 +133,7 @@
           </div>
           </div>
         <div class="d-flex justify-content-center">
-          <button class="button">Get Ideas</button>
+           <%= link_to "Get Ideas", ideas_path(refresh: true), class: "button" %>
         </div>
       </div>
     </div>
