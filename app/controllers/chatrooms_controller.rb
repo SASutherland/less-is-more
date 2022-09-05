@@ -9,8 +9,9 @@ class ChatroomsController < ApplicationController
     end
   end
 
-  # def show
-  #   @chatroom = Chatroom.find(params[:id])
-  #   @message = Message.new
-  # end
+  def show
+    @chatrooms = Chatroom.find(params[:chatroom_id])
+    @idea = Idea.find(params[:id])
+    @message = Message.new
+  end
 end
