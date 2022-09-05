@@ -30,6 +30,10 @@
   text-align: center;
 
 }
+#buttonhome{
+  margin-top: -7vw;
+
+}
 
 #typed{
   display: flex;
@@ -189,12 +193,14 @@ margin-top: -22vw;
   border: none;
   color: white;
   cursor: pointer;
+  background-color: black;
   animation: anim2 0.7s steps(22) forwards;
 }
 
 .button-container button:hover {
   animation: anim1 0.7s steps(22) forwards;
   color: rgb(195, 191, 191);
+  background-color: black;
 }
 
 

@@ -12,7 +12,7 @@
 
 }
 
-.results-container{
+.result-container{
   align-items: center;
   justify-content: center;
 
@@ -62,35 +62,32 @@ h3{
 .container-radar{
   align-items: center;
   justify-content: center;
-  height:70vh;
   width:90vw;
   border-radius: 30px;
   margin-top: 30vw;
   box-shadow: 2px 6px 6px #6f6f6f;
   line-height: 25vw;
   background: white;
+  margin-bottom: 30vh;
+  height: 59vh;
 }
 
 .comparison{
   font-weight: bold;
-  margin-top: 10vw;
+  margin-top: 20vw;
   font-size: 7.5vw;
   padding-top: 10vw;
-  padding-top: 10vw;
+
 }
 
-
-
-#bntresults{
-  margin-top: 50vw;
-}
 
 #maskresult{
-  margin-bottom: 70vw;
+  margin-top: -2vw;
 }
 
-
-
+#buttonsurvey {
+  margin-top: -20vw;
+}
 
 .button-container {
   position: relative;
@@ -98,7 +95,7 @@ h3{
   height: 10vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
+  margin-top: 13vh;
   margin-bottom: 10vh;
   overflow: hidden;
   transition: 0.5s;
