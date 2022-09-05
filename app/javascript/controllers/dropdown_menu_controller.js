@@ -7,12 +7,9 @@ export default class extends Controller {
   static values = { isOpen: { type: Boolean, default: false } }
 
   connect() {
-    console.log("hello from connect")
   }
 
   menu() {
-    console.log("hello from menu(click)")
-    console.log(this.dropdownTarget)
     this.isOpenValue ? this.hide() : this.show()
     this.isOpenValue = !this.isOpenValue
   }
