@@ -1,22 +1,37 @@
 .results-card{
   background-color: white;
   width: 90%;
-  height: 600px;
+  // height: 600px;
   border-radius: 12px;
   box-shadow: 10px 20px 15px #6f6f6f;
   border-radius: 20px;
-  padding: 25px;
-  flex-direction: row;
+  padding: 15px;
 }
 
-.card-product {
+.card-idea {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  transition: .3s;
+  cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+}
+
+.card-idea:hover {
+  transform: scale(1.05);
+}
+
+// .ideas-form {
+//   margin-left: 1rem;
+//   margin-right: 1rem;
+//   width: 90%;
+// }
 
 .card-product img {
   height: 50px;
@@ -38,6 +53,6 @@
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
-}
+// .card-product .card-product-infos {
+//   padding: 16px;
+// }

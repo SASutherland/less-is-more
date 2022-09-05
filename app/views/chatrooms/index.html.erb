@@ -1,25 +1,26 @@
 <div class="results-container">
   <div class="results-card">
     <div>
-      <h1>My Tribe</h1>
+      <h2>My Tribe</h2>
     </div>
-    <div class="middle d-flex ">
-      <div>
-        <%= render "searchbar", chatrooms: @chatrooms %></div>
-      </div>
-        <div class="row card-product">
-              <h2><% @ideas.each do |idea| %></h2>
-              <div class="col">
+    <%= render "searchbar", chatrooms: @chatrooms %>
+    <div>
+      <% @ideas.each do |idea| %>
+        <div class="card-idea">
+          <%= link_to chatroom_path(Chatroom.find_by(idea_id: idea.id).id) do %>
+            <div>
               <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" width="80px" height="50px" />
-              <div class="col card-product-infos">
-              <p><%= idea.title %></p>
-              <p><%= idea.content %></p>
-              </div>
-              <% end %>
+            </div>
+            <div class="card-product-infos">
+              <div>
 
-            <%# <a href="#" class="search-btn">Button</a> %>
-          </div>
+                <h4><%= idea.title %></h4>
+                <p><%= idea.content %></p>
+              </div>
+            </div>
+          <% end %>
         </div>
+      <% end %>
     </div>
   </div>
 </div>
