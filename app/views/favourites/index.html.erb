@@ -7,16 +7,29 @@
     </div>
     <div class="actionbtncont">
       <h4>My actions</h4>
-      <%= image_tag "plus-circle-fill.png"%>
+      <% link_to ideas_path %><%= image_tag "plus-circle-fill.png" %>
     </div>
+
     <div class="saved_ideas">
+
+    <% @favourites.each do |favourite| %>
       <div class="card-idea">
+        <%= image_tag favourite.idea.photo %>
+          <div class="card-idea-infos">
+            <h2><%= favourite.idea.title %></h2>
+            <p><%= favourite.idea.content %></p>
+          </div>
+      </div>
+    <% end %>
+
+
+   <!--   <div class="card-idea">
         <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
           <div class="card-idea-infos">
             <h2>Move towards veganism</h2>
             <p>Skip meat and choose a more plant-based diet.</p>
           </div>
-
+    -->
       <!--
           <div class="deletebtn">
             <%= image_tag "delete.png"%>

@@ -10,6 +10,7 @@ class IdeasController < ApplicationController
         location: idea.location,
         lat: idea.latitude,
         lng: idea.longitude,
+        idea_id: idea.id,
         infoWindow: render_to_string(partial: "info_window", locals: { idea: idea })
       }
     end

@@ -1,0 +1,27 @@
+  <%= simple_form_for(@idea) do |f| %>
+      <div class="form-control-idea">
+        <%= f.input :title %>
+      </div>
+      <div class="form-control-idea">
+        <%= f.input :content, label: "Description" %>
+      </div>
+      <div class="form-control-idea">
+        <%= f.input :location %>
+      </div>
+      <div class="form-control-idea">
+      <%= f.input :impact, label: "Impact in %", input_html: { min: "0"}  %>
+      </div>
+      <div class="form-control-idea">
+          <%= f.input :category, collection: ["Food", "House", "Transport", "Leisure"] %>
+      </div>
+      <div class="form-control-idea">
+      <%= f.input :subcategory, collection: ["Car", "Public transport", "Plane", "Beef", "Pork/Poultry", "Fish", "Vegetables", "Heating", "Lighting"] %>
+      </div>
+      <div class="form-control-idea">
+        <%= f.input :photo, as: :file, input_html: { multiple: false } %>
+      </div>
+    <br>
+    <div class="btn_idea_container">
+      <%= f.button :submit, "Post your idea", class: "button" %>
+    </div>
+  <% end %>

@@ -1,26 +1,32 @@
 .container-target{
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
 }
 .backcard{
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: white;
-  width: 80%;
+  width: 90vw;
   border-radius: 8px;
-  height: 88vh;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 20px;
+  box-shadow: 2px 6px 6px #6f6f6f;
 }
 .backcard h1{
-  margin-left: -4rem;
-  margin-top: 0rem;
-  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  font-size: 10vw;
+  font-weight: bold;
+  margin-top: 8vw;
+  margin-bottom: 20px;
 }
 .backcard h4{
   margin-left: -8rem;
   margin-top: 0rem;
   margin-bottom: 2rem;
+  font-weight: 700;
 }
 .targetchart{
   height: 30%;
