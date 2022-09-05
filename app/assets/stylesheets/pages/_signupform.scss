@@ -1,9 +1,7 @@
-// body{
-//   height: 100vh;
-// }
 h2{
+  margin-left: 1rem;
   font-weight: bold;
-  margin-left: 4vw;
+  font-size: 6vh;
 }
 h4{
   margin-left: 1rem;
@@ -11,12 +9,6 @@ h4{
 .form-label{
   margin-left: 1rem;
   margin-right: 1rem;
-}
-
-.form-control{
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: 90%;
 }
 .signtext{
   display: flex;
@@ -28,23 +20,26 @@ h4{
   border-radius: 8px;
   margin: 1rem;
   padding: 1rem;
-  width: 80%;
+  width: 90%;
+  height: 100%;
+  margin-left: 1.3rem;
+  .form-control{
+    height: 5vh;
+    width: 90%;
+    margin-left: 15px !important;
+    border-radius: 5px;
+  }
+}
+.form-actions .button{
+  width: 50%;
+  margin-left: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 1rem;
 }
 .form-text{
-  margin-left: 1.2rem;
+  margin-left: 1rem;
 }
 .btnsigncont{
   display: flex;
   justify-content: flex-end;
-}
-.btnsigncont a{
-  text-decoration: none;
-  margin-top: 25px;
-  color: #84c6bc;
-}
-.formall{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
