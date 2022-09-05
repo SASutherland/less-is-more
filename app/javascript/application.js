@@ -5,9 +5,6 @@ import "./controllers"
 import "bootstrap"
 import {swiper} from "./plugin/swiper"
 
-console.log('hello from app normal before slider')
-
-
 // var slider = document.getElementById("myRange");
 // var output = document.getElementById("demo");
 
@@ -125,5 +122,3 @@ document.addEventListener('turbo:load', () => {
     console.log(myRadar)
   }
 })
-
-console.log('hello from app normal after slider')
