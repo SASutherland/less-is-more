@@ -1,8 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" >
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-    <h1><=></h1>
-    <% end %>
+    <%= link_to image_tag("logo.png", alt: "Brand",style:" width: 20vw;"), root_path, :class=>'navbar-brand'  %>
     <div class="dropimg" data-controller="dropdown-menu" >
       <div data-action="click->dropdown-menu#menu">
         <%= image_tag "avatar.png", class:"avatarimg"%>
