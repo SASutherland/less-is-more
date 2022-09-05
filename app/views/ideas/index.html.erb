@@ -1,81 +1,131 @@
-<h2>Getting ideas</h2>
 
-<br>
+<div class="ideas-container">
 
-<div class="d-none" id="marker-get"><%= @markers %></div>
-<div id="map" data-markers="<%= @markers.to_json %>" style="width: 100%; height: 390px;"></div>
+  <div class="ideas-card">
 
-<style>
-  .marker {
-    background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/pin.svg');
-    background-size: cover;
-    cursor: pointer;
-  }
-</style>
+    <h2 class="pt-2">Getting ideas</h2>
 
-<script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoicGllcnJlY2FpbGxpYXUiLCJhIjoiY2w3aGd6d281MGVhbjNvc2FvZ3dnbXAxdCJ9.8TtZBHevDZoSbiFLOnXmqQ';
-  const markerGet = document.getElementById("marker-get").innerText
-  const mapGet = document.getElementById("map")
-  const markers = JSON.parse(mapGet.dataset.markers);
-  const features = [];
-  markers.forEach((marker) => {
-    features.push({
-      'type': 'Feature',
-      'properties': {
-        'name': 'Idea',
-        'height': 8849
-      },
-      'geometry': {
-        'type': 'Point',
-        'coordinates': [marker.lng, marker.lat]
+    <br>
+
+    <div class="d-none" id="marker-get"><%= @markers %></div>
+    <div id="map" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" data-markers="<%= @markers.to_json %>" style="width: 100%; height: 390px;"></div>
+
+    <style>
+      .marker {
+        background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/pin.svg');
+        background-size: cover;
+        cursor: pointer;
       }
-    })
-  });
-  const geojson = {
-    'type': 'FeatureCollection',
-    'features': features
-  };
+    </style>
 
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/light-v9',
-    center: [130, 35],
-    zoom: 0.75,
-    projection: 'globe'
-  });
+    <script>
+      const markerGet = document.getElementById("marker-get").innerText
+      const mapGet = document.getElementById("map")
+      mapboxgl.accessToken = mapGet.dataset.mapApiKeyValue;
+      const markers = JSON.parse(mapGet.dataset.markers);
+      const features = [];
+      markers.forEach((marker) => {
+        features.push({
+          'type': 'Feature',
+          'properties': {
+            'name': marker.name,
+            'height': 8849
+          },
+          'geometry': {
+            'type': marker.location,
+            'content': marker.content,
+            'coordinates': [marker.lng, marker.lat]
+          }
+        })
+      });
+      const geojson = {
+        'type': 'FeatureCollection',
+        'features': features
+      };
 
-  map.on('style.load', () => {
-    map.setFog({});
-  });
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v9',
+        center: [130, 35],
+        zoom: 0.75,
+        projection: 'globe'
+      });
 
-  for (const marker of geojson.features) {
-    // Create a DOM element for each marker.
-    const el = document.createElement('div');
-    el.className = 'marker';
-    const size = marker.properties.height / 100;
-    el.style.width = `${size}px`;
-    el.style.height = `${size}px`;
+      map.on('style.load', () => {
+        map.setFog({});
+      });
 
-    // Add a popup displayed on click for each marker
-    const popup = new mapboxgl.Popup({ offset: 25 });
-    popup.setHTML(
-    `<h2>${marker.properties.name}</h2>${marker.properties.height}m<br/>`
-    );
+      for (const marker of geojson.features) {
+        // Create a DOM element for each marker.
+        const el = document.createElement('div');
+        el.className = 'marker';
+        const size = marker.properties.height / 100;
+        el.style.width = `${size}px`;
+        el.style.height = `${size}px`;
 
-    // Add markers to the map.
-    new mapboxgl.Marker({
-      element: el,
-      // Point markers toward the nearest horizon
-      rotationAlignment: 'horizon',
-      offset: [0, -size / 2]
-    })
-    .setLngLat(marker.geometry.coordinates)
-    .setPopup(popup)
-    .addTo(map);
-  }
-</script>
+        // Add a popup displayed on click for each marker
+        const popup = new mapboxgl.Popup({ offset: 25 });
+        popup.setHTML(
+        `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br><br>
+        <%= link_to favourites_path do %>
+          <%= image_tag "plus-circle-fill.png" %>
+        <% end %>
+        <br/>`
+        );
 
-<br>
+        // Add markers to the map.
+        new mapboxgl.Marker({
+          element: el,
+          // Point markers toward the nearest horizon
+          rotationAlignment: 'horizon',
+          offset: [0, -size / 2]
+        })
+        .setLngLat(marker.geometry.coordinates)
+        .setPopup(popup)
+        .addTo(map);
+      }
+    </script>
 
-<h2>Recommended Ideas</h2>
+    <br>
+
+    <h2 class="pt-3" style="margin-bottom: -10px;">Ideas for You</h2>
+
+    <br>
+
+    <div class="swipe-instructions">
+      <p>Swipe <strong>right</strong> to accept an idea.</p>
+      <p>Swipe <strong>left</strong> to decline an idea.</p>
+    </div>
+
+    <div class="tinder">
+
+      <div class="tinder--status">
+        <i class="fa fa-remove"></i>
+        <i class="fa fa-heart"></i>
+      </div>
+
+      <div class="tinder--cards">
+
+        <% @ideas.each do |idea| %>
+          <div class="tinder--card">
+          <%# <img src="https://source.unsplash.com/random/600x300?nature"> %>
+            <img src=<%= idea.photo %>>
+            <h3><%= idea.title %></h3>
+            <p><%= idea.content %></p>
+          </div>
+        <% end %>
+
+      <!--
+        <div class="tinder--buttons">
+          <button id="nope"><i class="fa fa-remove"></i></button>
+          <button id="love"><i class="fa fa-heart"></i></button>
+        </div>
+      -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,4 +1,136 @@
-<div class="container general1 d-flex" id="page1">
+
+
+  <% if @refresh%>
+    <div id="refresh" style="display: none;" data-refresh="<%= @refresh %>"></div>
+  <% end %>
+
+  <form action="/results">
+      <div class="row card cardsurvey1 d-flex ">
+        <h1 class="title"> Profile your Lifestyle </h1>
+        <div class="icons justify-content-between">
+          <i class="fa-solid fa-solid1 fa-user current"></i>
+          <i class="fa-solid fa-solid1 fa-car-side"></i>
+          <i class="fa-solid fa-solid1 fa-utensils"></i>
+          <i class="fa-solid fa-solid1 fa-house-chimney"></i>
+          <i class="fa-solid fa-solid1 fa-champagne-glasses"></i>
+        </div>
+        <h2 class="question question1"> Where do you live?</h2>
+        <div class="form-group">
+          <select class="form-control" id="country" name="country" >
+            <option value="" disabled selected>Select your country</option>
+            <% ApplicationRecord::COUNTRIES.each do |country|%>
+              <option value="<%= country %>" > <%=country %> </option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+      <div class="row card d-flex ">
+        <div class="icons justify-content-between">
+          <i class="fa-solid fa-user "></i>
+          <i class="fa-solid fa-car-side current"></i>
+          <i class="fa-solid fa-utensils"></i>
+          <i class="fa-solid fa-house-chimney"></i>
+          <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+        <h2 class="question"> How do you go to work?</h2>
+        <div class="form-group">
+           <select class="form-control" id="work" name="work">
+                <option value="" disabled selected>Select...</option>
+                <option value="car"> Car </option>
+                <option value="electrical_car"> Electrical Car </option>
+                <option value="public_transport"> Public Transport </option>
+                <option value="bike"> Bike </option>
+                <option value="foot"> Foot </option>
+            </select>
+        </div>
+      </div>
+
+      <div class="row card d-flex ">
+        <div class="icons justify-content-between">
+          <i class="fa-solid fa-user "></i>
+          <i class="fa-solid fa-car-side current"></i>
+          <i class="fa-solid fa-utensils"></i>
+          <i class="fa-solid fa-house-chimney"></i>
+          <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+        <h2 class="question"> How many flights per year?</h2>
+        <div class="form-group">
+          <select class="form-control" id="flght" name="flight">
+                <option value="" disabled selected>Select...</option>
+                <option value="1flight"> 1 flight </option>
+                <option value="2_3flights"> 2 to 3 flights </option>
+                <option value="4_6flights"> 4 to 6 flights </option>
+                <option value="more6flights"> more than 6 flights </option>
+            </select>
+        </div>
+      </div>
+
+      <div class="row card d-flex ">
+        <div class="icons justify-content-between">
+          <i class="fa-solid fa-user "></i>
+          <i class="fa-solid fa-car-side "></i>
+          <i class="fa-solid fa-utensils current"></i>
+          <i class="fa-solid fa-house-chimney"></i>
+          <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+        <h2 class="question"> Your favorite food?</h2>
+        <div class="form-group">
+          <select class="form-control" id="food" name="food">
+                <option value="" disabled selected>Select...</option>
+                <option value="beek"> Beef </option>
+                <option value="pork_poultry"> Pork / Poultry </option>
+                <option value="fish"> Fish</option>
+                <option value="vegetables">Vegetables </option>
+            </select>
+        </div>
+      </div>
+
+      <div class="row card slicer d-flex ">
+        <div class="icons justify-content-between">
+          <i class="fa-solid fa-user "></i>
+          <i class="fa-solid fa-car-side "></i>
+          <i class="fa-solid fa-utensils "></i>
+          <i class="fa-solid fa-house-chimney current"></i>
+          <i class="fa-solid fa-champagne-glasses"></i>
+        </div>
+        <h2 class="question"> Your ideal room temperature?</h2>
+        <div class="slidecontainer">
+            <input type="range" min="16" max="25" value="20" class="slider" id="myRange" name="myrange">
+              <p> <span id="demo" > </span> Degrees</p>
+          </div>
+      </div>
+
+
+
+
+      <div class="row card slicer d-flex ">
+        <div class="icons justify-content-between">
+          <i class="fa-solid fa-user "></i>
+          <i class="fa-solid fa-car-side "></i>
+          <i class="fa-solid fa-utensils "></i>
+          <i class="fa-solid fa-house-chimney "></i>
+          <i class="fa-solid fa-champagne-glasses current"></i>
+        </div>
+        <h2 class="question"> How do you mostly spend your free-time?</h2>
+        <select class="form-control" id="leisure" name="leisure">
+          <option value="" disabled selected>Select...</option>
+          <option  value="traveling">Traveling</option>
+          <option value="chilling">Chilling at home</option>
+          <option value="shopping">Shopping</option>
+          <option value="shopping">Sport and Arts</option>
+          <option value="hanging out">Hanging out </option>
+          <option value="shopping">Others</option>
+        </select>
+      </div>
+    <div class="container">
+      <div class="button-container button-container1">
+        <input class="button" type="submit" value="Get your results">
+      </div>
+    </div>
+  </form>
+</div>
+
+<%# <div class="container general1 d-flex" id="page1">
   <form action="/results">
     <div class="row card d-flex ">
       <div class="title">
@@ -17,9 +149,9 @@
           <div class="form-group">
             <select class="form-control" id="country" name="country">
               <% ApplicationRecord::COUNTRIES.each do |country|%>
-              <option value="<%= country %>"> <%=country %> </option>
-              <% end %>
-            </select>
+              <%# <option value="<%= country"> <%=country </option> %>
+              <%# <% end %>
+            <%# </select>
           </div>
         </div>
       </div>
@@ -29,7 +161,7 @@
     </div>
   </div>
 
-
+<%#
 
   <div class="container-fluid general2 d-flex" id="page2">
     <div class="row card d-flex ">
@@ -177,4 +309,4 @@
     </div>
   </form>
 </div>
-    <h1><%= @country  %></h1>
+    <h1><%= @country </h1> %>

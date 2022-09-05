@@ -1,17 +1,91 @@
-<div class="container">
-  <div class="target_chart">
-    <h1>My target</h1>
-  </div>
-  <br>
-  <br>
-  <div class="actioncont">
-    <h3>My actions</h3>
-    <%= image_tag "plus-circle-fill.png"%>
-  </div>
-  <div class="saved_ideas">
-    <div class="card-idea">Idea One</div>
-    <div class="card-idea">Idea Two</div>
-    <div class="card-idea">Idea Three</div>
-    <div class="card-idea">Idea Four</div>
+<div class="container-target">
+  <div class="backcard">
+    <h1>My Target</h1>
+    <h4>My Co2 targets</h4>
+    <div class="targetchart">
+      <canvas id="myChart"></canvas>
+    </div>
+    <div class="actionbtncont">
+      <h4>My actions</h4>
+      <%= image_tag "plus-circle-fill.png"%>
+    </div>
+    <div class="saved_ideas">
+      <div class="card-idea">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"/>
+          <div class="card-idea-infos">
+            <h2>Move towards veganism</h2>
+            <p>Skip meat and choose a more plant-based diet.</p>
+          </div>
+
+      <!--
+          <div class="deletebtn">
+            <%= image_tag "delete.png"%>
+          </div>
+      -->
+      </div>
+
+<!--
+      <div class="card-idea">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-idea-infos">
+            <h2>Idea name</h2>
+            <p>Idea <strong>impact</strong></p>
+          </div>
+          <div class="deletebtn">
+            <%= image_tag "delete.png"%>
+          </div>
+      </div>
+      <div class="card-idea">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-idea-infos">
+            <h2>Idea name</h2>
+            <p>Idea <strong>impact</strong></p>
+          </div>
+          <div class="deletebtn">
+            <%= image_tag "delete.png"%>
+          </div>
+      </div>
+      <div class="card-idea">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-idea-infos">
+            <h2>Idea name</h2>
+            <p>Idea <strong>impact</strong></p>
+          </div>
+          <div class="deletebtn">
+            <%= image_tag "delete.png"%>
+          </div>
+      </div>
+    </div>
   </div>
 </div>
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const labels = [
+    'Max',
+    'Results',
+    'New Results',
+    'Goal',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: '',
+      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+      borderColor: 'rgb(255, 99, 132)',
+      data: [10 ,6, 4, 2]
+    }]
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  };
+    const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>

@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" >
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
     <h1><=></h1>
     <% end %>
     <div class="dropimg" data-controller="dropdown-menu" >
@@ -9,11 +9,11 @@
       </div>
       <div class="hidden dropdown" data-dropdown-menu-target="dropdown">
           <% if user_signed_in? %>
-                <%= link_to "Footprint", destroy_user_session_path, class: "dropdown-item" %>
-                <%= link_to "Ideas", destroy_user_session_path, class: "dropdown-item" %>
-                <%= link_to "Target", destroy_user_session_path, class: "dropdown-item" %>
+                <%= link_to "Footprint", results_path, class: "dropdown-item" %>
+                <%= link_to "Ideas", ideas_path, class: "dropdown-item" %>
+                <%= link_to "Target", favourites_path, class: "dropdown-item" %>
                 <%= link_to "Community", destroy_user_session_path, class: "dropdown-item" %>
-                <%= link_to "About", destroy_user_session_path, class: "dropdown-item" %>
+                <%= link_to "About", about_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
           <% else %>
             <div class="nav-item">
