@@ -8,7 +8,7 @@ class CreateIdeas < ActiveRecord::Migration[7.0]
       t.integer :votes
       t.string :category
       t.string :subcategory
-      t.string :impact
+      t.integer :impact
       t.references :user, null: false, foreign_key: true
 
       t.timestamps

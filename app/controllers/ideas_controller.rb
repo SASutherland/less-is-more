@@ -13,11 +13,25 @@ class IdeasController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { idea: idea })
       }
     end
-
   end
 
   def show
     @idea = Idea.find(params[:id])
   end
 
+  def new
+    @idea = Idea.new
+  end
+
+  def create
+    @idea = Idea.new(idea_params)
+    @idea.user = current_user
+    @idea.save!
+    redirect_to ideas_path
+  end
+
+  private
+
+  def idea_params
+    params.require(:idea).permit(:title, :content, :location, :votes, :category, :subcategory, :impact, :photo, :user)  end
 end
