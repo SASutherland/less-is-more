@@ -1,58 +1,80 @@
-
 .resultscont{
-  height: 160vh;
-  background: linear-gradient(0deg,#BE8EB6,#5F68AA);
+  margin-top: 10vw;
+  height: 200vh;
 }
+
+#title-result{
+  font-size: 9vw;
+  font-weight: bold;
+  padding-top:10vw;
+  padding-bottom:10vw;
+  text-align: center;
+
+}
+
 .results-container{
-  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  margin-bottom: 71px;
-  margin-top: 20px;
+
 }
 
-.results-card{
-  background-color: white;
-  width: 90%;
-  border-radius: 12px;
-  box-shadow: 10px 20px 15px #6f6f6f;
-  border-radius: 20px;
-  padding: 25px;
-  flex-direction: row;
-  margin-top: 30px;
-}
-
-#KPI {
-  font-size: 45px;
+.title-kpi {
+  font-size:5.5vw;
   font-weight: bold;
-  color: #7A56AB;
+
 }
+
+.split{
+  font-weight: bold;
+  margin-top: 10vw;
+  font-size: 7.5vw;
+}
+
+#KPI{
+  font-size: 12vw;
+  color:  #345f61;
+  font-weight: bolder;
+
+}
+
+.results-card-pie{
+  height:90vh;
+  width:90vw;
+  border-radius: 30px;
+  margin: 0 auto;
+  box-shadow: 2px 6px 6px #6f6f6f;
+  line-height: 25vw;
+  background: white;
+}
+
+
 
 #targetW{
   font-size: 45px;
   font-weight: bold;
-
 }
 
-h1{
-  text-align: left;
-  font-size: 38px;
-  padding: 30px 0 0 0;
-  font-weight: bold;
-  margin-bottom: -90px;
-}
-
-.title-kpi{
-  margin-top: 130px;
-}
 
 h3{
   font-weight: bold;
 }
 
-.mx-0 {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  margin-top: 33px;
+.container-radar{
+  align-items: center;
+  justify-content: center;
+  height:60vh;
+  width:90vw;
+  border-radius: 30px;
+  margin-top: 30vw;
+  box-shadow: 2px 6px 6px #6f6f6f;
+  line-height: 25vw;
+  background: white;
+}
+
+.comparison{
+  font-weight: bold;
+  margin-top: 10vw;
+  font-size: 7.5vw;
+  padding-top: 10vw;
+  padding-top: 10vw;
 }

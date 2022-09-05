@@ -71,18 +71,19 @@ document.addEventListener('turbo:load', () => {
     const radarLabels = [
       'Car',
       'Plane',
-      'Train',
       'Fish',
       'Meat',
       'Vegetables',
       'Heating',
+      'Country',
   ];
+    const country = document.querySelector(".country")
 
     const radarData = {
       labels: radarLabels,
       datasets: [{
-      label: 'Your Country',
-      data: [1441, 318, 272,101, 786, 202 ,990],
+      label: country.dataset.value,
+      data: [1441, 318, 101, 786, 202 ,990],
       fill: true,
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgb(255, 99, 132)',
@@ -92,8 +93,8 @@ document.addEventListener('turbo:load', () => {
       pointHoverBorderColor: 'rgb(255, 99, 132)'
     },
     {
-      label: 'My Footprint',
-      data: [700, 700, 500, 200, 200, 400 ,800],
+      label: 'My Impact',
+      data: [700, 700, 200, 200, 400 ,800],
       fill: true,
       backgroundColor: '#7A56AB',
       borderColor: '#7A56AB',

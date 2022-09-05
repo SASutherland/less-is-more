@@ -1,140 +1,48 @@
 <div class="resultscont">
+  <div class="country" data-value="<%= @country %>"></div>
   <div class="transport" data-value="<%= @transport %>"></div>
   <div class="food" data-value="<%= @food %>"></div>
   <div class="house" data-value="<%= @house %>"></div>
   <div class="leisure" data-value="<%= @leisure %>"></div>
 
   <div class="results-container">
-    <div class="results-card ">
-    <h1> Your CO2 Impact </h1>
-
-      <div>
-        <div class="middle d-flex ">
+    <div class="results-card-pie">
+      <div class="container container-pie">
+        <div >
+          <h1 id="title-result"> My CO2 Impact </h1>
+        </div>
+        <div class="middle ">
           <div class="d-flex justify-content-around">
-                <h3 class="title-kpi">Your Co2 tons</h3>
+                <h3 class="title-kpi">in Co2 tons</h3>
                 <h3 class="title-kpi">Target</h3>
           </div>
           <div class="d-flex justify-content-around">
             <p id="KPI"><%= @co2 %></p>
             <p id="targetW">2</p>
           </div>
-          <div>
-            <h2 class="mx-0 text-center">Split per category</h2>
+          <div class="container-pie">
+            <h2 class="split mx-0 text-center">Split per category</h2>
           </div>
           <div class="my-3">
             <canvas id="myChart" style="display: block; box-sizing: border-box; height: 154px; width: 154.5px;" width="350" height="350"></canvas>
-
-              <%# <script>
-                const labels_pie = [
-                  'Transport',
-                  'Food',
-                  'House',
-                  'Leisure',
-                ];
-
-                const transport = document.querySelector(".transport")
-                const food = document.querySelector(".food")
-                const house = document.querySelector(".house")
-                const leisure = document.querySelector(".leisure")
-
-                const data = {
-                  labels: labels_pie,
-                  datasets: [{
-                    label: 'My First dataset',
-                    backgroundColor: ['#FF839D', '#5CAB7D', '#349DE4', '#FFD77C'] ,
-
-                    data: [transport.dataset.value, food.dataset.value, house.dataset.value, leisure.dataset.value]
-                  }]
-                };
-                const config = {
-                  type: 'doughnut',
-                  data: data,
-                  options: {}
-                };
-
-
-              </script>
-              <script>
-                const myChart = new Chart(
-                  document.getElementById('myChart'),
-                  config
-                );
-              </script> %>
           </div>
+    </div>
+  </div>
 
-          <div>
-            <h2 class="mx-0 mb-0 text-center">Comparison</h2>
-          </div>
-          <div class="my-3">
-            <%# <canvas id="marksChart" width="600" height="400"></canvas> %>
-            <canvas id="myRadar" width="350" height="350" style="display: block; box-sizing: border-box; height: 254px; width: 254.5px;"></canvas>
-<%#
-            <script>
-              const radarLabels = [
-                  'Car',
-                  'Plane',
-                  'Train',
-                  'Fish',
-                  'Meat',
-                  'Vegetables',
-                  'Heating',
-              ];
-
-                const radarData = {
-                  labels: radarLabels,
-                  datasets: [{
-                  label: 'Your Country',
-                  data: [1441, 318, 272,101, 786, 202 ,990],
-                  fill: true,
-                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                  borderColor: 'rgb(255, 99, 132)',
-                  pointBackgroundColor: 'rgb(255, 99, 132)',
-                  pointBorderColor: '#fff',
-                  pointHoverBackgroundColor: '#fff',
-                  pointHoverBorderColor: 'rgb(255, 99, 132)'
-                },
-                {
-                  label: 'My Footprint',
-                  data: [700, 700, 500, 200, 200, 400 ,800],
-                  fill: true,
-                  backgroundColor: '#7A56AB',
-                  borderColor: '#7A56AB',
-                  pointBackgroundColor: '#7A56AB',
-                  pointBorderColor: '#fff',
-                  pointHoverBackgroundColor: '#fff',
-                  pointHoverBorderColor: 'rgb(255, 99, 132)'
-                }
-                ]
-                }
-
-
-              const radarConfig = {
-                type: 'radar',
-                data: radarData,
-                options: {
-                  elements: {
-                    line: {
-                      borderWidth: 3
-                    }
-                  }
-                },
-              };
-
-            </script> %>
-              <%# <script>
-                const myRadar = new Chart(
-                  document.getElementById('myRadar'),
-                  radarConfig
-                );
-                console.log(myRadar)
-              </script> %>
-          </div>
-          </div>
-          </div>
-        <div class="d-flex justify-content-center">
-           <%= link_to "Get Ideas", ideas_path(refresh: true), class: "button" %>
+  <div class="container-radar">
+      <div>
+        <h2 class="comparison mx-0 mb-0 text-center">Comparison</h2>
+      </div>
+      <div class="my-3">
+        <canvas id="myRadar" width="350" height="350" style="display: block; box-sizing: border-box; height: 254px; width: 254.5px;"></canvas>
+      </div>
+      <div class="container ">
+        <div class="button-container ">
+          <%= link_to "Get Ideas", ideas_path(refresh: true), class: "button" %>
         </div>
       </div>
+    </div>
+  </div>
     </div>
   </div>
 </div>
