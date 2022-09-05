@@ -29,7 +29,8 @@
           'type': 'Feature',
           'properties': {
             'name': marker.name,
-            'height': 8849
+            'height': 8849,
+            'id': marker.idea_id
           },
           'geometry': {
             'type': marker.location,
@@ -67,9 +68,12 @@
         const popup = new mapboxgl.Popup({ offset: 25 });
         popup.setHTML(
         `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br><br>
-        <%= link_to favourites_path do %>
-          <%= image_tag "plus-circle-fill.png" %>
-        <% end %>
+
+        <form method="post" action="/ideas/${marker.properties.id}/favourites" class="inline">
+          <button type="submit">
+            <%= image_tag "plus-circle-fill.png" %>
+          </button>
+        </form>
         <br/>`
         );
 
