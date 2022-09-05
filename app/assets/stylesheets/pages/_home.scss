@@ -1,46 +1,279 @@
-// Specific CSS for your home-page
-
-
-.container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: row;
-  margin-bottom: 12px;
-}
-
 
 .picto{
-    display: flex;
-    justify-content: center;
-    height: 1v;
-    font-size: 52vw;
-    font-family: 'Rubik Microbe', cursive;
-    margin-top: 1vh;
-    font-weight: 400;
-}
-
-
-.claim{
-  display: flex;
   text-align: center;
-  font-size: 12vw;
-  padding: 25px 25px 20px 25px;
-  margin-bottom: 21px;
-  color:rgb(20, 18, 18);
+  font-size: 50vw;
+  font-family: 'Rubik Microbe', cursive;
+  background: -webkit-linear-gradient(#32723c,#222539);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10vw;;
 }
 
+
+.brand{
+  text-align: center;
+  font-size: 11vw;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.co2claim{
+  text-align: center;
+  font-size: 10vw;
+  font-weight: bold;
+  margin-top: 0;
+  line-height: 5vh;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+
+}
 
 #typed{
   display: flex;
   justify-content: center;
   font-size: 7.5vw;
-  color :#5BD6C9 ;
+  color :#345f61 ;
   padding:9px;
   text-align: center;
   height: 100px;
+  margin-top: 13vw;
 }
 
-.greenhome{
-  margin-bottom: 80px;
+
+.journeys{
+  line-height: 4vh;
+  margin-top: 35vw;
 }
+.journey{
+  font-size: 8vw;
+  font-weight: bold;
+}
+
+$base: 0.6rem;
+
+.arrow{
+flex-direction: column;
+width: $base * 3.5;
+height: $base * 2.8;
+margin-top: -22vw;
+}
+
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+  margin-top: 10vw  ;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 50%;
+ background: #2c3e50;
+}
+
+.chevron:before {
+ left: 0;
+ transform: skewY(30deg);
+}
+
+.chevron:after {
+ right: 0;
+ width: 50%;
+ transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+ 25% {
+  opacity: 1;
+	}
+ 33.3% {
+  opacity: 1;
+  transform: translateY($base * 3.8);
+ }
+ 66.6% {
+  opacity: 1;
+  transform: translateY($base * 5.2);
+ }
+ 100% {
+  opacity: 0;
+  transform: translateY($base * 8) scale(0.5);
+ }
+}
+
+
+.card-product {
+  overflow: hidden;
+  height: 30vw;
+  background: #e5ffdf;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 8vw;
+  border-radius: 50px 0 50px 0;
+}
+
+.card1 {
+  margin-top: 15vw;
+}
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+
+
+.button-container {
+  position: relative;
+  width: 70vw;
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  overflow: hidden;
+  transition: 0.5s;
+  background: #a2d696, ;
+  border-radius: 10vw;
+  font-size: 6vw;
+}
+
+
+
+.button-container button {
+  width: 101%;
+  height: 100%;
+  font-size: 6vw;
+  background: #345f61;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  animation: anim2 0.7s steps(22) forwards;
+}
+
+.button-container button:hover {
+  animation: anim1 0.7s steps(22) forwards;
+  color: rgb(195, 191, 191);
+}
+
+
+.mask {
+  position: absolute;
+  color:  rgb(66, 64, 64);
+  text-align: center;
+  width: 101%;
+  font-weight: lighter;
+  font-size: 6vw;
+  margin-top: 7vw;
+  overflow: hidden;
+}
+
+
+@keyframes anim1 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
+
+@keyframes anim2 {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+// Specific CSS for your home-page
+
+
+// .container{
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   position: row;
+//   margin-bottom: 12px;
+// }
+
+
+// .picto{
+//     display: flex;
+//     justify-content: center;
+//     height: 1v;
+//     font-size: 52vw;
+//     font-family: 'Rubik Microbe', cursive;
+//     margin-top: 1vh;
+//     font-weight: 400;
+// }
+
+
+// .claim{
+//   display: flex;
+//   text-align: center;
+//   font-size: 12vw;
+//   padding: 25px 25px 20px 25px;
+//   margin-bottom: 21px;
+//   color:rgb(20, 18, 18);
+// }
+
+
+// #typed{
+//   display: flex;
+//   justify-content: center;
+//   font-size: 7.5vw;
+//   color :#5BD6C9 ;
+//   padding:9px;
+//   text-align: center;
+//   height: 100px;
+// }
+
+// .greenhome{
+//   margin-bottom: 80px;
+// }

@@ -23,20 +23,22 @@
 @import "pages/about";
 @import "ideas/index";
 
-* {
+
+body {
+  background: rgb(221,255,195);
+  background: linear-gradient(to bottom, rgb(182, 244, 146), rgb(51, 139, 147));;
+  font-family: 'Comfortaa', cursive;
+  letter-spacing: 1.1px;
+  color:rgb(28, 28, 28);
+  letter-spacing: 0.2px;
   font-family: 'Comfortaa', cursive;
   letter-spacing: 1.1px;
 }
 
-body {
-  background: linear-gradient(0deg,#BE8EB6,#5F68AA);
-  height: 100%;
-}
+// h1 {
+//   font-size : 50px;
+// }
 
-h1 {
-  font-size : 50px;
-}
-
-.typedcont {
-  color: #4FD1C5;
-}
+// .typedcont {
+//   color: #4FD1C5;
+// }

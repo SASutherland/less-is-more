@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
 
-
+    <%= favicon_link_tag asset_path('logo.png') %>
 
   </head>
 
@@ -26,7 +26,9 @@
     <%= render "shared/flashes" %>
 
     <%= yield %>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </body>
 
 </html>

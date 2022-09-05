@@ -23,9 +23,9 @@
           </div>
           <div class="my-3">
             <canvas id="myChart" style="display: block; box-sizing: border-box; height: 154px; width: 154.5px;" width="350" height="350"></canvas>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-              <script>
-                const labels = [
+
+              <%# <script>
+                const labels_pie = [
                   'Transport',
                   'Food',
                   'House',
@@ -38,7 +38,7 @@
                 const leisure = document.querySelector(".leisure")
 
                 const data = {
-                  labels: labels,
+                  labels: labels_pie,
                   datasets: [{
                     label: 'My First dataset',
                     backgroundColor: ['#FF839D', '#5CAB7D', '#349DE4', '#FFD77C'] ,
@@ -59,7 +59,7 @@
                   document.getElementById('myChart'),
                   config
                 );
-              </script>
+              </script> %>
           </div>
 
           <div>
@@ -68,8 +68,7 @@
           <div class="my-3">
             <%# <canvas id="marksChart" width="600" height="400"></canvas> %>
             <canvas id="myRadar" width="350" height="350" style="display: block; box-sizing: border-box; height: 254px; width: 254.5px;"></canvas>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+<%#
             <script>
               const radarLabels = [
                   'Car',
@@ -121,14 +120,14 @@
                 },
               };
 
-            </script>
-              <script>
+            </script> %>
+              <%# <script>
                 const myRadar = new Chart(
                   document.getElementById('myRadar'),
                   radarConfig
                 );
                 console.log(myRadar)
-              </script>
+              </script> %>
           </div>
           </div>
           </div>
