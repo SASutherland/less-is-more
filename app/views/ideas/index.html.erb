@@ -111,7 +111,7 @@
       <div class="tinder--cards">
 
         <% @ideas.each do |idea| %>
-          <div class="tinder--card">
+          <div class="tinder--card" data-id="<%= idea.id %>">
           <%# <img src="https://source.unsplash.com/random/600x300?nature"> %>
             <img src=<%= idea.photo %>>
             <h3><%= idea.title %></h3>
@@ -125,9 +125,7 @@
 
     <div class="tinder--buttons">
       <button id="nope"><i class="fa fa-remove"></i></button>
-
       <button id="love"><i class="fa fa-heart"></i></button>
-
     </div>
 
   </div>

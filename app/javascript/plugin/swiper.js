@@ -1,8 +1,6 @@
 import * as Hammer from "hammerjs";
 
 const swiper = () => {
-  console.log("Hello from swiper.js")
-
   var tinderContainer = document.querySelector('.tinder');
 
   if(tinderContainer) {
@@ -85,6 +83,11 @@ const swiper = () => {
 
         if (love) {
           card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+          fetch(`http://localhost:3000/ideas/${card.dataset.id}/favourites`, {
+            method: "POST", headers: { "Accept": "text/plain"}
+          })
+          .then(response => response.text())
+          .then(data => console.log(data))
         } else {
           card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
         }
