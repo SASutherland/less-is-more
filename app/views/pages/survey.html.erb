@@ -17,7 +17,7 @@
         <h2 class="question question1"> Where do you live?</h2>
         <div class="form-group">
           <select class="form-control" id="country" name="country" >
-            <option value="" disabled selected>Select your country</option>
+            <%# <option value="" disabled selected>Select your country</option> %>
             <% ApplicationRecord::COUNTRIES.each do |country|%>
               <option value="<%= country %>" > <%=country %> </option>
             <% end %>
@@ -35,7 +35,7 @@
         <h2 class="question"> How do you go to work?</h2>
         <div class="form-group">
            <select class="form-control" id="work" name="work">
-                <option value="" disabled selected>Select...</option>
+                <%# <option value="" disabled selected>Select...</option> %>
                 <option value="car"> Car </option>
                 <option value="electrical_car"> Electrical Car </option>
                 <option value="public_transport"> Public Transport </option>
@@ -56,7 +56,7 @@
         <h2 class="question"> How many flights per year?</h2>
         <div class="form-group">
           <select class="form-control" id="flght" name="flight">
-                <option value="" disabled selected>Select...</option>
+                <%# <option value="" disabled selected>Select...</option> %>
                 <option value="1flight"> 1 flight </option>
                 <option value="2_3flights"> 2 to 3 flights </option>
                 <option value="4_6flights"> 4 to 6 flights </option>
@@ -76,12 +76,12 @@
         <h2 class="question"> Your favorite food?</h2>
         <div class="form-group">
           <select class="form-control" id="food" name="food">
-                <option value="" disabled selected>Select...</option>
-                <option value="beek"> Beef </option>
-                <option value="pork_poultry"> Pork / Poultry </option>
+                <%# <option value="" disabled selected>Select...</option> %>
+                <option value="beef"> Beef </option>
+                <option value="pork_poultry"> Pork/Poultry </option>
                 <option value="fish"> Fish</option>
                 <option value="vegetables">Vegetables </option>
-            </select>
+          </select>
         </div>
       </div>
 
@@ -93,17 +93,18 @@
           <i class="fa-solid fa-house-chimney current"></i>
           <i class="fa-solid fa-champagne-glasses"></i>
         </div>
+
         <h2 class="question"> Your ideal room temperature?</h2>
-        <div class="slidecontainer">
-            <input type="range" min="16" max="25" value="20" class="slider" id="myRange" name="myrange">
-              <p> <span id="demo" > </span> Degrees</p>
-          </div>
+        <div clas="d-flex ">
+          <input type="range" min="16" max="25" value="20" class="slider" id="myRange" name="myrange">
+          <p> <span id="demo" > </span> Degrees</p>
+        </div>
       </div>
 
 
 
 
-      <div class="row card slicer d-flex ">
+      <div class="row card d-flex ">
         <div class="icons justify-content-between">
           <i class="fa-solid fa-user "></i>
           <i class="fa-solid fa-car-side "></i>
@@ -113,26 +114,21 @@
         </div>
         <h2 class="question"> How do you mostly spend your free-time?</h2>
         <select class="form-control" id="leisure" name="leisure">
-          <option value="" disabled selected>Select...</option>
+          <%# <option value="" disabled selected>Select...</option> %>
           <option  value="traveling">Traveling</option>
           <option value="chilling">Chilling at home</option>
           <option value="shopping">Shopping</option>
           <option value="shopping">Sport and Arts</option>
           <option value="hanging out">Hanging out </option>
-          <option value="shopping">Others</option>
         </select>
       </div>
-    <%# <div class="container">
-      <div class="button-container">
-        <input class="button" type="submit" value="Get your results">
+
+      <div class="container" >
+        <div class="button-container" id="bntsurvey">
+          <span  class="mask" >Get your results</span>
+          <button class="button" type="submit" name="Hover">Get your results</button>
+        </div>
       </div>
-    </div> %>
-    <div class="container">
-      <div class="button-container">
-        <%# <a class="mask" href="survey">Take the Quiz!</a> %>
-        <input class="button" type="submit" value="Get your results">
-    </div>
-</div>
 
   </form>
 </div>
