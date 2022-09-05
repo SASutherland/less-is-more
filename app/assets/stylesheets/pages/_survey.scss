@@ -54,7 +54,7 @@
 .question{
   font-size: 6vw;
   font-weight: bold;
-  margin-bottom: 20vw;
+  margin-bottom: 17vw;
   font-style: oblique;
   margin-top: 4vw;
   margin-right: 10vw;
@@ -67,20 +67,26 @@
   font-size: 6vw;
   font-weight: bold;
   font-style: oblique;
-  // margin-right: 10vw;
+  margin-top: 2vw;
+  margin-bottom: 15vw;
 }
+
 
 .form-control{
   height:10vh;
   width:60vw;
   border-radius: 30px;
-  margin-left: 15vw;
+  margin-left: 12vw;
 }
 
+.slicer{
+  display: flex;
+  flex-direction: row;
+}
 
 .slider {
   -webkit-appearance: none;
-  height: 25px;
+  height: 35px;
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;
@@ -88,9 +94,12 @@
   -webkit-transition: .2s;
   transition: opacity .2s;
   display: flex;
+  flex-direction: column;
   width:60vw;
   margin-left: 13vw;
+
 }
+
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -103,8 +112,8 @@
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background: #04AA6D;
   cursor: pointer;
@@ -113,8 +122,8 @@
 #demo{
   margin-left: 29vw;
   font-size: 7vw;
-
 }
+
 
 .button-container {
   position: relative;
@@ -129,9 +138,11 @@
   background: #a2d696, ;
   border-radius: 10vw;
   font-size: 6vw;
-
 }
 
+.container-survey{
+  padding: -13px;
+}
 
 .button-container button {
   width: 101%;
@@ -154,6 +165,8 @@
 }
 
 
+
+
 .mask {
   position: absolute;
   color:  rgb(66, 64, 64);
@@ -163,7 +176,6 @@
   font-size: 6vw;
   margin-top: 7vw;
   overflow: hidden;
-  text-decoration: none;
 }
 
 
@@ -187,4 +199,8 @@
     -webkit-mask-position: 100% 0;
     mask-position: 100% 0;
   }
+}
+
+#bntsurvey{
+  margin-top: 0vh;
 }

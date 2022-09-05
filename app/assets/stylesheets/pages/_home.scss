@@ -159,122 +159,77 @@ margin-top: -22vw;
 
 
 
-// .button-container {
-//   position: relative;
-//   width: 70vw;
-//   height: 10vh;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-top: 10vh;
-//   margin-bottom: 10vh;
-//   overflow: hidden;
-//   transition: 0.5s;
-//   background: #a2d696, ;
-//   border-radius: 10vw;
-//   font-size: 6vw;
-
-// }
-
-
-// .button-container button {
-//   width: 101%;
-//   height: 100%;
-//   font-size: 6vw;
-//   background: #345f61;
-//   -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-//   mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-//   -webkit-mask-size: 2300% 100%;
-//   mask-size: 2300% 100%;
-//   border: none;
-//   color: white;
-//   cursor: pointer;
-//   animation: anim2 0.7s steps(22) forwards;
-// }
-
-// .button-container button:hover {
-//   animation: anim1 0.7s steps(22) forwards;
-//   color: rgb(195, 191, 191);
-// }
+.button-container {
+  position: relative;
+  width: 70vw;
+  height: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  overflow: hidden;
+  transition: 0.5s;
+  background: #a2d696, ;
+  border-radius: 10vw;
+  font-size: 6vw;
+}
 
 
-// .mask {
-//   position: absolute;
-//   color:  rgb(66, 64, 64);
-//   text-align: center;
-//   width: 101%;
-//   font-weight: lighter;
-//   font-size: 6vw;
-//   margin-top: 7vw;
-//   overflow: hidden;
-//   text-decoration: none;
-// }
 
 
-// @keyframes anim1 {
-//   from {
-//     -webkit-mask-position: 100% 0;
-//     mask-position: 100% 0;
-//   }
-//   to {
-//     -webkit-mask-position: 0 0;
-//     mask-position: 0 0;
-//   }
-// }
+.button-container button {
+  width: 101%;
+  height: 100%;
+  font-size: 6vw;
+  background: #345f61;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  animation: anim2 0.7s steps(22) forwards;
+}
 
-// @keyframes anim2 {
-//   from {
-//     -webkit-mask-position: 0 0;
-//     mask-position: 0 0;
-//   }
-//   to {
-//     -webkit-mask-position: 100% 0;
-//     mask-position: 100% 0;
-//   }
-// }
-
-// Specific CSS for your home-page
+.button-container button:hover {
+  animation: anim1 0.7s steps(22) forwards;
+  color: rgb(195, 191, 191);
+}
 
 
-// .container{
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   position: row;
-//   margin-bottom: 12px;
-// }
 
 
-// .picto{
-//     display: flex;
-//     justify-content: center;
-//     height: 1v;
-//     font-size: 52vw;
-//     font-family: 'Rubik Microbe', cursive;
-//     margin-top: 1vh;
-//     font-weight: 400;
-// }
+.mask {
+  position: absolute;
+  color:  rgb(66, 64, 64);
+  text-align: center;
+  width: 101%;
+  font-weight: lighter;
+  font-size: 6vw;
+  margin-top: 7vw;
+  overflow: hidden;
+}
 
 
-// .claim{
-//   display: flex;
-//   text-align: center;
-//   font-size: 12vw;
-//   padding: 25px 25px 20px 25px;
-//   margin-bottom: 21px;
-//   color:rgb(20, 18, 18);
-// }
+@keyframes anim1 {
+  from {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  to {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+}
 
-
-// #typed{
-//   display: flex;
-//   justify-content: center;
-//   font-size: 7.5vw;
-//   color :#5BD6C9 ;
-//   padding:9px;
-//   text-align: center;
-//   height: 100px;
-// }
-
-// .greenhome{
-//   margin-bottom: 80px;
-// }
+@keyframes anim2 {
+  from {
+    -webkit-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}

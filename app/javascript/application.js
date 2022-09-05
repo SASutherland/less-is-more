@@ -23,7 +23,7 @@ document.addEventListener('turbo:load', () => {
   var refresh = document.getElementById("refresh");
 
   if(refresh) {
-    console.log("hello")
+    console.log("refreshed")
   }
 
   if(slider) {
@@ -46,6 +46,7 @@ document.addEventListener('turbo:load', () => {
     const food = document.querySelector(".food")
     const house = document.querySelector(".house")
     const leisure = document.querySelector(".leisure")
+    const country = document.querySelector(".country")
 
     const data = {
       labels: labels_pie,
@@ -53,7 +54,7 @@ document.addEventListener('turbo:load', () => {
         label: 'My First dataset',
         backgroundColor: ['#FF839D', '#5CAB7D', '#349DE4', '#FFD77C'] ,
 
-        data: [transport.dataset.value, food.dataset.value, house.dataset.value, leisure.dataset.value]
+        data: [country.dataset.value, transport.dataset.value, food.dataset.value, house.dataset.value, leisure.dataset.value]
       }]
     };
     const config = {
@@ -69,21 +70,24 @@ document.addEventListener('turbo:load', () => {
     //-----------------------------------------
 
     const radarLabels = [
-      'Car',
-      'Plane',
-      'Fish',
+      'Transport',
       'Meat',
-      'Vegetables',
-      'Heating',
-      'Country',
+      'Heating'
+
   ];
-    const country = document.querySelector(".country")
+
+    const transportcountry = document.querySelector(".transportcountry")
+    const foodcountry = document.querySelector(".foodcountry")
+    const housecountry = document.querySelector(".housecountry")
+    const leisurecountry = document.querySelector(".leisurecountry")
+
 
     const radarData = {
       labels: radarLabels,
       datasets: [{
       label: country.dataset.value,
-      data: [1441, 318, 101, 786, 202 ,990],
+      data: [transportcountry.dataset.value, foodcountry.dataset.value, housecountry.dataset.value, leisurecountry.dataset.value],
+
       fill: true,
       backgroundColor: 'rgba(255, 99, 132, 0.2)',
       borderColor: 'rgb(255, 99, 132)',
@@ -94,7 +98,8 @@ document.addEventListener('turbo:load', () => {
     },
     {
       label: 'My Impact',
-      data: [700, 700, 200, 200, 400 ,800],
+      // data: [2000, 2000, 4000, 200,2000],
+      data: [transport.dataset.value, food.dataset.value, house.dataset.value, leisure.dataset.value],
       fill: true,
       backgroundColor: '#7A56AB',
       borderColor: '#7A56AB',
@@ -117,7 +122,7 @@ document.addEventListener('turbo:load', () => {
       },
     };
     //--------------------------------------
-
+    console.log(transportcountry.dataset.value, foodcountry.dataset.value, housecountry.dataset.value, leisurecountry.dataset.value)
     const myRadar = new Chart(
       document.getElementById('myRadar'),
       radarConfig
@@ -126,4 +131,4 @@ document.addEventListener('turbo:load', () => {
   }
 })
 
-console.log('hello from app normal after slider')
+console.log('hello from app normal after graph')

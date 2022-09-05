@@ -1,3 +1,4 @@
+
 <div class="resultscont">
   <div class="country" data-value="<%= @country %>"></div>
   <div class="transport" data-value="<%= @transport %>"></div>
@@ -17,7 +18,7 @@
                 <h3 class="title-kpi">Target</h3>
           </div>
           <div class="d-flex justify-content-around">
-            <p id="KPI"><%= @co2 %></p>
+            <p id="KPI"><%= @co2_weighted %></p>
             <p id="targetW">2</p>
           </div>
           <div class="container-pie">
@@ -26,23 +27,28 @@
           <div class="my-3">
             <canvas id="myChart" style="display: block; box-sizing: border-box; height: 154px; width: 154.5px;" width="350" height="350"></canvas>
           </div>
-    </div>
+        </div>
   </div>
 
   <div class="container-radar">
-      <div>
-        <h2 class="comparison mx-0 mb-0 text-center">Comparison</h2>
-      </div>
-      <div class="my-3">
-        <canvas id="myRadar" width="350" height="350" style="display: block; box-sizing: border-box; height: 254px; width: 254.5px;"></canvas>
-      </div>
-      <div class="container ">
-        <div class="button-container ">
-          <%= link_to "Get Ideas", ideas_path(refresh: true), class: "button" %>
-        </div>
+    <div class="transportcountry" data-value="<%= @transportcountry %>"></div>
+    <div class="foodcountry" data-value="<%= @foodcountry %>"></div>
+    <div class="housecountry" data-value="<%= @housecountry %>"></div>
+    <div class="leisurecountry" data-value="<%= @leisurecountry %>"></div>
+    <div>
+      <h2 class="comparison mx-0 mb-0 text-center">Comparison</h2>
+    </div>
+    <div class="my-3">
+      <canvas id="myRadar" width="350" height="350" style="display: block; box-sizing: border-box; height: 254px; width: 254.5px;"></canvas>
+    </div>
+    <div class="container">
+      <div class="button-container" id="bntresults">
+        <span  class="mask" id="maskresult" >Get ideas!</span>
+        <%= link_to '<button type="button" name="Hover" >Get ideas!</button>'.html_safe, ideas_path(refresh: true) %>
       </div>
     </div>
-  </div>
+
+
     </div>
   </div>
 </div>
