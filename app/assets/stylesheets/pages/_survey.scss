@@ -59,7 +59,8 @@
   margin-top: 4vw;
   margin-right: 10vw;
   text-align: center;
-  padding-left: 4vw;
+  padding-left: 0vw;
+  padding-right: 8vw;
 
 }
 
@@ -148,7 +149,7 @@
   width: 101%;
   height: 100%;
   font-size: 6vw;
-  background: #345f61;
+  background: #111718;
   -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
   -webkit-mask-size: 2300% 100%;
@@ -157,11 +158,13 @@
   color: white;
   cursor: pointer;
   animation: anim2 0.7s steps(22) forwards;
+  background-color: black;
 }
 
 .button-container button:hover {
   animation: anim1 0.7s steps(22) forwards;
   color: rgb(195, 191, 191);
+  background-color: black;
 }
 
 
@@ -169,7 +172,7 @@
 
 .mask {
   position: absolute;
-  color:  rgb(66, 64, 64);
+  color:  rgb(47, 45, 45);
   text-align: center;
   width: 101%;
   font-weight: lighter;
