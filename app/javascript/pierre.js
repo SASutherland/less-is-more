@@ -3,7 +3,7 @@ const pierreCart = () => {
   var result = document.querySelector(".new_result");
   if(pi) {
   const labels = [
-    'Survey results',
+    'My footprint',
     'New Results',
     'Goal',
   ];
@@ -12,7 +12,7 @@ const pierreCart = () => {
     labels: labels,
     datasets: [{
       label: '',
-      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(255, 159, 64, 0.2)', 'rgba(255, 205, 86, 0.2)'],
+      backgroundColor: ['rgba(182, 244, 146, 0.4)', 'rgba(51, 139, 147, 0.4)', 'rgba(165, 42, 42, 0.4)'],
       borderColor: 'rgb(255, 99, 132)',
       data: [6, result.dataset.result, 2]
     }]
