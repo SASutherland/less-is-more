@@ -6,7 +6,7 @@ class FavouritesController < ApplicationController
     @favourites = Favourite.all
     sum = 0
     @favourites.each do |favourite|
-      sum += favourite.idea.impact
+      sum += favourite.idea.impact.to_f
     end
     @new_results_takeoff = @co2_weighted_fix * sum
     @new_results = @co2_weighted_fix - @new_results_takeoff
