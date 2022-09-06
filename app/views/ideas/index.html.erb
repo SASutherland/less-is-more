@@ -70,7 +70,7 @@
         el.style.height = `${size}px`;
 
         // Add a popup displayed on click for each marker
-        const popup = new mapboxgl.Popup({ offset: 25 });
+        const popup = new mapboxgl.Popup({ offset: 5 });
         popup.setHTML(
         `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br><br>
 
@@ -103,7 +103,7 @@
 
 
     <div class="swipe-instructions">
-      <p>See ideas recommended for you based on your profile</p>
+      <p>Swipe ideas <strong>left</strong> to decline or <strong>right</strong> to accept</p>
 <!--
       <span style="white-space: pre-line">
         <p>Swipe <strong>right</strong> to accept an idea
