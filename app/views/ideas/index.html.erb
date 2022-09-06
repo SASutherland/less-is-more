@@ -103,7 +103,7 @@
 
 
     <div class="swipe-instructions">
-      <p>Swipe ideas <strong>left</strong> to decline or <strong>right</strong> to accept</p>
+      <p>Swipe ideas to the <strong>right</strong> to add them to your targets</p>
 <!--
       <span style="white-space: pre-line">
         <p>Swipe <strong>right</strong> to accept an idea
@@ -138,6 +138,12 @@
       <button id="nope"><i class="fa fa-remove"></i></button>
       <button id="love"><i class="fa fa-heart"></i></button>
     </div>
+
+  <br>
+
+  <div class="button-targets d-flex justify-content-center mt-3">
+    <%= link_to "See My Targets", favourites_path %>
+  </div>
 
   </div>
 
