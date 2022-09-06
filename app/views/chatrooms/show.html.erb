@@ -1,10 +1,19 @@
-<div class="results-container">
+<div class="results-container"
+  data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%= @chatroom.id %>"
+  data-chatroom-subscription-current-user-id-value="<%= current_user.id %>"
+  >
   <div class="results-card">
-    <div>
-      <h1>My Tribe</h1>
+    <h1><%= @chatroom.name %></h1>
+    <div class="messages" data-chatroom-subscription-target="messages">
+      <% @chatroom.messages.each do |message| %>
+        <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start'%>">
+          <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+            <%= render "messages/message", message: message %>
+          </div>
+        </div>
+      <% end %>
     </div>
-    <div>
-      <%= render "searchbar", chatrooms: @chatrooms %></div>
-    </div>
+      <%= render "messages/messagesform", message: @message %>
   </div>
 </div>

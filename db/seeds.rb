@@ -10,7 +10,7 @@ puts "Clearing database..."
 Favourite.destroy_all
 Idea.destroy_all
 User.destroy_all
-# Chatroom.destroy_all
+Chatroom.destroy_all
 puts "Cleared!"
 
 puts "Creating users, ideas..."
@@ -200,5 +200,10 @@ skip_meat.save!
 # file = URI.open("")
 # ideaname9.photo.attach(io: file, filename: "ideaname9.jpg", content_type: "image/jpg")
 # ideaname9.save!
+
+Idea.all.each do |idea|
+  Chatroom.create!(idea: idea, name: idea.title)
+end
+
 
 puts "Done!"
