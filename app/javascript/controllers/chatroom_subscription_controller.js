@@ -20,7 +20,7 @@ export default class extends Controller {
       const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
 
       // Inserting the `message` in the DOM
-      this.messagesTarget.insertAdjacentHTML("beforeend", data),
+      this.messagesTarget.insertAdjacentHTML("beforeend", messageElement),
       this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
     }
 
@@ -47,5 +47,10 @@ export default class extends Controller {
 
     resetForm(event) {
       event.target.reset()
+    }
+
+    disconnect() {
+      console.log("Unsubscribed from the chatroom")
+      this.channel.unsubscribe()
     }
 }

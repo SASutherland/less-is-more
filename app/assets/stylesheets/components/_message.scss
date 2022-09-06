@@ -6,7 +6,7 @@
 
 // To style the message itself
 .sender-style, .receiver-style {
-  width: 60%;
+  width: 70%;
   max-width: 300px;
   border-radius: 6px;
   padding: 8px;
@@ -14,18 +14,48 @@
 }
 
 .sender-style {
-  background-color: lightcoral;
+  background-color: #80C992;
 }
 
 .receiver-style {
-  background-color: lightblue;
+  background-color: #449893;
 }
 
 .message-form {
   .form-control {
     margin-left: 0;
     margin-right: 0;
-    width: 50vw;
+    width: 64vw;
+    height: 9vh;
     border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 0;
   }
+}
+
+.message-form {
+  .input {
+    margin-left: 0;
+  }
+}
+
+.messages {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.send-btn {
+  width: 100px;
+  height: 9vh;
+  font-size: 16px;
+  font-weight: 500;
+  color: #313133;
+  background: #98DC92 !important;
+  // background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 1rem;
 }
