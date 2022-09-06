@@ -1,0 +1,21 @@
+<div class="results-container">
+  <div class="results-card">
+    <div>
+      <h2>My Tribe</h2>
+    </div>
+    <%= render "shared/searchbar" %>
+    <div>
+      <% @ideas.each do |idea| %>
+        <%= link_to chatroom_path(Chatroom.find_by(idea_id: idea.id).id) do %>
+          <div class="card-idea">
+              <%= image_tag idea.photo %>
+              <div class="card-idea-infos">
+                <h2><%= idea.title %></h2>
+                <p><%= idea.content %></p>
+              </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
