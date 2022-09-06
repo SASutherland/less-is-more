@@ -17,18 +17,20 @@ h4{
   align-items: center;
 }
 .logcard{
+  border-radius: 30px;
+  margin: 0 auto;
+  box-shadow: 2px 6px 6px #6f6f6f;
   background-color: white;
-  border-radius: 8px;
   margin: 1rem;
   padding: 1rem;
   width: 90%;
   height: 100%;
   margin-left: 1.3rem;
   .form-control{
-    height: 5vh;
+    height: 10vh;
     width: 90%;
     margin-left: 15px !important;
-    border-radius: 5px;
+    border-radius: 8px;
   }
 }
 .form-actions .button{
@@ -46,3 +48,6 @@ h4{
 .remember-button{
   margin-left: 16px;
 }
+
+
+
