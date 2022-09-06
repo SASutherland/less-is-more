@@ -1,6 +1,15 @@
 // Import page-specific CSS files here.
 @import "swiper";
 
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+  border: none !important;
+  background-color: white;
+}
+
 .ideas-container {
   display: flex;
   align-items: center;
@@ -22,24 +31,29 @@
   margin-bottom: 30px;
 }
 
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
-  cursor: pointer;
-  border: none !important;
-  background-color: white;
+.ideas-card h2 {
+  font-size: 37px;
+  margin-left: 0rem;
+}
+
+.ideas-card p {
+  font-size: 18px;
+  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+.ideas-card-title {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .swipe-instructions {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .swipe-instructions p {
-  text-align: left;
-  font-size: 10px;
-  line-height: 60%;
-  padding-left: 16px;
+  font-size: 18px;
+  margin-left: 0rem;
 }
 
 .tinder--card img {
