@@ -37,6 +37,11 @@ body {
   min-height: 100vh;
 }
 
+button:active {
+  outline: none;
+  border: none;
+}
+
 // h1 {
 //   font-size : 50px;
 // }
