@@ -1,11 +1,6 @@
 <br>
 <div class="logtext">
-  <h2>Log in for</h2>
-  <br>
-  <h4>Customized ideas</h4>
-  <h4>Target setting</h4>
-  <h4>Get in touch</h4>
-  <h4>Post your ideas</h4>
+  <h2>Log in</h2>
 </div>
 <br>
 <div class="logcard">
@@ -18,14 +13,25 @@
     <%= f.input :password,
                 required: false,
                 input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <div class="remember-button">
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in", class: "button"%>
+  <div class="form-button-container d-flex justify-content-center">
+
+    <div class="form-actions">
+      <%= f.button :submit, "Log in", class: "button-old" %>
+    </div>
+
   </div>
+
 <% end %>
+
+<br>
+
   <div class="btncontainer">
     <%= render "devise/shared/links" %>
   </div>
+
 </div>
