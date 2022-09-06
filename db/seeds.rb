@@ -10,10 +10,12 @@ puts "Clearing database..."
 Favourite.destroy_all
 Idea.destroy_all
 User.destroy_all
-# Chatroom.destroy_all
+Chatroom.destroy_all
 puts "Cleared!"
 
 puts "Creating users, ideas..."
+
+User.create(email: "p@gmail.com", password: "pierre")
 
 carpool = Idea.new(
   title: "Carpool to work",
@@ -22,7 +24,7 @@ carpool = Idea.new(
   votes: 0,
   category: "transport",
   subcategory: "car",
-  impact: 25,
+  impact: 0.1,
   photo: "https://images.unsplash.com/photo-1597685204565-110abf469a1e?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Brian",
@@ -42,7 +44,7 @@ work_from_home = Idea.new(
   votes: 0,
   category: "transport",
   subcategory: "car",
-  impact: 20,
+  impact: 0.05,
   photo: "https://images.unsplash.com/photo-1591382696684-38c427c7547a?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Janet",
@@ -62,7 +64,7 @@ more_fish = Idea.new(
   votes: 0,
   category: "food",
   subcategory: "beef",
-  impact: 20,
+  impact: 0.05,
   photo: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Donna",
@@ -82,7 +84,7 @@ electric_car = Idea.new(
   votes: 0,
   category: "transport",
   subcategory: "car",
-  impact: 50,
+  impact: 0.1,
   photo: "https://images.unsplash.com/photo-1594535182308-8ffefbb661e1?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1065&q=80",
   user: User.create!(
     first_name: "Sally",
@@ -102,7 +104,7 @@ lower_home_heating = Idea.new(
   votes: 0,
   category: "home",
   subcategory: "heating",
-  impact: 10,
+  impact: 0.02,
   photo: "https://images.unsplash.com/photo-1619140099965-06d74aaf51fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Todd",
@@ -122,13 +124,13 @@ holiday_train = Idea.new(
   votes: 0,
   category: "leisure",
   subcategory: "travel",
-  impact: 10,
+  impact: 0.05,
   photo: "https://images.unsplash.com/photo-1562078809-7ef447ae26c6?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
-  first_name: "Lois",
-  last_name: "Steele",
-  email: "lois@realmail.com",
-  password: "password"
+    first_name: "Lois",
+    last_name: "Steele",
+    email: "lois@realmail.com",
+    password: "password"
   )
 )
 # file = URI.open("https://images.unsplash.com/photo-1562078809-7ef447ae26c6?ixlib=rb-1.2.1&ixid=MnwxMjA3[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
@@ -142,7 +144,7 @@ poultry_and_pork = Idea.new(
   votes: 0,
   category: "food",
   subcategory: "beef",
-  impact: 10,
+  impact: 0.05,
   photo: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1013&q=80",
   user: User.create!(
     first_name: "Dan",
@@ -162,7 +164,7 @@ skip_meat = Idea.new(
   votes: 0,
   category: "food",
   subcategory: "beef",
-  impact: 30,
+  impact: 0.15,
   photo: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
   user: User.create!(
     first_name: "Michael",
@@ -200,5 +202,9 @@ skip_meat.save!
 # file = URI.open("")
 # ideaname9.photo.attach(io: file, filename: "ideaname9.jpg", content_type: "image/jpg")
 # ideaname9.save!
+
+Idea.all.each do |idea|
+  Chatroom.create!(idea: idea, name: idea.title)
+end
 
 puts "Done!"

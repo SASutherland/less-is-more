@@ -1,6 +1,48 @@
 // Import page-specific CSS files here.
 @import "swiper";
 
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+  border: none !important;
+  background-color: white;
+}
+
+.button-targets {
+  display: inline;
+  min-width: 80%;
+  min-height: 60px;
+  font-size: 19px;
+  font-weight: 800;
+  color: white;
+  background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  padding: 22px;
+  text-decoration: none;
+  text-align: center;
+  }
+
+.button-targets:hover,.button-targets:focus {
+  color: white;
+  transform: translateY(-6px);
+}
+
+// button-targets::after {
+//   content: '';
+//   width: 30px; height: 30px;
+//   border-radius: 100%;
+//   position: absolute;
+//   z-index: -1;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+// }
+
 .ideas-container {
   display: flex;
   align-items: center;
@@ -22,24 +64,42 @@
   margin-bottom: 30px;
 }
 
-button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
-  cursor: pointer;
-  border: none !important;
-  background-color: white;
+.ideas-card h2 {
+  font-size: 37px;
+  margin-left: 0rem;
+}
+
+.ideas-card p {
+  font-size: 18px;
+  margin-bottom: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+.ideas-card-title {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mapboxgl-popup {
+  transform:none !important;
+  top: 21%;
+  left: 28px;
+}
+
+.mapboxgl-popup-content {
+  border-radius: 5px;
+  padding: 10px 10px 0px 10px !important;
+  box-shadow: 10px 20px 15px rgb(111, 111, 111);
 }
 
 .swipe-instructions {
-  padding-bottom: 10px;
+  padding-bottom: 15px;
 }
 
 .swipe-instructions p {
-  text-align: left;
-  font-size: 10px;
-  line-height: 60%;
-  padding-left: 16px;
+  font-size: 18px;
+  margin-left: 0rem;
+  margin-bottom: 0.7rem;
 }
 
 .tinder--card img {

@@ -3,7 +3,12 @@
 
   <div class="ideas-card">
 
-    <h2 class="pt-2">Getting ideas</h2>
+    <div class="ideas-card-title">
+      <h2 class="pt-2">Gathering Ideas</h2>
+    </div>
+    <div class="ideas-card-title">
+      <p>Search for ideas anywhere in the world</p>
+    </div>
 
     <br>
 
@@ -65,7 +70,7 @@
         el.style.height = `${size}px`;
 
         // Add a popup displayed on click for each marker
-        const popup = new mapboxgl.Popup({ offset: 25 });
+        const popup = new mapboxgl.Popup({ offset: 5 });
         popup.setHTML(
         `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br><br>
 
@@ -96,9 +101,15 @@
 
     <br>
 
+
     <div class="swipe-instructions">
-      <p>Swipe <strong>right</strong> to accept an idea.</p>
-      <p>Swipe <strong>left</strong> to decline an idea.</p>
+      <p>Swipe ideas to the <strong>right</strong> to add them to your targets</p>
+<!--
+      <span style="white-space: pre-line">
+        <p>Swipe <strong>right</strong> to accept an idea
+           Swipe <strong>left</strong> to decline an idea</p>
+      </span>
+-->
     </div>
 
     <div class="tinder">
@@ -127,6 +138,12 @@
       <button id="nope"><i class="fa fa-remove"></i></button>
       <button id="love"><i class="fa fa-heart"></i></button>
     </div>
+
+  <br>
+
+  <div class="button-targets d-flex justify-content-center mt-3">
+    <%= link_to "See My Targets", favourites_path %>
+  </div>
 
   </div>
 

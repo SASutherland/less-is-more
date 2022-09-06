@@ -54,7 +54,15 @@ const swiper = () => {
         event.target.classList.toggle('removed', !keep);
 
         if (keep) {
+
+          fetch(`http://localhost:3000/ideas/${el.dataset.id}/favourites`, {
+            method: "POST", headers: { "Accept": "text/plain"}
+          })
+            .then(response => response.text())
+            .then(data => console.log(data))
+            
           event.target.style.transform = '';
+
         } else {
           var endX = Math.max(Math.abs(event.velocityX) * moveOutWidth, moveOutWidth);
           var toX = event.deltaX > 0 ? endX : -endX;
@@ -83,11 +91,13 @@ const swiper = () => {
 
         if (love) {
           card.style.transform = 'translate(' + moveOutWidth + 'px, -100px) rotate(-30deg)';
+
           fetch(`http://localhost:3000/ideas/${card.dataset.id}/favourites`, {
             method: "POST", headers: { "Accept": "text/plain"}
           })
-          .then(response => response.text())
-          .then(data => console.log(data))
+            .then(response => response.text())
+            .then(data => console.log(data))
+
         } else {
           card.style.transform = 'translate(-' + moveOutWidth + 'px, -100px) rotate(30deg)';
         }
