@@ -13,39 +13,6 @@ button:not(:disabled),
   background-color: white;
 }
 
-.button-targets {
-  display: inline;
-  min-width: 80%;
-  min-height: 60px;
-  font-size: 19px;
-  font-weight: 800;
-  color: white;
-  background: #4FD1C5;
-  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
-  border: none;
-  border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
-  padding: 22px;
-  text-decoration: none;
-  text-align: center;
-  }
-
-.button-targets:hover,.button-targets:focus {
-  color: white;
-  transform: translateY(-6px);
-}
-
-// button-targets::after {
-//   content: '';
-//   width: 30px; height: 30px;
-//   border-radius: 100%;
-//   position: absolute;
-//   z-index: -1;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
 .ideas-container {
   display: flex;
   align-items: center;
