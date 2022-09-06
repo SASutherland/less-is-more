@@ -110,8 +110,6 @@ class PagesController < ApplicationController
     @leisure2 = @leisure2.to_f.round(2)
     @co2_weighted = @transport2 + @food + @house + @leisure2
     @co2_weighted = @co2_weighted.to_f.round(2)
-
-
   end
 
   def search
