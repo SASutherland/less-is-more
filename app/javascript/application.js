@@ -4,6 +4,7 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 import {swiper} from "./plugin/swiper"
+import {pierreCart} from "./pierre"
 
 // var slider = document.getElementById("myRange");
 // var output = document.getElementById("demo");
@@ -126,5 +127,7 @@ document.addEventListener('turbo:load', () => {
     );
     console.log(myRadar)
   }
-})
 
+  pierreCart()
+
+})
