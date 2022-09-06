@@ -2,6 +2,7 @@ class FavouritesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def index
+    @co2_weighted
     @co2_weighted_fix = 6
     @favourites = Favourite.all
     sum = 0
