@@ -1,5 +1,8 @@
 // Import page-specific CSS files here.
 @import "swiper";
+.ideas-container{
+  height:250vh;
+}
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -25,10 +28,11 @@ button:not(:disabled),
   border-radius:  20px;
   padding: 0px 25px 0px 25px;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: -508px;
   padding-top: 20px;
   padding-bottom: 30px;
   margin-bottom: 30px;
+  height: 159vh;
 }
 
 .ideas-card h2 {

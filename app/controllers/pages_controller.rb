@@ -191,6 +191,10 @@ class PagesController < ApplicationController
     @leisure_user =@leisure_user.to_f.round(0)
     @co2 = @co2.to_f.round(0)
     @transport = @transport.to_f.round(0)
+    @transport_country = @transport_country.to_f.round(0)
+    @food_country = @food_country.to_f.round(0)
+    @house_country = @house_country.to_f.round(0)
+    @leisure_country =@leisure_country.to_f.round(0)
 
 
   end

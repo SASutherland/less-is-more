@@ -141,10 +141,13 @@
 
   <br>
 
-  <div class="button-old d-flex justify-content-center mt-3">
-    <%= link_to "See My Targets", favourites_path %>
-  </div>
 
+  <div class="container">
+    <div class="button-container">
+      <a class="mask" href="favourite">See My Targets</a>
+      <%= link_to ' <button type="button" name="Hover" >See My Targets</button>'.html_safe, favourites_path(refresh: true) %>
+  </div>
+</div>
   </div>
 
 </div>
