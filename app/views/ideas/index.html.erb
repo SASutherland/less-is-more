@@ -4,7 +4,7 @@
   <div class="ideas-card">
 
     <div class="ideas-card-title">
-      <h2 class="pt-2">Gathering Ideas</h2>
+      <h2 class="pt-2">Get Inspired</h2>
     </div>
     <div class="ideas-card-title">
       <p>Search for ideas anywhere in the world</p>
@@ -51,7 +51,7 @@
 
       const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v9',
+        style: 'mapbox://styles/mapbox/outdoors-v11',
         center: [130, 35],
         zoom: 0.75,
         projection: 'globe'
@@ -127,8 +127,8 @@
 
     <div class="container">
       <div class="button-container">
-        <a class="mask" href="favourite">See My Targets</a>
-        <%= link_to ' <button type="button" name="Hover" >See My Targets</button>'.html_safe, favourites_path(refresh: true) %>
+        <a class="mask" href="favourite">Set My Target!</a>
+        <%= link_to ' <button type="button" name="Hover" >Set My Target!</button>'.html_safe, favourites_path(refresh: true) %>
     </div>
 
   </div>

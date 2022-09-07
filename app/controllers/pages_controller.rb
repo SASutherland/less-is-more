@@ -17,7 +17,6 @@ class PagesController < ApplicationController
   end
 
   def results
-
     @country = params[:country]
     @work = params[:work]
     @flight = params[:flight]
@@ -101,9 +100,6 @@ class PagesController < ApplicationController
     @sport = @sport.to_f * 1000
     @hangingout = @hangingout.to_f * 1000
 
-
-
-
     if @work == "car"
       @work_user = @car
     elsif @work  == "electrical_car"
@@ -115,8 +111,6 @@ class PagesController < ApplicationController
     elsif @work  == "foot"
       @work_user =@foot
     end
-
-
 
     if @flight == "1flight"
       @flight_user = @oneflight
@@ -172,8 +166,6 @@ class PagesController < ApplicationController
       @leisure_user = @hangingout
     end
 
-
-
     @co2_weighted = (
       @work_user.to_f +
       @flight_user.to_f +
@@ -181,7 +173,6 @@ class PagesController < ApplicationController
       @house_user.to_f +
       @leisure_user.to_f
     )
-    @co2_weighted = @co2_weighted.to_f.round(0)
 
     @transport_user = @work_user.to_f + @flight_user.to_f
     @transport_user = @transport_user.to_f.round(0)
@@ -194,8 +185,6 @@ class PagesController < ApplicationController
     @food_country = @food_country.to_f.round(0)
     @house_country = @house_country.to_f.round(0)
     @leisure_country =@leisure_country.to_f.round(0)
-
-
   end
 
   def search

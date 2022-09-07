@@ -5,7 +5,7 @@ const pierreCart = () => {
   const labels = [
     'My footprint',
     'New Results',
-    'Goal',
+    'Goal for 2030',
   ];
 
   const data = {
@@ -14,7 +14,7 @@ const pierreCart = () => {
       label: '',
       backgroundColor: ['rgba(182, 244, 146, 0.4)', 'rgba(51, 139, 147, 0.4)', 'rgba(165, 42, 42, 0.4)'],
       borderColor: 'rgb(255, 99, 132)',
-      data: [6, result.dataset.result, 2]
+      data: [result.dataset.survey, result.dataset.result, 2000]
     }]
   };
 
