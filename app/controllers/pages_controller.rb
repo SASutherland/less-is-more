@@ -67,9 +67,8 @@ class PagesController < ApplicationController
       end
     end
 
-
     @co2 = @co2.to_f * 1000
-    @transport_country = @transport_country.to_f* 1000
+    @transport_country = @transport_country.to_f * 1000
     @food_country = @food_country.to_f * 1000
     @house_country = @house_country.to_f * 1000
     @leisure_country = @leisure_country.to_f * 1000
