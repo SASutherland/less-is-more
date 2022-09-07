@@ -17,7 +17,7 @@
         <h2 class="question question1"> Where do you live?</h2>
         <div class="form-group">
           <select class="form-control" id="country" name="country" >
-            <%# <option value="" disabled selected>Select your country</option> %>
+            <option value="" disabled selected>Select your country</option>
             <% ApplicationRecord::COUNTRIES.each do |country|%>
               <option value="<%= country %>" > <%=country %> </option>
             <% end %>
@@ -35,7 +35,7 @@
         <h2 class="question"> How do you go to work?</h2>
         <div class="form-group">
            <select class="form-control" id="work" name="work">
-                <%# <option value="" disabled selected>Select...</option> %>
+                <option value="" disabled selected>Select...</option>
                 <option value="car">Car</option>
                 <option value="electrical_car">Electrical Car</option>
                 <option value="public_transport">Public Transport</option>
@@ -56,7 +56,7 @@
         <h2 class="question"> How many flights per year?</h2>
         <div class="form-group">
           <select class="form-control" id="flght" name="flight">
-                <%# <option value="" disabled selected>Select...</option> %>
+                <option value="" disabled selected>Select...</option>
                 <option value="1flight">1 flight</option>
                 <option value="2_3flights">2 to 3 flights</option>
                 <option value="4_6flights">4 to 6 flights</option>
@@ -76,7 +76,7 @@
         <h2 class="question"> Your favorite food?</h2>
         <div class="form-group">
           <select class="form-control" id="food" name="food">
-                <%# <option value="" disabled selected>Select...</option> %>
+                <option value="" disabled selected>Select...</option>
                 <option value="beef">Beef</option>
                 <option value="pork_poultry">Pork/Poultry</option>
                 <option value="fish">Fish</option>
@@ -114,7 +114,7 @@
         </div>
         <h2 class="question"> How do you mostly spend your free-time?</h2>
         <select class="form-control" id="leisure" name="leisure">
-          <%# <option value="" disabled selected>Select...</option> %>
+          <option value="" disabled selected>Select...</option>
           <option  value="traveling">Traveling</option>
           <option value="chilling">Chilling at home</option>
           <option value="shopping">Shopping</option>
