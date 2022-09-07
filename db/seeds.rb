@@ -11,6 +11,7 @@ Favourite.destroy_all
 Idea.destroy_all
 User.destroy_all
 Chatroom.destroy_all
+Donation.destroy_all
 puts "Cleared!"
 
 puts "Creating users, ideas..."
@@ -203,8 +204,24 @@ skip_meat.save!
 # ideaname9.photo.attach(io: file, filename: "ideaname9.jpg", content_type: "image/jpg")
 # ideaname9.save!
 
+puts "Creating chatroom for each idea"
 Idea.all.each do |idea|
   Chatroom.create!(idea: idea, name: idea.title)
 end
 
+puts "Creating donations"
+Donation.create!(
+  name: "Small donation",
+  price: 10
+)
+
+Donation.create!(
+  name: "Medium donation",
+  price: 20
+)
+
+Donation.create!(
+  name: "Huge donation",
+  price: 50
+)
 puts "Done!"
