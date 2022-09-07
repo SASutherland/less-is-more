@@ -1,5 +1,3 @@
-
-
 .card-idea {
   overflow: hidden;
   height: 120px;
@@ -34,5 +32,42 @@
 }
 
 .card-idea .card-idea-infos {
+  padding: 16px;
+}
+
+.card-target {
+  height: 200px;
+  background: white;
+  box-shadow: 2px 6px 6px #6f6f6f;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin: 3px;
+  margin-bottom: 10px;
+}
+
+.card-target-sideimg {
+  height: 100%;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-position: center;
+}
+
+.card-target h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-target p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-target .card-target-infos {
   padding: 16px;
 }

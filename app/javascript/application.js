@@ -13,9 +13,9 @@ import {pierreCart} from "./pierre"
 // output.innerText = slider.value;
 // console.log(slider.value)
 
-swiper();
 
 document.addEventListener('turbo:load', () => {
+  swiper();
   var slider = document.getElementById("myRange");
   var output = document.getElementById("demo");
   var refresh = document.getElementById("refresh");
