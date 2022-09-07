@@ -112,8 +112,6 @@ class PagesController < ApplicationController
       @work_user =@foot
     end
 
-
-
     if @flight == "1flight"
       @flight_user = @oneflight
     elsif @flight == "2_3flights"
@@ -175,7 +173,6 @@ class PagesController < ApplicationController
       @house_user.to_f +
       @leisure_user.to_f
     )
-    @co2_weighted = @co2_weighted.to_f.round(0)
 
     @transport_user = @work_user.to_f + @flight_user.to_f
     @transport_user = @transport_user.to_f.round(0)
@@ -188,8 +185,6 @@ class PagesController < ApplicationController
     @food_country = @food_country.to_f.round(0)
     @house_country = @house_country.to_f.round(0)
     @leisure_country =@leisure_country.to_f.round(0)
-
-
   end
 
   def search
