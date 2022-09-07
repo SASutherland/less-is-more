@@ -6,5 +6,5 @@ class User < ApplicationRecord
   # has_one_attached :photo
   has_many :ideas
   has_many :favourites
-  has_many :orders
+  has_many :orders, dependent: :destroy
 end
