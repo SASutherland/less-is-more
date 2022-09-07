@@ -1,6 +1,12 @@
 // Import page-specific CSS files here.
 @import "swiper";
 
+.fullcard-container{
+  height: 260vh;
+}
+.body{
+  height: 210vh !important;
+}
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -37,6 +43,7 @@ button:not(:disabled),
 .ideas-card h2 {
   font-size: 36px !important;
   margin-left: 0rem;
+  
 }
 
 .ideas-card p {

@@ -1,6 +1,6 @@
 .resultscont{
   margin-top: 10vw;
-  height: 197vh;
+  height: 203vh;
 }
 
 #title-result{
@@ -69,7 +69,8 @@
   width: 80vw;
   color: white;
   font-size: 18px;
-  background-color: #192733;
+  // background-color: #192733;
+  background-color : rgba($color: #000000, $alpha: 0.8);
   border-radius: 10px;
   padding: 10px 15px 10px 15px;
   line-height: 30px;
