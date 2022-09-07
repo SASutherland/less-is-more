@@ -21,10 +21,21 @@ font-size: 7vw;
   }
 }
 .donate_btn{
-  margin-top: 6.5rem;
-  margin-left: 7rem;
-  // color: black;
-  // background-color: aqua;
+  width: 135px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #313133;
+  background-color: #a2d696 !important;
+  // background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  // box-shadow: 2px 6px 6px #6f6f6f;
+  padding: 5px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .about-team{
   height: 30vw;
