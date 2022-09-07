@@ -11,6 +11,7 @@ Favourite.destroy_all
 Idea.destroy_all
 User.destroy_all
 Chatroom.destroy_all
+Donation.destroy_all
 puts "Cleared!"
 
 puts "Creating users, ideas..."
@@ -25,7 +26,7 @@ carpool = Idea.new(
   category: "transport",
   subcategory: "car",
   impact: 0.1,
-  photo: "https://images.unsplash.com/photo-1597685204565-110abf469a1e?ixlib=rb-1.2.1&ixid=MnwxM[…]90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+  photo: "https://res.cloudinary.com/carole-g/image/upload/v1662472359/LessIsMore_ai/sharing_car_c3c23z.jpg",
   user: User.create!(
     first_name: "Brian",
     last_name: "Mac",
@@ -203,8 +204,24 @@ skip_meat.save!
 # ideaname9.photo.attach(io: file, filename: "ideaname9.jpg", content_type: "image/jpg")
 # ideaname9.save!
 
+puts "Creating chatroom for each idea"
 Idea.all.each do |idea|
   Chatroom.create!(idea: idea, name: idea.title)
 end
 
+puts "Creating donations"
+Donation.create!(
+  name: "Small donation",
+  price: 10
+)
+
+Donation.create!(
+  name: "Medium donation",
+  price: 20
+)
+
+Donation.create!(
+  name: "Huge donation",
+  price: 50
+)
 puts "Done!"

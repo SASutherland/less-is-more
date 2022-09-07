@@ -95,43 +95,29 @@
       }
     </script>
 
-    <br>
 
-    <h2 class="pt-3" style="margin-bottom: -10px;">Ideas for You</h2>
 
-    <br>
+    <h2 class="pt-3 tinder--title" style="margin-bottom: -10px;">Ideas for You</h2>
 
 
     <div class="swipe-instructions">
-      <p>Swipe ideas to the <strong>right</strong> to add them to your targets</p>
-<!--
-      <span style="white-space: pre-line">
-        <p>Swipe <strong>right</strong> to accept an idea
-           Swipe <strong>left</strong> to decline an idea</p>
-      </span>
--->
+      <p >Swipe ideas to the <strong>right</strong> to add them to your targets</p>
     </div>
 
     <div class="tinder">
-
       <div class="tinder--status">
         <i class="fa fa-remove"></i>
         <i class="fa fa-heart"></i>
       </div>
-
       <div class="tinder--cards">
-
         <% @ideas.each do |idea| %>
           <div class="tinder--card" data-id="<%= idea.id %>">
-          <%# <img src="https://source.unsplash.com/random/600x300?nature"> %>
             <img src=<%= idea.photo %>>
             <h3><%= idea.title %></h3>
             <p><%= idea.content %></p>
           </div>
         <% end %>
-
       </div>
-
     </div>
 
     <div class="tinder--buttons">
@@ -139,12 +125,10 @@
       <button id="love"><i class="fa fa-heart"></i></button>
     </div>
 
-  <br>
+    <div class="container">
+      <div class="button-container">
+        <a class="mask" href="favourite">See My Targets</a>
+        <%= link_to ' <button type="button" name="Hover" >See My Targets</button>'.html_safe, favourites_path(refresh: true) %>
+    </div>
 
-  <div class="button-targets d-flex justify-content-center mt-3">
-    <%= link_to "See My Targets", favourites_path %>
   </div>
-
-  </div>
-
-</div>

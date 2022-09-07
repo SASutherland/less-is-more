@@ -19,4 +19,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :favourites, only: [:index, :destroy]
+  resources :donations, only: [:index, :show]
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
 end

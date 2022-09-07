@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "swiper";
 
+
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -10,44 +11,12 @@ button:not(:disabled),
   background-color: white;
 }
 
-.button-targets {
-  display: inline;
-  min-width: 80%;
-  min-height: 60px;
-  font-size: 19px;
-  font-weight: 800;
-  color: white;
-  background: #4FD1C5;
-  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
-  border: none;
-  border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
-  padding: 22px;
-  text-decoration: none;
-  text-align: center;
-  }
-
-.button-targets:hover,.button-targets:focus {
-  color: white;
-  transform: translateY(-6px);
-}
-
-// button-targets::after {
-//   content: '';
-//   width: 30px; height: 30px;
-//   border-radius: 100%;
-//   position: absolute;
-//   z-index: -1;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
 .ideas-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 253vh;
 }
 
 .ideas-card {
@@ -58,10 +27,11 @@ button:not(:disabled),
   border-radius:  20px;
   padding: 0px 25px 0px 25px;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: -508px;
   padding-top: 20px;
   padding-bottom: 30px;
   margin-bottom: 30px;
+  height: 159vh;
 }
 
 .ideas-card h2 {
@@ -100,6 +70,12 @@ button:not(:disabled),
   font-size: 18px;
   margin-left: 0rem;
   margin-bottom: 0.7rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.tinder--button {
+  padding-top: 3px;
 }
 
 .tinder--card img {
@@ -113,4 +89,10 @@ button:not(:disabled),
 
 .tinder--card p {
   font-size: 18px;
+}
+
+.tinder--title{
+  margin-top: 10vw;
+  text-align: center;
+
 }
