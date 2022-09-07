@@ -1,10 +1,10 @@
 
 <div class="resultscont">
   <div class="country" data-value="<%= @country %>"></div>
-  <div class="transport" data-value="<%= @transport %>"></div>
-  <div class="food" data-value="<%= @food %>"></div>
-  <div class="house" data-value="<%= @house %>"></div>
-  <div class="leisure" data-value="<%= @leisure %>"></div>
+  <div class="transport_user" data-value="<%= @transport_user %>"></div>
+  <div class="food_user" data-value="<%= @food_user %>"></div>
+  <div class="house_user" data-value="<%= @house_user %>"></div>
+  <div class="leisure_user" data-value="<%= @leisure_user %>"></div>
 
   <div class="results-container">
     <div class="results-card-pie">
@@ -14,12 +14,12 @@
         </div>
         <div class="middle ">
           <div class="d-flex justify-content-around">
-                <h3 class="title-kpi">in Co2 tons</h3>
+                <h3 class="title-kpi">Co2 in kg</h3>
                 <h3 class="title-kpi">Target</h3>
           </div>
           <div class="d-flex justify-content-around">
             <p id="KPI"><%= @co2_weighted %></p>
-            <p id="targetW">2</p>
+            <p id="targetW">2000</p>
           </div>
           <div class="container-pie">
             <h2 class="split mx-0 text-center">Split per category</h2>
@@ -31,10 +31,10 @@
   </div>
 
   <div class="container-radar">
-    <div class="transportcountry" data-value="<%= @transportcountry %>"></div>
-    <div class="foodcountry" data-value="<%= @foodcountry %>"></div>
-    <div class="housecountry" data-value="<%= @housecountry %>"></div>
-    <div class="leisurecountry" data-value="<%= @leisurecountry %>"></div>
+    <div class="transportcountry" data-value="<%= @transport_country %>"></div>
+    <div class="foodcountry" data-value="<%= @food_country %>"></div>
+    <div class="housecountry" data-value="<%= @house_country %>"></div>
+    <div class="leisurecountry" data-value="<%= @leisure_country %>"></div>
     <div>
       <h2 class="comparison mx-0 mb-0 text-center">Comparison</h2>
     </div>

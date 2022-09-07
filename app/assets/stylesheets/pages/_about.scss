@@ -1,10 +1,14 @@
 .about_container{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   margin-left: 1rem;
   height: 90%;
   margin-top: 3rem;
+  text-align: center;
+}
+
+.title-about{
+margin-top: 20vw;
+  font-size:11vw;
+  font-weight: bold;
 }
 .about_link{
   margin-top: 10.5rem;
@@ -15,4 +19,21 @@
 .donate_btn{
   margin-top: 6.5rem;
   margin-left: 7rem;
+}
+.about-team{
+  height: 30vw;
+  width: 30vw;
+  box-shadow: 10px 10px 5px #ccc;
+  margin: 10px;
+  border-radius: 50%;
+
+}
+
+.for-dev{
+  margin-top: 20vw;
+  text-decoration: none;
+}
+
+.fa-github{
+  font-size: 30vw;
 }
