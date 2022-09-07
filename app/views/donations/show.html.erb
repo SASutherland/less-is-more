@@ -1,7 +1,7 @@
 <div class="results-container">
   <div class="results-card x-center">
     <h1><%= @donation.name %></h1>
-    <p>Amount: <%= humanized_money_with_symbol(@donation.price) %></p>
+    <p>Amount: <%= @donation.price / 100 %>€</p>
     <p>Some description about the donation, and the awesome person who donated</p>
     <%= form_with url: orders_path do %>
       <%= hidden_field_tag 'donation_id', @donation.id %>
