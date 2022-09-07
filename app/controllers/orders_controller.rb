@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
     donation = Donation.find(params[:donation_id])
     order = Order.create!(
       donation: donation,
-      donation_name: donation.name,
+      # donation_name: "my donation",
       amount: donation.price,
       state: 'pending',
       user: current_user
@@ -11,12 +11,17 @@ class OrdersController < ApplicationController
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
-      line_items: [{
-        name: donation.name,
-        amount: donation.price_cents,
-        currency: 'eur',
-        quantity: 1
-      }],
+      line_items: [
+        quantity: 1,
+        price_data: {
+          unit_amount: donation.price.to_s.to_i,
+          currency: 'eur',
+          product_data: {
+            name: donation.name
+          }
+        }
+      ],
+      mode: "payment",
       success_url: order_url(order),
       cancel_url: order_url(order)
     )
