@@ -1,13 +1,21 @@
 <div class="container-target">
   <div class="backcard">
     <h1>My Targets</h1>
-    <h4>My Co2 target <%= @co2_weighted_user.round(0) %></h4>
+    <div class= "card cardTarget">
+      <h4>My Footprint : </h4>
+      <h5> <%= @co2_weighted_user.round(0) %> kg of Co2</h5>
+      <h4>My Actions  :  </h4>
+      <h5>  - <%= @co2_weighted_user.round(0) - @new_results.round(0) %> kg of Co2</h5>
+      <h4>My Target : </h4>
+      <h5> =  <%= @new_results.round(0) %> kg of Co2</h5>
+    </div>
     <div class="targetchart">
       <canvas id="pChart"></canvas>
     </div>
     <div class="actionbtncont">
-      <h4>My actions</h4>
-      <a href="/ideas"><%= image_tag "plus-circle-fill.png" %></a>
+      <h4 id="myactiontitle">My Actions</h4>
+      <h5 id="myactiontotal">Total = <%= @co2_weighted_user.round(0) - @new_results.round(0) %> kg of Co2</h5>
+      <%# <a href="/ideas"><%= image_tag "plus-circle-fill.png" %></a>
     </div>
 <div style="display: none;" class="new_result" data-result="<%=@new_results%>" data-survey="<%= @co2_weighted_user %>"></div>
 

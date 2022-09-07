@@ -1,134 +1,137 @@
 
-<div class="ideas-container">
+<div class="fullcard-container">
 
-  <div class="ideas-card">
+  <div class="ideas-container">
 
-    <div class="ideas-card-title">
-      <h2 class="pt-2">Get Inspired</h2>
-    </div>
-    <div class="ideas-card-title">
-      <p>Search for ideas anywhere in the world</p>
-    </div>
+    <div class="ideas-card">
 
-    <br>
-
-    <div class="d-none" id="marker-get"><%= @markers %></div>
-    <div id="map" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" data-markers="<%= @markers.to_json %>" style="width: 100%; height: 390px;"></div>
-
-    <style>
-      .marker {
-        background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/pin.svg');
-        background-size: cover;
-        cursor: pointer;
-      }
-    </style>
-
-    <script>
-      const markerGet = document.getElementById("marker-get").innerText
-      const mapGet = document.getElementById("map")
-      mapboxgl.accessToken = mapGet.dataset.mapApiKeyValue;
-      const markers = JSON.parse(mapGet.dataset.markers);
-      const features = [];
-      markers.forEach((marker) => {
-        features.push({
-          'type': 'Feature',
-          'properties': {
-            'name': marker.name,
-            'height': 6000,
-            'id': marker.idea_id
-          },
-          'geometry': {
-            'type': marker.location,
-            'content': marker.content,
-            'coordinates': [marker.lng, marker.lat]
-          }
-        })
-      });
-      const geojson = {
-        'type': 'FeatureCollection',
-        'features': features
-      };
-
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/outdoors-v11',
-        center: [130, 35],
-        zoom: 0.75,
-        projection: 'globe'
-      });
-
-      map.on('style.load', () => {
-        map.setFog({});
-      });
-
-      for (const marker of geojson.features) {
-        // Create a DOM element for each marker.
-        const el = document.createElement('div');
-        el.className = 'marker';
-        const size = marker.properties.height / 100;
-        el.style.width = `${size}px`;
-        el.style.height = `${size}px`;
-
-        // Add a popup displayed on click for each marker
-        const popup = new mapboxgl.Popup({ offset: 5 });
-        popup.setHTML(
-        `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br><br>
-
-        <form method="post" action="/ideas/${marker.properties.id}/favourites" class="inline">
-          <button type="submit">
-            <%= image_tag "plus-circle-fill.png" %>
-          </button>
-        </form>
-        <br/>`
-        );
-
-        // Add markers to the map.
-        new mapboxgl.Marker({
-          element: el,
-          // Point markers toward the nearest horizon
-          rotationAlignment: 'horizon',
-          offset: [0, -size / 2]
-        })
-        .setLngLat(marker.geometry.coordinates)
-        .setPopup(popup)
-        .addTo(map);
-      }
-    </script>
-
-
-
-    <h2 class="pt-3 tinder--title" style="margin-bottom: -10px;">Ideas for You</h2>
-
-
-    <div class="swipe-instructions">
-      <p >Swipe ideas to the <strong>right</strong> to add them to your targets</p>
-    </div>
-
-    <div class="tinder">
-      <div class="tinder--status">
-        <i class="fa fa-remove"></i>
-        <i class="fa fa-heart"></i>
+      <div class="ideas-card-title">
+        <h2 class="pt-2">Get Inspired</h2>
       </div>
-      <div class="tinder--cards">
-        <% @ideas.each do |idea| %>
-          <div class="tinder--card" data-id="<%= idea.id %>">
-            <img src=<%= idea.photo %>>
-            <h3><%= idea.title %></h3>
-            <p><%= idea.content %></p>
-          </div>
-        <% end %>
+      <div class="ideas-card-title">
+        <p>Search for ideas anywhere in the world</p>
       </div>
-    </div>
 
-    <div class="tinder--buttons">
-      <button id="nope"><i class="fa fa-remove"></i></button>
-      <button id="love"><i class="fa fa-heart"></i></button>
-    </div>
+      <br>
 
-    <div class="container">
-      <div class="button-container">
-        <a class="mask" href="favourite">Set My Target!</a>
-        <%= link_to ' <button type="button" name="Hover" >Set My Target!</button>'.html_safe, favourites_path(refresh: true) %>
-    </div>
+      <div class="d-none" id="marker-get"><%= @markers %></div>
+      <div id="map" data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>" data-markers="<%= @markers.to_json %>" style="width: 100%; height: 390px;"></div>
+
+      <style>
+        .marker {
+          background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/pin.svg');
+          background-size: cover;
+          cursor: pointer;
+        }
+      </style>
+
+      <script>
+        const markerGet = document.getElementById("marker-get").innerText
+        const mapGet = document.getElementById("map")
+        mapboxgl.accessToken = mapGet.dataset.mapApiKeyValue;
+        const markers = JSON.parse(mapGet.dataset.markers);
+        const features = [];
+        markers.forEach((marker) => {
+          features.push({
+            'type': 'Feature',
+            'properties': {
+              'name': marker.name,
+              'height': 6000,
+              'id': marker.idea_id
+            },
+            'geometry': {
+              'type': marker.location,
+              'content': marker.content,
+              'coordinates': [marker.lng, marker.lat]
+            }
+          })
+        });
+        const geojson = {
+          'type': 'FeatureCollection',
+          'features': features
+        };
+
+        const map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/outdoors-v11',
+          center: [130, 35],
+          zoom: 0.75,
+          projection: 'globe'
+        });
+
+        map.on('style.load', () => {
+          map.setFog({});
+        });
+
+        for (const marker of geojson.features) {
+          // Create a DOM element for each marker.
+          const el = document.createElement('div');
+          el.className = 'marker';
+          const size = marker.properties.height / 100;
+          el.style.width = `${size}px`;
+          el.style.height = `${size}px`;
+
+          // Add a popup displayed on click for each marker
+          const popup = new mapboxgl.Popup({ offset: 5 });
+          popup.setHTML(
+          `<h3><strong>${marker.properties.name}</strong></h3>${marker.geometry.type}<br><em>${marker.geometry.content}</em><br><br>
+
+          <form method="post" action="/ideas/${marker.properties.id}/favourites" class="inline">
+            <button type="submit">
+              <%= image_tag "plus-circle-fill.png" %>
+            </button>
+          </form>
+          <br/>`
+          );
+
+          // Add markers to the map.
+          new mapboxgl.Marker({
+            element: el,
+            // Point markers toward the nearest horizon
+            rotationAlignment: 'horizon',
+            offset: [0, -size / 2]
+          })
+          .setLngLat(marker.geometry.coordinates)
+          .setPopup(popup)
+          .addTo(map);
+        }
+      </script>
+
+
+
+      <h2 class="pt-3 tinder--title" style="margin-bottom: -10px;">Ideas for You</h2>
+
+
+      <div class="swipe-instructions">
+        <p >Swipe ideas to the <strong>right</strong> to add them to your targets</p>
+      </div>
+
+      <div class="tinder">
+        <div class="tinder--status">
+          <i class="fa fa-remove"></i>
+          <i class="fa fa-heart"></i>
+        </div>
+        <div class="tinder--cards">
+          <% @ideas.each do |idea| %>
+            <div class="tinder--card" data-id="<%= idea.id %>">
+              <img src=<%= idea.photo %>>
+              <h3><%= idea.title %></h3>
+              <p><%= idea.content %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="tinder--buttons">
+        <button id="nope"><i class="fa fa-remove"></i></button>
+        <button id="love"><i class="fa fa-heart"></i></button>
+      </div>
+
+      <div class="container">
+        <div class="button-container">
+          <a class="mask" href="favourite">Set My Target!</a>
+          <%= link_to ' <button type="button" name="Hover" >Set My Target!</button>'.html_safe, favourites_path(refresh: true) %>
+      </div>
 
   </div>
+</div>
