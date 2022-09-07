@@ -1,19 +1,53 @@
 <div class="card about_container">
   <h1 class="title-about">About us</h1>
   <div class="about_link">
-    <h3>The project</h3>
-    <h3>The team</h3>
-    <img class="about-team" src="https://res.cloudinary.com/carole-g/image/upload/t_Profile/v1662469422/LessIsMore_ai/carole_e9a89c.png" alt="">
-    <img class="about-team"  src="https://res.cloudinary.com/carole-g/image/upload/t_Profile/v1662469418/LessIsMore_ai/pierre_i7xwhc.png" alt="">
-    <img class="about-team" src="https://res.cloudinary.com/carole-g/image/upload/t_Profile/v1662469441/LessIsMore_ai/cristina_zf4aer.png" alt="">
-    <img class="about-team"  src="https://res.cloudinary.com/carole-g/image/upload/t_Profile/v1662469435/LessIsMore_ai/shawn_duuugi.png" alt="">
+    <h3 class="titleproject">The project</h3>
+    <h6 class="textproject"> Less is More.ai is a project to help the community to understand the impact of our individual footprint and get customized ideas to reduce our Co2 emissions.  </h6>
+    <h6 class="textproject">  We need to reach 2 tons (2000 kg) of Co2 per person in order to limit the impact of climate change and ensure liveable conditions for our kids.
+    </h6>
+     </h6>
+    <h3 class="titleproject">The team</h3>
+    <div class="card-product card1">
+      <img src="https://res.cloudinary.com/carole-g/image/upload/v1662548684/LessIsMore_ai/carole_h9bxjf.jpg" />
+      <div class="card-product-infos">
+        <h2>Carole Gendron</h2>
+        <p>CEO / Founder : Data, Analytics, Data-Artist </p>
+      </div>
+    </div>
 
-    <h3 class="for-dev">For developers</h3>
+    <div class="card-product card1">
+      <img src="https://res.cloudinary.com/carole-g/image/upload/v1662548684/LessIsMore_ai/shawn_daxnq3.jpg" />
+      <div class="card-product-infos">
+        <h2>Shawn Sutherland </h2>
+        <p>CTO : Chief Technology Officer </p>
+      </div>
+    </div>
+
+    <div class="card-product card1">
+      <img src="https://res.cloudinary.com/carole-g/image/upload/v1662548684/LessIsMore_ai/Pierre_e0f1ck.jpg" />
+      <div class="card-product-infos">
+        <h2>Pierre Cailleau </h2>
+        <p>CBO : Chief Business Officer </p>
+      </div>
+    </div>
+
+    <div class="card-product card1">
+      <img src="https://res.cloudinary.com/carole-g/image/upload/v1662548684/LessIsMore_ai/cristina_rqppag.png" />
+      <div class="card-product-infos">
+        <h2>Cristina Nunu</h2>
+        <p>CCO : Chief Communication Officer </p>
+      </div>
+    </div>
+
+    <h3 class="for-dev titleproject" >For developers</h3>
     <a class="for-dev" href="https://github.com/SASutherland/less-is-more"><i class="fa-brands fa-github"></i></a>
 
   </div>
-  <div class="donate_btn">
-    <%# link_to "Donate", order_path(@order) %>
-    <a class="button" href="#">Donate</a>
+
+<div class="container">
+  <div class="button-container">
+    <a class="mask" id="bntabout" href="survey">Donate</a>
+    <%= link_to ' <button type="button" name="Hover" >Donate</button>'.html_safe, root_path(refresh: true) %>
   </div>
+</div>
 </div>
