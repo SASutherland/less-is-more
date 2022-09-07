@@ -4,6 +4,7 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import "bootstrap"
 import {swiper} from "./plugin/swiper"
+import {pierreCart} from "./pierre"
 
 // var slider = document.getElementById("myRange");
 // var output = document.getElementById("demo");
@@ -31,6 +32,7 @@ document.addEventListener('turbo:load', () => {
 
   const myChart = document.querySelector("#myChart");
 
+
   if(myChart) {
     const labels_pie = [
       'Transport',
@@ -39,11 +41,12 @@ document.addEventListener('turbo:load', () => {
       'Leisure',
     ];
 
-    const transport = document.querySelector(".transport")
-    const food = document.querySelector(".food")
-    const house = document.querySelector(".house")
-    const leisure = document.querySelector(".leisure")
+    const transportUser = document.querySelector(".transport_user")
+    const foodUser = document.querySelector(".food_user")
+    const houseUser = document.querySelector(".house_user")
+    const leisureUser = document.querySelector(".leisure_user")
     const country = document.querySelector(".country")
+
 
     const data = {
       labels: labels_pie,
@@ -51,9 +54,14 @@ document.addEventListener('turbo:load', () => {
         label: 'My First dataset',
         backgroundColor: ['#FF839D', '#5CAB7D', '#349DE4', '#FFD77C'] ,
 
-        data: [country.dataset.value, transport.dataset.value, food.dataset.value, house.dataset.value, leisure.dataset.value]
+
+        data: [transportUser.dataset.value,
+          foodUser.dataset.value, houseUser.dataset.value,
+          leisureUser.dataset.value]
       }]
+
     };
+
     const config = {
       type: 'doughnut',
       data: data,
@@ -64,67 +72,88 @@ document.addEventListener('turbo:load', () => {
       document.getElementById('myChart'),
       config
     );
+
     //-----------------------------------------
 
     const radarLabels = [
       'Transport',
-      'Meat',
-      'Heating'
+      'Food',
+      'House',
+      'Leisure'
 
   ];
 
-    const transportcountry = document.querySelector(".transportcountry")
-    const foodcountry = document.querySelector(".foodcountry")
-    const housecountry = document.querySelector(".housecountry")
-    const leisurecountry = document.querySelector(".leisurecountry")
-
+    const transportCountry = document.querySelector(".transportcountry")
+    const foodCountry = document.querySelector(".foodcountry")
+    const houseCountry = document.querySelector(".housecountry")
+    const leisureCountry = document.querySelector(".leisurecountry")
 
     const radarData = {
       labels: radarLabels,
       datasets: [{
       label: country.dataset.value,
-      data: [transportcountry.dataset.value, foodcountry.dataset.value, housecountry.dataset.value, leisurecountry.dataset.value],
+      data: [transportCountry.dataset.value, foodCountry.dataset.value,
+        houseCountry.dataset.value, leisureCountry.dataset.value],
 
-      fill: true,
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgb(255, 99, 132)',
-      pointBackgroundColor: 'rgb(255, 99, 132)',
+      fill: false,
+      borderColor: 'Grey',
+      pointBackgroundColor: 'Grey',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgb(255, 99, 132)'
     },
     {
       label: 'My Impact',
-      // data: [2000, 2000, 4000, 200,2000],
-      data: [transport.dataset.value, food.dataset.value, house.dataset.value, leisure.dataset.value],
+      data: [transportUser.dataset.value,
+        foodUser.dataset.value, houseUser.dataset.value,
+        leisureUser.dataset.value],
+
       fill: true,
-      backgroundColor: '#7A56AB',
-      borderColor: '#7A56AB',
-      pointBackgroundColor: '#7A56AB',
+      backgroundColor: '#9DE192',
+      borderColor: '#9DE192',
+      pointBackgroundColor: '#9DE192',
       pointBorderColor: '#fff',
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: 'rgb(255, 99, 132)'
     }
     ]
+
     }
     const radarConfig = {
       type: 'radar',
       data: radarData,
       options: {
+        legend: {
+          display: true,
+          position: 'left',
+          labels: {
+              fontColor: 'rgb(255, 99, 132)'
+          }
+      },
         elements: {
           line: {
             borderWidth: 3
           }
         }
-      },
+
+      }
+
     };
+
+
     //--------------------------------------
-    console.log(transportcountry.dataset.value, foodcountry.dataset.value, housecountry.dataset.value, leisurecountry.dataset.value)
+    // console.log(transportCountry.dataset.value, foodCountry.dataset.value,
+    //   houseCountry.dataset.value, leisureCountry.dataset.value)
     const myRadar = new Chart(
       document.getElementById('myRadar'),
       radarConfig
     );
     console.log(myRadar)
-  }
-})
 
+  }
+
+
+  pierreCart()
+
+
+})

@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "swiper";
 
+
 button:not(:disabled),
 [type="button"]:not(:disabled),
 [type="reset"]:not(:disabled),
@@ -15,6 +16,7 @@ button:not(:disabled),
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 253vh;
 }
 
 .ideas-card {
@@ -25,10 +27,11 @@ button:not(:disabled),
   border-radius:  20px;
   padding: 0px 25px 0px 25px;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: -508px;
   padding-top: 20px;
   padding-bottom: 30px;
   margin-bottom: 30px;
+  height: 159vh;
 }
 
 .ideas-card h2 {
@@ -47,6 +50,18 @@ button:not(:disabled),
   justify-content: flex-start;
 }
 
+.mapboxgl-popup {
+  transform:none !important;
+  top: 21%;
+  left: 28px;
+}
+
+.mapboxgl-popup-content {
+  border-radius: 5px;
+  padding: 10px 10px 0px 10px !important;
+  box-shadow: 10px 20px 15px rgb(111, 111, 111);
+}
+
 .swipe-instructions {
   padding-bottom: 15px;
 }
@@ -55,6 +70,12 @@ button:not(:disabled),
   font-size: 18px;
   margin-left: 0rem;
   margin-bottom: 0.7rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.tinder--button {
+  padding-top: 3px;
 }
 
 .tinder--card img {
@@ -68,4 +89,10 @@ button:not(:disabled),
 
 .tinder--card p {
   font-size: 18px;
+}
+
+.tinder--title{
+  margin-top: 10vw;
+  text-align: center;
+
 }
