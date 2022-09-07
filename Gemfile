@@ -4,6 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 
 gem "geocoder"
+# Gem for the payment module
+gem 'money-rails'
+
+# Stripe gem for payments
+gem 'stripe'
+
+#To change the status from pending to succesful or not using stripe webhooks
+gem 'stripe_event'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"

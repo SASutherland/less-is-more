@@ -1,0 +1,15 @@
+<div class="results-container">
+  <div class="results-card x-center">
+    <h1>Our donations</h1>
+    <div>
+      <ul>
+        <% @donations.each do |donation| %>
+          <%= link_to donation_path(donation) do %>
+            <li><%= donation.name %></li>
+            <p>Amount: <%= donation.price / 100 %>€</p>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

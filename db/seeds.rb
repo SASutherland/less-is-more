@@ -11,9 +11,10 @@ Favourite.destroy_all
 Idea.destroy_all
 User.destroy_all
 Chatroom.destroy_all
+Donation.destroy_all
 puts "Cleared!"
 
-puts "Creating users, ideas..."
+# puts "Creating users, ideas..."
 
 User.create(email: "p@gmail.com", password: "pierre")
 
@@ -177,12 +178,12 @@ skip_meat = Idea.new(
 # skip_meat.photo.attach(io: file, filename: "skip_meat.jpg", content_type: "image/jpg")
 skip_meat.save!
 
-# Idea.all.each do |idea|
-#   Chatroom.create(
-#     name: idea.title,
-#     idea: idea
-#   )
-# end
+Idea.all.each do |idea|
+  Chatroom.create!(
+    name: idea.title,
+    idea: idea
+  )
+end
 
 # ideaname9 = Idea.new(
 #   title: ,
@@ -203,8 +204,24 @@ skip_meat.save!
 # ideaname9.photo.attach(io: file, filename: "ideaname9.jpg", content_type: "image/jpg")
 # ideaname9.save!
 
-Idea.all.each do |idea|
-  Chatroom.create!(idea: idea, name: idea.title)
-end
+# puts "Creating chatroom for each idea"
+# Idea.all.each do |idea|
+#   Chatroom.create!(idea: idea, name: idea.title)
+# end
 
+puts "Creating donations"
+Donation.create!(
+  name: "Small donation",
+  price: 1000
+)
+
+Donation.create!(
+  name: "Medium donation",
+  price: 2000
+)
+
+Donation.create!(
+  name: "Huge donation",
+  price: 5000
+)
 puts "Done!"
