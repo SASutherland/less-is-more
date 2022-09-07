@@ -2,7 +2,7 @@ class FavouritesController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def index
-    @co2_weighted_user = current_user.survey_result
+    @co2_weighted_user = current_user.survey_result || 4500
     @favourites = Favourite.all
     sum = 0
     @favourites.each do |favourite|
