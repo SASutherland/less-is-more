@@ -1,6 +1,7 @@
 .container-target{
   display: flex;
   justify-content: center;
+  height: fit-content;
 }
 .backcard{
   box-shadow: 10px 10px 5px #ccc;
@@ -47,29 +48,27 @@
 .saved_ideas{
   background-color: white;
   width: 90%;
-  height: 35vh;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
 }
-.deletebtn img{
-  width: 20px;
-  height: 20px;
-  margin-left: 14px;
+
+.fa-comments {
+  color: #4C9F93;
 }
 
-.card-idea img {
-  width: 130px;
-  height: 100%;
-}
+// .card-idea img {
+//   width: 130px;
+//   height: 100%;
+// }
 
-.card-idea h2 {
-  text-align: left;
-  font-size: 15px;
-}
+// .card-idea h2 {
+//   text-align: left;
+//   font-size: 15px;
+// }
 
-.card-idea p {
-  text-align: left;
-  font-size: 10px;
-}
+// .card-idea p {
+//   text-align: left;
+//   font-size: 10px;
+// }

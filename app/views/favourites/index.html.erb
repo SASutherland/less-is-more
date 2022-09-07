@@ -1,25 +1,39 @@
 <div class="container-target">
   <div class="backcard">
-    <h1>My Target</h1>
+    <h1>My Targets</h1>
     <h4>My Co2 target <%= @co2_weighted %></h4>
-
     <div class="targetchart">
       <canvas id="pChart"></canvas>
     </div>
     <div class="actionbtncont">
       <h4>My actions</h4>
-      <% link_to ideas_path %><%= image_tag "plus-circle-fill.png" %>
+      <a href="/ideas"><%= image_tag "plus-circle-fill.png" %></a>
     </div>
 <div style="display: none;" class="new_result" data-result="<%=@new_results%>" data-survey="<%= @co2_weighted %>"></div>
+
     <div class="saved_ideas">
 
     <% @favourites.each do |favourite| %>
-      <div class="card-idea">
-        <%= image_tag favourite.idea.photo %>
-          <div class="card-idea-infos">
+      <div class="card-target">
+        <%= image_tag favourite.idea.photo, class: "card-target-sideimg" %>
+          <div class="card-target-infos">
             <h2><%= favourite.idea.title %></h2>
             <p><%= favourite.idea.content %></p>
-            <p>impact: <%= favourite.idea.impact * 100  %>%</p>
+            <% test_impact = favourite.idea.impact * 100.0 %>
+            <p class="bold-text">Estimated Impact: <%= test_impact %>%</p>
+            <br>
+
+            <div class="d-flex justify-content-between w-100 align-items-center">
+
+              <%= link_to favourite_path(favourite), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+                <i class="far fa-trash-alt fa-lg opacity-50"></i>
+              <% end %>
+
+              <%= link_to chatroom_path(favourite.idea.chatroom) do %>
+                <i class="fas fa-comments fa-xl"></i>
+              <% end %>
+            </div>
+
           </div>
       </div>
     <% end %>

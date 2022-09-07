@@ -4,9 +4,9 @@
     <div>
       <ul>
         <% @donations.each do |donation| %>
-          <%= link_to donation_path(Donation.find_by(@donation).id) do %>
+          <%= link_to donation_path(donation) do %>
             <li><%= donation.name %></li>
-            <p>Amount: <%= humanized_money_with_symbol(donation.price) %></p>
+            <p>Amount: <%= donation.price / 100 %>€</p>
           <% end %>
         <% end %>
       </ul>
