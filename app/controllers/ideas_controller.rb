@@ -1,5 +1,4 @@
 class IdeasController < ApplicationController
-
   def index
     @ideas = Idea.all
     @markers = @ideas.geocoded.map do |idea|

@@ -10,7 +10,7 @@
       <h4>My actions</h4>
       <% link_to ideas_path %><%= image_tag "plus-circle-fill.png" %>
     </div>
-<div style="display: none;" class="new_result" data-result="<%=@new_results%>"></div>
+<div style="display: none;" class="new_result" data-result="<%=@new_results%>" data-survey="<%= @co2_weighted %>"></div>
     <div class="saved_ideas">
 
     <% @favourites.each do |favourite| %>

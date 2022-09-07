@@ -37,6 +37,8 @@
                     input_html: { autocomplete: "new-password" } %>
         <%= f.input :photo, as: :file,
                     required: false %>
+        <%= f.input :survey_result,
+                    input_html: { autocomplete: "survey_result", value: params[:co] }%>
       </div>
 
       <div class="form-button-container d-flex justify-content-center">

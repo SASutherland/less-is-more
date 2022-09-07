@@ -17,7 +17,6 @@ class PagesController < ApplicationController
   end
 
   def results
-
     @country = params[:country]
     @work = params[:work]
     @flight = params[:flight]
@@ -101,9 +100,6 @@ class PagesController < ApplicationController
     @sport = @sport.to_f * 1000
     @hangingout = @hangingout.to_f * 1000
 
-
-
-
     if @work == "car"
       @work_user = @car
     elsif @work  == "electrical_car"
@@ -171,8 +167,6 @@ class PagesController < ApplicationController
     elsif @leisure == "hanging_out"
       @leisure_user = @hangingout
     end
-
-
 
     @co2_weighted = (
       @work_user.to_f +
