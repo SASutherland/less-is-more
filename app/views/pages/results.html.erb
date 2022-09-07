@@ -1,4 +1,3 @@
-<%= link_to "Sign Up", new_user_registration_path(co:@co2_weighted), class: "button"  %>
 <div class="resultscont">
   <div class="country" data-value="<%= @country %>"></div>
   <div class="transport_user" data-value="<%= @transport_user %>"></div>
@@ -22,7 +21,7 @@
             </div>
           </div>
           <div class="d-flex justify-content-around">
-            <p id="KPI"><%= @co2_weighted %></p>
+            <p id="KPI"><%= @co2_weighted.round(0) %></p>
             <p id="targetW">2000</p>
           </div>
 
@@ -52,7 +51,7 @@
         <i class="fa-solid fa-circle-info" id="info3"></i>
           <span class="tooltip-text " id="left">We are comparing your impact per category versus <%= @co2_weighted %> average citizen
           </span>
-       </div>
+      </div>
     </div>
     <div class="my-3">
       <canvas id="myRadar" width="350" height="350" style="display: block; box-sizing: border-box; height: 254px; width: 254.5px;"></canvas>
@@ -60,7 +59,11 @@
     <div class="container" id="buttonhome">
       <div class="button-container">
         <span  class="mask" id="maskresult" >Get ideas!</span>
+        <% if current_user %>
         <%= link_to '<button type="button" name="Hover" >Get ideas!</button>'.html_safe, ideas_path(refresh: true) %>
+        <% else %>
+          <%= link_to '<button type="button" name="Hover" >Get ideas!</button>'.html_safe, new_user_registration_path(co:@co2_weighted) %>
+        <% end %>
       </div>
     </div>
   </div>
