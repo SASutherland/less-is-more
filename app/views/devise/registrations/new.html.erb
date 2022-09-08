@@ -7,7 +7,6 @@
       <li><h4>Receive customized ideas</h4></li>
       <li><h4>Set targets and goals</h4></li>
       <li><h4>Build a community</h4></li>
-      <li><h4>Post your ideas</h4></li>
     </ul>
   </div>
   <br>
@@ -35,7 +34,7 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
-        <%= f.input :photo, as: :file,
+        <%# <%= f.input :photo, as: :file,
                     required: false %>
         <%= f.input :survey_result, as: :hidden,
                     input_html: { autocomplete: "survey_result", value: params[:co] }%>
