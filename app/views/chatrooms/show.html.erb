@@ -4,7 +4,6 @@
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>"
   >
   <div class="results-card x-center">
-    <%= link_to "Back to ideas", search_path %>
     <div>
       <h1><%= @chatroom.name %></h1>
     </div>
@@ -18,5 +17,11 @@
       <% end %>
     </div>
       <%= render "messages/messagesform", message: @message %>
+  </div>
+</div>
+<div class="container">
+  <div class="button-container">
+    <a class="mask" href="search">Back to Community</a>
+    <%= link_to ' <button type="button" name="Hover" >Back to Community</button>'.html_safe, search_path %>
   </div>
 </div>
