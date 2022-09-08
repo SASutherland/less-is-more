@@ -4,7 +4,8 @@
       <div class="col">
         <h1>Checkout summary</h1>
         <h4><strong><%= @order.donation.name %> for <%= @order.amount / 100 %>€</strong></h4>
-        <button  class="pay_btn">Pay</button>
+        <%# <button  class="pay_btn">Pay</button> %>
+        <button id="pay" class="pay_btn">Pay</button>
 
         <script src="https://js.stripe.com/v3/"></script>
         <script>
