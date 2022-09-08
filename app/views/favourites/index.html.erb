@@ -1,12 +1,12 @@
 <div class="container-target">
   <div class="backcard">
     <h1>My Targets</h1>
-    <h4>My Co2 target <%= @co2_weighted_user.round(0) %></h4>
+    <h4 class="mt-2 backcard-co2-header">My Co2 target: <%= @co2_weighted_user.round(0) %></h4>
     <div class="targetchart">
       <canvas id="pChart"></canvas>
     </div>
     <div class="actionbtncont">
-      <h4>My actions</h4>
+      <h4 class="mt-2 backcard-actions-header">My actions</h4>
       <a href="/ideas"><%= image_tag "plus-circle-fill.png" %></a>
     </div>
 <div style="display: none;" class="new_result" data-result="<%=@new_results%>" data-survey="<%= @co2_weighted_user %>"></div>
