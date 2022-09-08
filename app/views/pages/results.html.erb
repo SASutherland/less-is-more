@@ -17,7 +17,7 @@
             <h3 class="title-kpi">Target</h3>
             <div class=" hover-text ">
               <i class="fa-solid fa-circle-info" id="info"></i>
-              <span class="tooltip-text" id="left">Your Co2 Footprint is <strong><%= @co2_weighted.round(0) %>kg</strong>. Which is by far too much. We need to reach 2000kg (=2tons) per person to ensure a liveable world for our children.</span>
+              <span class="tooltip-text left" >Your Co2 Footprint is <strong><%= @co2_weighted.round(0) %>kg</strong>. Which is by far too much. We need to reach 2000kg (=2tons) per person to ensure a liveable world for our children.</span>
             </div>
           </div>
           <div class="d-flex justify-content-around">
@@ -29,7 +29,7 @@
             <h2 class="split mx-0 text-center">Split per category</h2>
             <div class="hover-text">
               <i class="fa-solid fa-circle-info" id="info2"></i>
-              <span class="tooltip-text tooltip-text2" id="left">Your Co2 impact is mainly coming from your transportation and your food.
+              <span class="tooltip-text tooltip-text2 left" >Your Co2 impact is mainly coming from your transportation and your food.
               </span>
             </div>
           </div>
@@ -49,7 +49,7 @@
 
       <div class="hover-text tooltipComparison">
         <i class="fa-solid fa-circle-info" id="info3"></i>
-          <span class="tooltip-text " id="left">We are comparing your impact per category versus <%= @co2_weighted %> average citizen
+          <span class="tooltip-text" style="top: 0px; right: 10%;">We are comparing your impact per category versus <%= @co2_weighted.round(0) %>kg average citizen
           </span>
       </div>
     </div>
@@ -58,7 +58,7 @@
     </div>
     <div class="container" id="buttonhome">
       <div class="button-container">
-        <span  class="mask" id="maskresult" >Get ideas!</span>
+        <span  class="mask" id="maskresult" ><strong>Get ideas!</strong></span>
         <% if current_user %>
         <%= link_to '<button type="button" name="Hover" >Get ideas!</button>'.html_safe, ideas_path(refresh: true) %>
         <% else %>

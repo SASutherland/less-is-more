@@ -1,10 +1,10 @@
 <div class="results-container">
-  <div class="card">
+  <div class="card_pay">
     <div class="row py-4">
       <div class="col">
         <h1>Checkout summary</h1>
-        <p><strong><%= @order.donation.name %></strong> for <strong><%= @order.amount / 100 %>€</strong></p>
-        <button id="pay" class="donation_btn">Pay</button>
+        <h4><strong><%= @order.donation.name %> for <%= @order.amount / 100 %>€</strong></h4>
+        <button  class="pay_btn">Pay</button>
 
         <script src="https://js.stripe.com/v3/"></script>
         <script>
