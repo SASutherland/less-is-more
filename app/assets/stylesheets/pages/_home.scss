@@ -64,6 +64,7 @@ flex-direction: column;
 width: $base * 3.5;
 height: $base * 2.8;
 margin-top: -22vw;
+margin-left: 8.5rem;
 }
 
 .chevron {
@@ -131,12 +132,12 @@ margin-top: -22vw;
   box-shadow: 2px 6px 6px #6f6f6f;
   display: flex;
   align-items: center;
-  margin: 8vw;
+  margin: 6vw;
   border-radius: 50px 0 50px 0;
 }
 
 .card1 {
-  margin-top: 15vw;
+  margin-top: 2rem;
 }
 .card-product img {
   height: 100%;
@@ -170,7 +171,7 @@ margin-top: -22vw;
   height: 10vh;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10vh;
+  margin-top: 6vh;
   margin-bottom: 10vh;
   overflow: hidden;
   transition: 0.5s;
