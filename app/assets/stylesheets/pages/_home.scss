@@ -1,3 +1,10 @@
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 390px;
+  }
+}
+
 .picto{
   text-align: center;
   font-size: 50vw;
@@ -62,7 +69,7 @@ flex-direction: column;
 width: $base * 3.5;
 height: $base * 2.8;
 margin-top: -22vw;
-margin-left: 8.5rem;
+margin-left: 11.5rem;
 }
 
 .chevron {
