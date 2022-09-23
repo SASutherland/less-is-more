@@ -11,18 +11,9 @@
 
 // Your CSS partials
 @import "components/index";
-@import "pages/home";
 @import "pages/index";
-
-@import "pages/survey";
-
-@import "components/navbar";
-@import "components/cards";
-@import "components/btn";
-@import "pages/favindex";
-@import "pages/about";
 @import "ideas/index";
-@import "pages/ideaform";
+
 
 
 body {
@@ -42,10 +33,3 @@ button:active {
   border: none;
 }
 
-// h1 {
-//   font-size : 50px;
-// }
-
-// .typedcont {
-//   color: #4FD1C5;
-// }

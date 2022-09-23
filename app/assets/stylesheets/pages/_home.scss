@@ -1,4 +1,9 @@
-
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 390px;
+  }
+}
 
 .picto{
   text-align: center;
@@ -64,7 +69,7 @@ flex-direction: column;
 width: $base * 3.5;
 height: $base * 2.8;
 margin-top: -22vw;
-margin-left: 8.5rem;
+margin-left: 11.5rem;
 }
 
 .chevron {
@@ -87,43 +92,42 @@ margin-left: 8.5rem;
 
 .chevron:before,
 .chevron:after {
- content: '';
- position: absolute;
- top: 0;
- height: 100%;
- width: 50%;
- background: #2c3e50;
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #2c3e50;
 }
 
 .chevron:before {
- left: 0;
- transform: skewY(30deg);
+  left: 0;
+  transform: skewY(30deg);
 }
 
 .chevron:after {
- right: 0;
- width: 50%;
- transform: skewY(-30deg);
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
 }
 
 @keyframes move-chevron {
- 25% {
+  25% {
   opacity: 1;
 	}
- 33.3% {
+  33.3% {
   opacity: 1;
   transform: translateY($base * 3.8);
- }
- 66.6% {
+  }
+  66.6% {
   opacity: 1;
   transform: translateY($base * 5.2);
- }
- 100% {
+  }
+  100% {
   opacity: 0;
   transform: translateY($base * 8) scale(0.5);
- }
+  }
 }
-
 
 .card-product {
   overflow: hidden;
@@ -136,9 +140,6 @@ margin-left: 8.5rem;
   border-radius: 50px 0 50px 0;
 }
 
-.card1 {
-  margin-top: 2rem;
-}
 .card-product img {
   height: 100%;
   width: 130px;
@@ -163,8 +164,6 @@ margin-left: 8.5rem;
   padding: 16px;
 }
 
-
-
 .button-container {
   position: relative;
   width: 70vw;
@@ -179,9 +178,6 @@ margin-left: 8.5rem;
   border-radius: 10vw;
   font-size: 6vw;
 }
-
-
-
 
 .button-container button {
   width: 101%;
